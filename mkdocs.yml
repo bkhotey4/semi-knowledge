@@ -1,0 +1,69 @@
+site_name: 半導體製程技術
+site_description: 依晶圓製造流程編排的半導體製程教科書，每日新增章節並補充產業最新進展
+site_url: https://bkhotey4.github.io/semi-knowledge/
+repo_url: https://github.com/bkhotey4/semi-knowledge
+repo_name: semi-knowledge
+copyright: 內容由 AI 依課綱撰寫，僅供學習參考
+theme:
+  name: material
+  language: zh-TW
+  font:
+    text: Noto Sans TC
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: 切換深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: 切換淺色模式
+  features:
+    - navigation.indexes
+    - navigation.footer
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - toc.follow
+    - content.code.copy
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+extra_javascript:
+  - javascripts/katex.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css
+nav:
+  - 首頁: index.md
+  - 第一篇　半導體物理與元件基礎:
+    - 第 1 章　半導體材料與能帶理論: part-01/01-01.md
+  - 術語表: glossary.md
