@@ -1,8 +1,65 @@
 {
- "seen_news": [],
- "pending_updates": {},
+ "seen_news": [
+  "https://news.google.com/rss/articles/CBMiggFBVV95cUxQOTZDQWFvV3EzWHV5c3lIZW5qakd2clFmWTFJYjd0U3FTQUFZWDVVUXFtYm9nSlMyejRkV1Utb1pZQWVaYmZHRjY3Vk9IbEM1V0N6MVI0LVBDbmR6Unh6N2JrTWh1QW53a0tiZDJJUUxQMmFvdVB6bm9jZlVFMmIyQ25B?oc=5",
+  "https://news.google.com/rss/articles/CBMikAFBVV95cUxQbG5WUmFxUTRaeXdNTFhHc2VodDVTZjZwaXFzN2FZYUVmUzgxRDlPQy1qNUtLNEFQTXV5NEdYcEJYYUE1TURHTXlsZ1ZLUXhVVnUwanVYTktiLXk0WmhWTDhOV0ZWZFlNTmJCei1CLXZsb2paOWpFcU1QbUY0RUNlT1lFZ2xyaU9CX3llUzA4NTM?oc=5",
+  "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9vQ2psSzdkdzhpTENvOW1vZWxEN2JET3cwazI5YkpNVzh4T0lCd3FRM3M2NW1GNGV3T2pGZGVDMjAwUW9rdDlFNXFXTUlsdUJzQ0N4QkFjNDhhZWRrNmpJ?oc=5",
+  "https://news.google.com/rss/articles/CBMijgFBVV95cUxPdU54ZUdRazVXdi1td1h4UTY4RHIwU0pXWDV4S2FzY3V6UHA3cVRvazR0N0o4TXlUT29OWktxUUxrYm1kWDlXZEZZcEpnRG43U0hiSktrWEVWZ0Z0SERWeXpjakxJMVNkeUxkdVhJSDdMQlZRMjJScmpZSFJ1OV9nX1d1aHJiRlVFQ0JpWTJ3?oc=5",
+  "https://news.google.com/rss/articles/CBMiX0FVX3lxTE53Uk5sYVYxQUFwVFhhNWR4RGJiWDB1Mk9OSkVmX0lzUndmYzdFLVh2NFpUQ3VYbWYyMXctcG9PWk55clNrdW5uN2xuS3Vtem82UzNWbmNCcVJpZDRSVEZJ?oc=5",
+  "https://news.google.com/rss/articles/CBMiakFVX3lxTE40VC16cy1aaFVGVXJhTGdWOHhMeEhrRDllbFJsNGJ2V1ZERDlnTEVjREp2MUF5YTh2XzFkSmsyX0RxdTBHN0kyZHQwejhJYW9JNHc0dG1BOWYxcEdQVXpHTzgxME0wRzFtekE?oc=5",
+  "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1OOUd3bDM4NDZSenF4cWlRek45SnEzNzgyMWRWcGVLS0pfelp4UVR4eHA5MjlmOW14QzRNRnFrdFN1RWNKOFhycVhYd3NwbFkz0gFWQVVfeXFMT0RNbS1xS0xCRVVRT1VxLTVLeXdtWGpsUnhQcDQ1RGJmTmlicjUyUXBxMDhfekk3WVd5NHh2TVJlOXpxMFRnSlIzZjdpUzE1ZjVxdFZmSFE?oc=5",
+  "https://news.google.com/rss/articles/CBMiggFBVV95cUxPNjU2VlBIZWFFRFUzQ1RORWJ2QWhsb0ZmTDFTLTV4YmtvRXJPY01NZzlpazRBUmt1aUUtT0NQa2g0eVdobU5yVFBmcEpHT3JNUllZQnJ0aHgwcUhyeU00a0xZM0V2WjZHbUJWMGJ4QkdZM2loajlaenNmeUFOVFIyZjlB?oc=5",
+  "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fQm0tLXlld0FMaElESzVLc0xOR1ViYVQtVHk1aUx1V1BWSm5KbUxGYmpNeVk0elFNYWxqZThkdWVmVll1dzU0OGdGV2ZtNU0?oc=5",
+  "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPZ0l4cHRZUWN6dkM0eHRHSzdVVkdiSkYwZGlxNHdKNnlHbWRqZktIdHJ6OWcwVmk0bmJkc2ZzTDNVMjItb0sxOVJoOFhiOExGY3Z0QUVEX3RDZkpES1ZnNDdkODRHZEdwdmdxQXhIX003LUNxT0tjdkR1VmVqSU5vU0Q1VjJYRDNlZDhiNzgzMVk1ZnFoVHY5SFAxT3Z5VUVwN0xnZjB1TEstOEZ4S3hGYmhkeFRQcjRUTU9FRDhTcHRleGpRNDdqdnRkV0h3cXVrZlhxNE9FU0NNYUR6QXVwVzBwVWo?oc=5",
+  "https://news.google.com/rss/articles/CBMiTkFVX3lxTE45ZUQteEZkUlluMzJNVjdvYWFuRkJ2T1d2aTlnbVVVTzhBZThGWXBQdmNLR2t3a1pLWXBzZWphNF9JZGxqYUgyZ2NYN1pmUQ?oc=5",
+  "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9QVHZUU243eE53dFZlMUFlVHIzWVA5Y3JJX3BWWFF5R0V4amdtOWtsbW5JZjNzUk5XT1dwN2pwdjdUdWk2alFnNVJsRy1Mc04tYm4yZGtqc1hocHFuRzNZ?oc=5",
+  "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBhckw5OTJjTmtfZWxDT0dIb3J3bVVDVlBKMEJldm16QmliTFhsSHVXYkllOW9SRUs0RlFacXk5b0NnRWxDQmx4d01CN0F3ckpN?oc=5",
+  "https://news.google.com/rss/articles/CBMiswFBVV95cUxOc0VCOEhkS3FuNU00U2NTV2RUYmR5OG00LTdlYkgwTVo2b3RWTWwxaXE3WnVoNjN6Vi1pdWZKeUdidUNkU1luLUZySUNRR3N6aFJITjh2TWNYMUhmTXJXUE11dy1pVmhnODI1b0t3R093U1BmUXhOUVBsNi1YcEZXb0p6dWdpb3A4bE1EMGlURm03R0FWQmo1TXJ6eHJIUjhTd3hqczllc2Fnd3ZJTGNYbkhibw?oc=5",
+  "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9EZXduU2FqMFM2YkI0TXlQSy1pSHlPZU9QVUh5UURSUzlONE56V3BOeWY1ZUktRnRLajc5blI2RzBuUy1zLVQ2MjhQX09EM3RqUG1kMjhR0gFWQVVfeXFMT0Rld25TYWowUzZiQjRNeVBLLWlIeU9lT1BVSHlRRFJTOU40TnpXcE55ZjVlSS1GdEtqNzluUjZHMG5TLXMtVDYyOFBfT0QzdGpQbWQyOFE?oc=5",
+  "https://news.google.com/rss/articles/CBMidEFVX3lxTE11RjQ3bWVFaHRwUGZTcUY3VTVRT0xKRXNHYW9ad25xejBENnh4dHVxMUo3VFVMaDFOM0lWbjRoRXNYdlZkelZfV3BFWUJEYVZwSFFpSjVweHYzb0ZReGpiTlpzUWp5UFE5NlBCclNKSm5PWUJt?oc=5",
+  "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9KSk9oZnNwN0VpNjcwdERHYzVpQ1ZFU3dVOTFMUXlYSnNyQlZvTHBKXzBxWFRjbkxReWVtWDMtMTNBMXZDOTdUejMzVW42cjNJ0gFWQVVfeXFMTVQxcmpMeDVtVlFHb1dPdklka0IzMHdsMDFGZmFBc2hLcGpTckgzdk92amx1WEx5OUltem0tVjd3cWJONk9PN0dVbk9TRmpJSU9EeEFwNVE?oc=5",
+  "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5fS09MQnRJNTNzUlpxN0t2TlV2andhcnZ2TGtUM0tseWEwU1hzWmlwVGRjankzLV94c3Azc3l2UElfRkFPcUJidVdKSFVTNHNuLXBGNk1ZNHJkeVZEbFE?oc=5",
+  "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4ybFhaZGt2VmNvSFdINmtScjQ5X3UwNDNQT3pQdmdPUTR4djVoN2RmZlR2UkN3YU9wQVk2Vkw0ZF9Pd1czNnRQMTZISXd4blpIY25MNm0za1FRd3BocXltd1NNZDXSAWRBVV95cUxOMmxYWmRrdlZjb0hXSDZrUnI0OV91MDQzUE96UHZnT1E0eHY1aDdkZmZUdlJDd2FPcEFZNlZMNGRfT3dXMzZ0UDE2SEl3eG5aSGNuTDZtM2tRUXdwaHF5bXdTTWQ1?oc=5",
+  "https://news.google.com/rss/articles/CBMimgJBVV95cUxObGYxdkoxU2JuQkRVT3p3UnFoUHNKUmo5djhOVG9xQkIxTnRwMFlrY0RsQkxnM0ZXVVJsQlBTejFoTHJHX2dQMFJzVDQ5TEVNSVFTTnpJMk90bjVVeEFzcFczXzA3YVhqdklwdTlXNjBkT1RsbE92ZDZiMlp0cS1OYjZfYVlIRzBfbVZCTHlfLVVKblMwQ2xaSHRjOWdYZTU1V1M0akh0aGZSMjhVeWlRVmcxRy1wVHlSaHphOXdGMVAtQWhMcFFtbHgtYi0wWUpmLVpsMUFpNXZSbWRWS2dUSjdhcWhOajdmbWNWUVVRLUFjMFpGV2VzQ01KUEkzME8zUlVVQUZfSDh2dUpZVTA5aUlDQVFLWnFiMUE?oc=5",
+  "https://news.google.com/rss/articles/CBMiekFVX3lxTE4waC1vTHVfZHpoWmthS0JJYlJhRzdFNkhEOXF5d2JzUW9vcDRVdVVsNFpnQnpBMEdpOWxvaUI3OVdmMlRieldveU5zdU9sU24td0lzYzFycmstcnF2Q0VreTFRQlhXWUF5TUJNUGdOb0I5dDFIQmhKQnFn?oc=5",
+  "https://news.google.com/rss/articles/CBMiigFBVV95cUxOSXdYYlI2cW16dDEyUTBWVUtQX2Nyb3IwWnlLNmdoaHM3X0dGa1p5RUpIeWs4VnhlUFF2ZloxTl9TcVowbG1DUGlrTU5vaXlfY09nNWU2dG9ncXkzeE9kSzlWdnhvak1JM2Rrd1lmTENKdnhPMDRoSzFTZzZVSlVpU0ZEOUY1SmtZRnc?oc=5",
+  "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBqakdOQ0ZlelBWVmxxdkg1TjN2ZC1ISjgyYkt5ek9FRVA5ckp2VnJSSF9lSU13S2FXbVAzeXA4ZjFOcU5uUi1iMmxncm02Yk0?oc=5",
+  "https://news.google.com/rss/articles/CBMickFVX3lxTE1PcFB2REIxVEQ0VGg1dExjdzV1Umx2NFgtODM0WkN4SGJrUVVDNThYQW1ySW5BOWl4Vm50OXNiU0JmSjB4T2R2MlRfVnh0RGd0UXVoenl6bWhZODkwQ3ZWc24tczg4LUN1RVlqa2RpNXhWd9IBVkFVX3lxTE9BREEzRGQ1QzBSRGMxUHNjQThxeUxTN1JPYUFZWG5LaWdEeElmdWFpWWc0MWI1NkdlY2dQSGhWb3ExRUhjTEZZTDZqVzNyX3FFM3VmeVh3?oc=5",
+  "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBOZ05ucUpQMEtjekJTa0NvbklaUE4zbTJ3czMyTGZzSUpsN3FQNTRjVDB2bTF1UGNCaFBVYjc1dDF1UHJQOHJfYWJHMW1fY3NkNEh6R0w1dHVpd9IBX0FVX3lxTE5Lb214TU94RXVON1Z1YjEzV2xoaDVhT05oOVpNRGFzRFAtRDZQaXhRQWxSM1dnd0JRSG1lclNsZDZpTHV6Sm5qTkNDemFnNHNSaERhSzhBYVJuVFZST05Z?oc=5",
+  "https://news.google.com/rss/articles/CBMiY0FVX3lxTE4wQXNZV0Z2QjJvX2RNMm1BdEFDdmlPd3BLNXBrTE5uZ1JlYS11b0x6Y1RGWlYwVjlYb0FzYlltN3ZldV84dlIxS1VHeTNSQnVEZnkwRmtnSkhHQ1NRUjdBWHFkbw?oc=5",
+  "https://news.google.com/rss/articles/CBMivwNBVV95cUxPZW5odlBUVVV1WkIwUS1PYXhHZDFfeHZQRG1WaFhkSnZ1YjNXc0M0ZWNJaUZCRXhQZkoxbXdjZ2g5ZHQzT0RHbmtCM0twUFVPenVsU09vTDkwUFVTckI3ek5GcVhfT2swNXhhcFFpejNZMHdTRUJhemVYVG9nWVY3YXowcm9OeFAzYXNIWTFZRFV5QjN5VldMTHBiUmRNQTBrQVp0MXlwN3RUT293WFkzOVpERi1UaE9IU0Vnd0xtcENIdi1mWXdZZEdqT3ZseUFhSFBCNFlnd3BBbzY2UmEwZFlzSXZFeklyUGFsVm9EUkRlSDFDdnBBWEtIQ282U1IyRE1WUGNXb2ZhR0JXLVpWOGdYRlctdUV6eHRzdUtfT3Y5SVZMc0JhOVR4QjBjRHhEWXhjS09yajNCcjUxY0NPcmpiUXo1MEZFSmliSVRHV3JFclhoczh6aWlYSFhCaDJXckZaUmw3N2xiVUNJbk0zY3V1MENyempGdFRoWlhWM1owc1A5Z1RUUGcyU2NtVU9yd3ZxSHpzWVNOSWhna21UZUJSOFprMmtONnMwWktFeHAtMUJQdXE3VHpFR3BMaWM?oc=5",
+  "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0zaFBqUWdxbkVlWE5ucno0aWJMMHYya3kxUEFTSVY5THhwY2ZCYXFEUVpya2lMNC1YSXdyOU5udWt4RGlRbEg4ZjQyOXB1R2h1bDM1cHJvZ3M?oc=5",
+  "https://news.google.com/rss/articles/CBMiakFVX3lxTFBiOHJIaTlRNEs1V09senA0aFdrR3VuMWFmNEpONEIzT1pHUHVxTnB3NllveEVOZG5scXQtN2xhcHFBbklaS2hmdHk1eUFFV2VWTHdaTk5ELVBGVVBNRENlZVV0c1B5T2k5VUHSAW9BVV95cUxQM3diR2JGcTg0NHp5WEQ4aThWbklVV05Fb1huVVhMMmJWaDk5Y3gwaE1JUkNCXzJPN0Z2TXZFUkY5dDhmSUJYWFNJaHdhUFp2enprZjlSWFNJT2loZGhLSHJqTC1aYjZKQ3F5U0pzdWM?oc=5",
+  "https://news.google.com/rss/articles/CBMigwFBVV95cUxQTG9QR0FhZjZIdWQ3Uk15Umg1eG11TXdnN1dndmhmXzRSa3VIMjNRRDRZUTYtTS0ydV8wUjdxY1l4S0pfbnR4ZWFOa204NkFnT1ZxNm92b0tNTzU1ZUE4YmFhaF9abl85X2JNZEp6U25oVU90RGhHeUNldk5LMXpQUzRESQ?oc=5"
+ ],
+ "pending_updates": {
+  "03-04": [
+   "- **2026-10-16**　此進展涉及極紫外光（EUV）曝光機的核心光源研製。EUV 微影主要依賴雷射引發電漿（LPP）技術，以脈衝雷射轟擊熔融錫滴產生波長 13.5 奈米之極紫外光，光源的轉換效率與功率穩定性直接決定了微影設備的晶圓產能與解析能力。（來源：[陸產EUV光源樣機現身了 朗道燧岩展出高端曝光機心臟 - UDN](https://news.google.com/rss/articles/CBMiUEFVX3lxTE9KSk9oZnNwN0VpNjcwdERHYzVpQ1ZFU3dVOTFMUXlYSnNyQlZvTHBKXzBxWFRjbkxReWVtWDMtMTNBMXZDOTdUejMzVW42cjNJ0gFWQVVfeXFMTVQxcmpMeDVtVlFHb1dPdklka0IzMHdsMDFGZmFBc2hLcGpTckgzdk92amx1WEx5OUltem0tVjd3cWJONk9PN0dVbk9TRmpJSU9EeEFwNVE?oc=5)）"
+  ],
+  "03-05": [
+   "- **2026-10-16**　此報導探討次世代高數值孔徑極紫外光（High-NA EUV）技術在先進晶圓製造中的導入評估。根據雷利解析度公式，將數值孔徑由 0.33 提升至 0.55 能有效提高光學解析度並縮小臨界尺寸，但同時需要變形光學系統與更薄的光阻層以克服極淺的焦深限制。（來源：[HIGH NA EUV設備 台積電2030年導入 - UDN](https://news.google.com/rss/articles/CBMickFVX3lxTE1PcFB2REIxVEQ0VGg1dExjdzV1Umx2NFgtODM0WkN4SGJrUVVDNThYQW1ySW5BOWl4Vm50OXNiU0JmSjB4T2R2MlRfVnh0RGd0UXVoenl6bWhZODkwQ3ZWc24tczg4LUN1RVlqa2RpNXhWd9IBVkFVX3lxTE9BREEzRGQ1QzBSRGMxUHNjQThxeUxTN1JPYUFZWG5LaWdEeElmdWFpWWc0MWI1NkdlY2dQSGhWb3ExRUhjTEZZTDZqVzNyX3FFM3VmeVh3?oc=5)）"
+  ],
+  "08-04": [
+   "- **2026-10-16**　此進展涉及高頻寬記憶體（HBM）之先進封裝與測試產能擴建。HBM 利用矽穿孔（TSV）與微凸塊技術將多層 DRAM 晶粒進行垂直三維堆疊，能顯著縮短連線長度並大幅提升頻寬密度，本章探討其堆疊架構、散熱管理與晶圓級測試之製程挑戰。（來源：[台灣美光先進封裝與測試二廠啟用，深化 AI 時代高頻寬記憶體布局 - TechNews 科技新報](https://news.google.com/rss/articles/CBMiswFBVV95cUxOc0VCOEhkS3FuNU00U2NTV2RUYmR5OG00LTdlYkgwTVo2b3RWTWwxaXE3WnVoNjN6Vi1pdWZKeUdidUNkU1luLUZySUNRR3N6aFJITjh2TWNYMUhmTXJXUE11dy1pVmhnODI1b0t3R093U1BmUXhOUVBsNi1YcEZXb0p6dWdpb3A4bE1EMGlURm03R0FWQmo1TXJ6eHJIUjhTd3hqczllc2Fnd3ZJTGNYbkhibw?oc=5)）"
+  ]
+ },
  "written": {
   "01-01": "2026-10-16"
  },
- "recent_updates": []
+ "recent_updates": [
+  {
+   "date": "2026-10-16",
+   "chapter": "08-04",
+   "summary": "此進展涉及高頻寬記憶體（HBM）之先進封裝與測試產能擴建。HBM 利用矽穿孔（TSV）與微凸塊技術將多層 DRAM 晶粒進行垂直三維堆疊，能顯著縮短連線長度並大幅提升頻寬密度，本章探討其堆疊架構、散熱管理與晶圓級測試之製程挑戰。"
+  },
+  {
+   "date": "2026-10-16",
+   "chapter": "03-05",
+   "summary": "此報導探討次世代高數值孔徑極紫外光（High-NA EUV）技術在先進晶圓製造中的導入評估。根據雷利解析度公式，將數值孔徑由 0.33 提升至 0.55 能有效提高光學解析度並縮小臨界尺寸，但同時需要變形光學系統與更薄的光阻層以克服極淺的焦深限制。"
+  },
+  {
+   "date": "2026-10-16",
+   "chapter": "03-04",
+   "summary": "此進展涉及極紫外光（EUV）曝光機的核心光源研製。EUV 微影主要依賴雷射引發電漿（LPP）技術，以脈衝雷射轟擊熔融錫滴產生波長 13.5 奈米之極紫外光，光源的轉換效率與功率穩定性直接決定了微影設備的晶圓產能與解析能力。"
+  }
+ ]
 }
