@@ -58,13 +58,20 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 extra_javascript:
   - javascripts/katex.js
+  - javascripts/interactive.js
   - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js
   - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js
 extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css
+  - stylesheets/interactive.css
 nav:
   - 首頁: index.md
   - 第一篇　半導體物理與元件基礎:
     - 第 1 章　半導體材料與能帶理論: part-01/01-01.md
     - 第 2 章　載子、摻雜與傳輸: part-01/01-02.md
+  - 互動學習:
+    - 設備機台圖鑑: equipment.md
+    - 機台到工程師的資料流: dataflow.md
+    - 互動實驗室: labs.md
+    - 術語閃卡: flashcards.md
   - 術語表: glossary.md

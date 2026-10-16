@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <marker id="arrow-axis" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1a365d"/>
+    </marker>
+    <marker id="arrow-photon" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#c53030"/>
+    </marker>
+    <marker id="arrow-phonon" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2f855a"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <text x="210" y="38" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1a365d" text-anchor="middle">直接能隙 (Direct Bandgap)</text>
+  <text x="590" y="38" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1a365d" text-anchor="middle">間接能隙 (Indirect Bandgap)</text>
+
+  <line x1="70" y1="390" x2="360" y2="390" stroke="#1a365d" stroke-width="1.5" marker-end="url(#arrow-axis)"/>
+  <line x1="210" y1="390" x2="210" y2="70" stroke="#1a365d" stroke-width="1.5" marker-end="url(#arrow-axis)"/>
+  <text x="365" y="395" font-family="sans-serif" font-size="15" fill="#1a365d">k</text>
+  <text x="200" y="65" font-family="sans-serif" font-size="15" fill="#1a365d">E</text>
+  <text x="210" y="412" font-family="sans-serif" font-size="14" fill="#1a365d" text-anchor="middle">k = 0 (Γ)</text>
+
+  <path d="M 100 95 Q 210 180 320 95" fill="none" stroke="#2b6cb0" stroke-width="3"/>
+  <text x="325" y="105" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2b6cb0">導帶 (CB)</text>
+
+  <path d="M 100 355 Q 210 270 320 355" fill="none" stroke="#2b6cb0" stroke-width="3"/>
+  <text x="325" y="355" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2b6cb0">價帶 (VB)</text>
+
+  <line x1="210" y1="265" x2="210" y2="145" stroke="#c53030" stroke-width="2.5" marker-end="url(#arrow-photon)"/>
+  <circle cx="210" cy="270" r="4" fill="#c53030"/>
+  <circle cx="210" cy="138" r="4" fill="#c53030"/>
+
+  <line x1="218" y1="138" x2="255" y2="138" stroke="#718096" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="218" y1="270" x2="255" y2="270" stroke="#718096" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="250" y1="265" x2="250" y2="143" stroke="#718096" stroke-width="1.2"/>
+  <text x="260" y="210" font-family="sans-serif" font-size="15" font-weight="bold" fill="#718096">Eg</text>
+
+  <text x="195" y="210" font-family="sans-serif" font-size="14" fill="#c53030" text-anchor="end">垂直光躍遷</text>
+  <text x="195" y="230" font-family="sans-serif" font-size="14" fill="#c53030" text-anchor="end">(hν ≈ Eg, Δk ≈ 0)</text>
+
+  <line x1="450" y1="390" x2="740" y2="390" stroke="#1a365d" stroke-width="1.5" marker-end="url(#arrow-axis)"/>
+  <line x1="510" y1="390" x2="510" y2="70" stroke="#1a365d" stroke-width="1.5" marker-end="url(#arrow-axis)"/>
+  <text x="745" y="395" font-family="sans-serif" font-size="15" fill="#1a365d">k</text>
+  <text x="500" y="65" font-family="sans-serif" font-size="15" fill="#1a365d">E</text>
+  <text x="510" y="412" font-family="sans-serif" font-size="14" fill="#1a365d" text-anchor="middle">k = 0 (Γ)</text>
+  <text x="670" y="412" font-family="sans-serif" font-size="14" fill="#1a365d" text-anchor="middle">k = kc</text>
+
+  <path d="M 570 195 Q 670 138 770 195" fill="none" stroke="#2b6cb0" stroke-width="3"/>
+  <text x="725" y="215" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2b6cb0">導帶 (CB)</text>
+
+  <path d="M 400 355 Q 510 270 620 355" fill="none" stroke="#2b6cb0" stroke-width="3"/>
+  <text x="400" y="375" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2b6cb0">價帶 (VB)</text>
+
+  <line x1="670" y1="138" x2="670" y2="390" stroke="#718096" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <line x1="510" y1="265" x2="510" y2="145" stroke="#c53030" stroke-width="2.5" marker-end="url(#arrow-photon)"/>
+  <circle cx="510" cy="270" r="4" fill="#c53030"/>
+
+  <circle cx="510" cy="138" r="4" fill="none" stroke="#718096" stroke-width="2"/>
+  <text x="495" y="132" font-family="sans-serif" font-size="14" fill="#718096" text-anchor="end">中間虛態</text>
+
+  <line x1="515" y1="138" x2="662" y2="138" stroke="#2f855a" stroke-width="2.5" marker-end="url(#arrow-phonon)"/>
+  <circle cx="670" cy="138" r="4" fill="#2f855a"/>
+
+  <text x="495" y="210" font-family="sans-serif" font-size="14" fill="#c53030" text-anchor="end">光子吸收</text>
+  <text x="495" y="230" font-family="sans-serif" font-size="14" fill="#c53030" text-anchor="end">(提供能量 hν)</text>
+
+  <text x="590" y="115" font-family="sans-serif" font-size="14" fill="#2f855a" text-anchor="middle">聲子輔助動量躍遷</text>
+  <text x="590" y="95" font-family="sans-serif" font-size="14" fill="#2f855a" text-anchor="middle">(提供動量 ±ℏq)</text>
+
+  <line x1="675" y1="138" x2="710" y2="138" stroke="#718096" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="515" y1="270" x2="710" y2="270" stroke="#718096" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="705" y1="265" x2="705" y2="143" stroke="#718096" stroke-width="1.2"/>
+  <text x="715" y="210" font-family="sans-serif" font-size="15" font-weight="bold" fill="#718096">Eg</text>
+</svg>

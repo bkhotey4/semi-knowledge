@@ -1,0 +1,86 @@
+/* 半導體教科書互動元件：測驗、閃卡、進度、互動實驗 — 顏色沿用 Material 主題變數，深淺色模式自動切換 */
+.ix-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin: 16px 0;
+  background: var(--md-default-bg-color);
+}
+.ix-muted { color: var(--md-default-fg-color--light); font-size: .85em; }
+.ix-row { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin: 8px 0; }
+.ix-btn {
+  border: 1px solid var(--md-default-fg-color--lighter);
+  background: transparent; color: var(--md-default-fg-color);
+  border-radius: 6px; padding: 6px 12px; cursor: pointer; font: inherit; font-size: .85em;
+}
+.ix-btn:hover { border-color: var(--md-accent-fg-color); color: var(--md-accent-fg-color); }
+.ix-btn.primary { background: var(--md-primary-fg-color); color: var(--md-primary-bg-color); border-color: transparent; }
+.ix-btn[disabled] { opacity: .5; cursor: default; }
+
+/* 測驗 */
+.ix-quiz-q { margin: 18px 0 8px; font-weight: 600; }
+.ix-quiz-opt {
+  display: block; width: 100%; text-align: left; margin: 6px 0; padding: 8px 12px;
+  border: 1px solid var(--md-default-fg-color--lightest); border-radius: 6px;
+  background: transparent; color: inherit; font: inherit; cursor: pointer;
+}
+.ix-quiz-opt:hover:not([disabled]) { border-color: var(--md-accent-fg-color); }
+.ix-quiz-opt.correct { border-color: #2e7d32; background: rgba(46, 125, 50, .12); }
+.ix-quiz-opt.wrong { border-color: #c62828; background: rgba(198, 40, 40, .12); }
+.ix-quiz-explain { margin: 6px 0 4px; padding: 8px 12px; border-left: 3px solid var(--md-accent-fg-color); font-size: .9em; }
+.ix-score { font-size: 1.1em; font-weight: 700; }
+
+/* 閃卡 */
+.ix-flash {
+  min-height: 170px; display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; cursor: pointer; user-select: none; padding: 24px;
+  border: 1px solid var(--md-default-fg-color--lighter); border-radius: 10px; margin: 12px 0;
+}
+.ix-flash .term { font-size: 1.6em; font-weight: 700; }
+.ix-flash .def { margin-top: 10px; max-width: 560px; }
+.ix-bar { height: 8px; border-radius: 4px; background: var(--md-default-fg-color--lightest); overflow: hidden; }
+.ix-bar > span { display: block; height: 100%; background: var(--md-accent-fg-color); }
+
+/* 進度 */
+.ix-progress-table { width: 100%; font-size: .85em; }
+.ix-progress-table td { padding: 4px 8px; }
+
+/* 互動實驗 */
+.ix-lab label { display: flex; flex-direction: column; gap: 2px; font-size: .85em; min-width: 180px; flex: 1; }
+.ix-lab input[type=range] { width: 100%; accent-color: var(--md-accent-fg-color); }
+.ix-lab select { font: inherit; padding: 4px; background: var(--md-default-bg-color); color: var(--md-default-fg-color); }
+.ix-lab .val { font-variant-numeric: tabular-nums; font-weight: 600; }
+.ix-lab canvas { width: 100%; height: 280px; display: block; margin-top: 8px; }
+.ix-lab .ix-out { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 10px 0; }
+.ix-lab .ix-out div { border: 1px solid var(--md-default-fg-color--lightest); border-radius: 6px; padding: 6px 10px; }
+.ix-lab .ix-out b { display: block; font-size: 1.1em; font-variant-numeric: tabular-nums; }
+.ix-legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: .8em; }
+.ix-legend i { display: inline-block; width: 12px; height: 3px; margin-right: 4px; vertical-align: middle; }
+
+/* 機台資料流圖 */
+.ix-df-wrap { overflow-x: auto; margin: 10px 0; }
+.ix-df { width: 100%; min-width: 760px; height: auto; font-family: inherit; }
+.ix-df-node { cursor: pointer; }
+.ix-df-node rect { fill: var(--md-default-bg-color); stroke: var(--md-default-fg-color--lighter); stroke-width: 1.5; }
+.ix-df-node .t { fill: var(--md-default-fg-color); font-size: 15px; font-weight: 700; }
+.ix-df-node .s { fill: var(--md-default-fg-color--light); font-size: 12px; }
+.ix-df-node.on rect { stroke: var(--md-accent-fg-color); stroke-width: 3.5; }
+.ix-df-edge { cursor: pointer; }
+.ix-df-edge line { stroke: var(--md-default-fg-color--lighter); stroke-width: 1.5; }
+.ix-df-edge line.hit { stroke: transparent; stroke-width: 14; }
+.ix-df-edge text { fill: var(--md-default-fg-color--light); font-size: 11px; }
+.ix-df-edge.on line:not(.hit) { stroke: var(--md-accent-fg-color); stroke-width: 3; }
+.ix-df-edge.on text { fill: var(--md-accent-fg-color); font-weight: 700; }
+.ix-df-head { fill: var(--md-default-fg-color--lighter); }
+.ix-df-head.on { fill: var(--md-accent-fg-color); }
+
+/* 設備圖鑑 */
+.ix-search { width: 100%; padding: 8px 10px; font: inherit; border: 1px solid var(--md-default-fg-color--lighter); border-radius: 6px; background: var(--md-default-bg-color); color: var(--md-default-fg-color); }
+.ix-tool { border: 1px solid var(--md-default-fg-color--lightest); border-radius: 8px; padding: 10px 14px; margin: 8px 0; }
+.ix-tool summary { cursor: pointer; }
+.ix-tool[open] { border-color: var(--md-accent-fg-color); }
+
+/* 章節圖片：SVG 結構圖在深色模式加白底，AI 情境圖加圓角 */
+.md-typeset figure img[src$=".svg"] { background: #fff; border-radius: 8px; padding: 10px; }
+.md-typeset figure img { border-radius: 8px; }
+.md-typeset figcaption { font-size: .8em; color: var(--md-default-fg-color--light); }
