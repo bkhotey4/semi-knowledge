@@ -59,6 +59,7 @@ markdown_extensions:
 extra_javascript:
   - javascripts/katex.js
   - javascripts/interactive.js
+  - javascripts/games.js
   - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js
   - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js
 extra_css:
@@ -74,4 +75,9 @@ nav:
     - 機台到工程師的資料流: dataflow.md
     - 互動實驗室: labs.md
     - 術語閃卡: flashcards.md
+  - 遊戲學習:
+    - 每日挑戰與成就徽章: daily.md
+    - PE 值班模擬: pe-oncall.md
+    - 晶圓的一生: wafer-life.md
+    - 製程排序拼圖: puzzles.md
   - 術語表: glossary.md

@@ -685,6 +685,7 @@
     function finish() {
       var prev = store.get("quiz:" + id, null);
       if (prev === null || correct > prev) store.set("quiz:" + id, correct);
+      store.set("quiztotal:" + id, qs.length);
       result.replaceChildren(
         el("span", { class: "ix-score", text: "得分 " + correct + " / " + qs.length }),
         el("button", { class: "ix-btn", text: "重新作答", onclick: function () { renderQuiz(root, id, shuffle(qs.slice())); } }));
@@ -773,6 +774,10 @@
       })
       .catch(function () { root.textContent = "進度載入失敗。"; });
   }
+
+  // 給遊戲模組 (games.js) 共用
+  window.SemiIX = { el: el, store: store, plot: plot, sci: sci, shuffle: shuffle, range: range,
+    dataUrl: dataUrl, pageUrl: pageUrl, legend: legend, PALETTE: PALETTE };
 
   // ── 啟動 ───────────────────────────────────────
   function init() {
