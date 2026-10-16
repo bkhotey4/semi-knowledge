@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <defs>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <polygon points="0,1 10,5 0,9" fill="#1e293b"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <polygon points="0,1 10,5 0,9" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <polygon points="0,1 10,5 0,9" fill="#059669"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <polygon points="0,1 10,5 0,9" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- 圖名 -->
+  <text x="35" y="42" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1e293b">閉迴路製程控制架構</text>
+
+  <!-- 上方：FDC 即時監控模組 -->
+  <rect x="240" y="25" width="320" height="70" rx="6" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+  <text x="400" y="52" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">FDC 即時故障偵測與分類</text>
+  <text x="400" y="76" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">腔體感測特徵擷取與多變量監控</text>
+
+  <!-- 中央左側：前製程量測 -->
+  <rect x="35" y="165" width="180" height="80" rx="6" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+  <text x="125" y="198" font-family="sans-serif" font-size="16" font-weight="bold" fill="#059669" text-anchor="middle">前製程量測</text>
+  <text x="125" y="224" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">入料品質 (Pre-Metrology)</text>
+
+  <!-- 中央：製程機台 -->
+  <rect x="290" y="165" width="220" height="80" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="400" y="198" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">晶圓製程機台</text>
+  <text x="400" y="224" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">蝕刻 / 薄膜沉積 / 研磨腔體</text>
+
+  <!-- 中央右側：後製程量測 -->
+  <rect x="585" y="165" width="180" height="80" rx="6" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+  <text x="675" y="198" font-family="sans-serif" font-size="16" font-weight="bold" fill="#059669" text-anchor="middle">後製程量測</text>
+  <text x="675" y="224" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">膜厚 / 關鍵尺寸 (CD)</text>
+
+  <!-- 下方：R2R 控制器 -->
+  <rect x="240" y="340" width="320" height="80" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="400" y="372" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">R2R 先進製程控制器</text>
+  <text x="400" y="398" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">EWMA 模型 / 動態配方補正</text>
+
+  <!-- 晶圓物流箭線 -->
+  <line x1="215" y1="205" x2="284" y2="205" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow-slate)"/>
+  <text x="252" y="195" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">晶圓</text>
+
+  <line x1="510" y1="205" x2="579" y2="205" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow-slate)"/>
+  <text x="547" y="195" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">晶圓</text>
+
+  <!-- FDC 上下控制箭線 -->
+  <line x1="345" y1="165" x2="345" y2="101" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="335" y="135" font-family="sans-serif" font-size="14" fill="#2563eb" text-anchor="end">感測器訊號</text>
+
+  <line x1="455" y1="95" x2="455" y2="159" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <text x="465" y="135" font-family="sans-serif" font-size="14" fill="#dc2626" text-anchor="start">異常攔截 (Interlock)</text>
+
+  <!-- 前饋控制線路 (Feedforward) -->
+  <path d="M 125,245 L 125,380 L 234,380" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="135" y="315" font-family="sans-serif" font-size="14" fill="#059669" text-anchor="start">前饋 (Feedforward)</text>
+  <text x="135" y="335" font-family="sans-serif" font-size="14" fill="#059669" text-anchor="start">入料誤差補償</text>
+
+  <!-- 後製程回饋控制線路 (Feedback) -->
+  <path d="M 675,245 L 675,380 L 566,380" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="665" y="315" font-family="sans-serif" font-size="14" fill="#059669" text-anchor="end">回饋 (Feedback)</text>
+  <text x="665" y="335" font-family="sans-serif" font-size="14" fill="#059669" text-anchor="end">機台漂移補償</text>
+
+  <!-- R2R 補正配方至機台 -->
+  <line x1="400" y1="340" x2="400" y2="251" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="408" y="298" font-family="sans-serif" font-size="14" fill="#2563eb" text-anchor="start">最佳化配方更新</text>
+</svg>
