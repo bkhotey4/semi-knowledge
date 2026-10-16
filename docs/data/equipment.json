@@ -1,158 +1,778 @@
 [
-  {"id": "scanner", "name": "曝光機（掃描式步進機）", "en": "Scanner / Stepper", "area": "微影（黃光）",
-   "function": "把光罩上的電路圖案，以縮小 4 倍的倍率投影到塗了光阻的晶圓上，一個曝光區 (field) 接一個曝光區掃描完成。",
-   "purpose": "定義每一層電路的圖形與尺寸，決定電晶體能做到多小，是整個晶圓廠最昂貴、最關鍵的站別。",
-   "subsystems": ["光源（KrF/ArF 準分子雷射、EUV 錫電漿光源）", "照明系統與投影物鏡（EUV 為反射鏡）", "光罩載台與晶圓載台（奈米級同步掃描）", "對準與水平量測感測器", "浸潤式水罩（ArFi）"],
-   "data": "每片晶圓產生對準、水平高度圖、劑量與焦距等資料；疊對修正值由 APC 系統依前層量測結果回授給機台。",
-   "vendors": ["ASML", "Nikon", "Canon"], "chapters": ["03-02", "03-03", "03-04", "03-05"]},
-  {"id": "track", "name": "塗佈顯影機", "en": "Coater / Developer (Track)", "area": "微影（黃光）",
-   "function": "在曝光前後處理晶圓：塗佈光阻與抗反射層、軟烤、曝後烤 (PEB)、顯影、清洗，通常與曝光機直接連線 (inline)。",
-   "purpose": "讓光阻厚度、均勻度與烘烤溫度精準一致，曝光後才能得到正確的線寬。",
-   "subsystems": ["旋轉塗佈杯 (spin coater)", "精密熱板與冷板", "顯影噴嘴", "與曝光機的晶圓介面", "化學品供應與排氣"],
-   "data": "記錄每片的塗佈轉速、熱板溫度曲線、顯影時間；溫度偏差會直接反映在線寬上，常是 FDC 監控重點。",
-   "vendors": ["Tokyo Electron (TEL)", "SCREEN"], "chapters": ["03-01"]},
-  {"id": "etch-conductor", "name": "導體蝕刻機", "en": "Conductor Etch", "area": "蝕刻",
-   "function": "用電漿蝕刻矽、多晶矽與金屬，把光阻圖形轉移到下層材料，例如閘極、鰭片 (fin)。",
-   "purpose": "做出垂直、尺寸精準的結構；蝕刻輪廓與線寬直接影響電晶體特性。",
-   "subsystems": ["電漿源（多為感應耦合 ICP）", "射頻電源與阻抗匹配器", "靜電吸盤 (ESC) 與背面氦氣溫控", "氣體流量控制器 (MFC)", "光學發射光譜 (OES) 終點偵測"],
-   "data": "射頻功率、反射功率、腔壓、氣體流量、OES 光譜每秒多筆；終點偵測必須即時運算，常由機台內或外掛運算模組處理。",
-   "vendors": ["Lam Research", "Tokyo Electron (TEL)", "Applied Materials"], "chapters": ["04-01", "04-02"]},
-  {"id": "etch-dielectric", "name": "介電質蝕刻機", "en": "Dielectric Etch", "area": "蝕刻",
-   "function": "蝕刻氧化矽、氮化矽、低介電材料，做出接觸孔、通孔與 3D NAND 的高深寬比孔洞。",
-   "purpose": "在絕緣層中開出導線與接觸的位置；深寬比越高越難控制。",
-   "subsystems": ["電容耦合電漿源 (CCP)，常用雙頻或多頻射頻", "高功率偏壓電源", "腔體溫控與聚焦環 (focus ring)", "終點偵測"],
-   "data": "與導體蝕刻類似；高深寬比蝕刻時間長，腔體狀態漂移需要靠 FDC 與定期清腔管理。",
-   "vendors": ["Lam Research", "Tokyo Electron (TEL)"], "chapters": ["04-02", "06-01"]},
-  {"id": "cvd", "name": "化學氣相沉積機", "en": "CVD (PECVD / LPCVD)", "area": "薄膜",
-   "function": "通入反應氣體，在晶圓表面以化學反應長出薄膜，例如氧化矽、氮化矽、碳摻雜氧化物。",
-   "purpose": "提供絕緣層、硬遮罩、保護層與填洞材料。",
-   "subsystems": ["反應腔與噴氣頭 (showerhead)", "加熱座 (heater pedestal)", "射頻電漿源（PECVD）", "前驅物輸送與真空系統"],
-   "data": "腔溫、壓力、射頻與氣體流量；膜厚與應力由後續量測站確認後回授調整。",
-   "vendors": ["Applied Materials", "Lam Research", "Tokyo Electron (TEL)", "ASM International"], "chapters": ["04-04"]},
-  {"id": "pvd", "name": "物理氣相沉積機（濺鍍）", "en": "PVD / Sputtering", "area": "薄膜",
-   "function": "用離子轟擊金屬靶材，讓金屬原子沉積到晶圓上，形成阻障層、晶種層與金屬層。",
-   "purpose": "為銅導線提供阻障層 (TaN/Ta) 與電鍍用的銅晶種層。",
-   "subsystems": ["磁控濺鍍源與靶材", "超高真空腔與群集式 (cluster) 傳送平台", "預清洗腔", "晶圓偏壓"],
-   "data": "靶材使用壽命 (kWh)、腔壓、功率；靶材壽命管理是排程與保養的重點。",
-   "vendors": ["Applied Materials", "Ulvac"], "chapters": ["04-05", "06-01"]},
-  {"id": "ald", "name": "原子層沉積機", "en": "ALD", "area": "薄膜",
-   "function": "交替通入兩種前驅物，每個循環只長一層原子厚度的薄膜。",
-   "purpose": "長出極薄、極均勻、能包覆 3D 結構的薄膜，例如高介電閘極氧化層、GAA 的間隔層。",
-   "subsystems": ["高速氣閥（毫秒級切換）", "反應腔與加熱座", "前驅物源瓶與加熱管路", "批次式或單晶圓式腔體"],
-   "data": "每個循環的閥門時序與壓力曲線；循環數決定厚度，閥門異常會在壓力波形上看出來。",
-   "vendors": ["ASM International", "Tokyo Electron (TEL)", "Applied Materials", "Lam Research"], "chapters": ["04-06", "05-04"]},
-  {"id": "epi", "name": "磊晶機", "en": "Epitaxy", "area": "薄膜",
-   "function": "在單晶基板上，沿著原本的晶格長出單晶薄膜，例如 SiGe 源汲極、GAA 的 Si/SiGe 疊層。",
-   "purpose": "提供高品質單晶層與應變工程，提升載子遷移率。",
-   "subsystems": ["高溫反應腔（燈管加熱）", "氫氣預清洗", "前驅物（矽烷、鍺烷等）供應", "溫度量測（高溫計）"],
-   "data": "溫度均勻性與氣體比例是關鍵；厚度與組成由 X 光或光學量測確認。",
-   "vendors": ["Applied Materials", "ASM International"], "chapters": ["02-03"]},
-  {"id": "furnace", "name": "爐管", "en": "Furnace (Batch Thermal)", "area": "擴散／熱製程",
-   "function": "一次放入上百片晶圓，在高溫下進行氧化、退火、LPCVD 沉積。",
-   "purpose": "長出高品質熱氧化層，或以批次方式低成本沉積薄膜。",
-   "subsystems": ["石英爐管與多區加熱器", "晶舟 (boat) 與升降機構", "氣體控制", "冷卻與排氣"],
-   "data": "多區溫度曲線、氣體流量；一批次處理數小時，異常會影響整批晶圓，所以批次前後的監控片很重要。",
-   "vendors": ["Tokyo Electron (TEL)", "Kokusai Electric", "ASM International"], "chapters": ["05-01"]},
-  {"id": "rtp", "name": "快速熱處理機", "en": "RTP / Anneal", "area": "擴散／熱製程",
-   "function": "在數秒到毫秒內把晶圓加熱到上千度，活化摻雜並修復佈植損傷。",
-   "purpose": "在活化摻雜的同時限制擴散，讓接面保持很淺。",
-   "subsystems": ["鹵素燈陣列或雷射加熱", "高溫計溫度量測", "快速冷卻", "反射腔設計"],
-   "data": "溫度曲線（升溫速率、峰值溫度）是唯一關鍵，常以高頻取樣監控。",
-   "vendors": ["Applied Materials", "Mattson", "SCREEN"], "chapters": ["05-03"]},
-  {"id": "implanter", "name": "離子佈植機", "en": "Ion Implanter", "area": "離子佈植",
-   "function": "把硼、磷、砷等離子加速後射入晶圓，精確控制摻雜的劑量與深度。",
-   "purpose": "形成源汲極、井區與調整臨界電壓。",
-   "subsystems": ["離子源", "質量分析磁鐵（篩選離子種類）", "加速器", "掃描與劑量量測（法拉第杯）", "晶圓傾角控制"],
-   "data": "射束電流、能量、劑量均勻度；劑量錯誤無法重工，所以機台有多重互鎖檢查。",
-   "vendors": ["Applied Materials", "Axcelis", "Sumitomo Heavy Industries Ion Technology"], "chapters": ["05-02"]},
-  {"id": "cmp", "name": "化學機械研磨機", "en": "CMP", "area": "平坦化",
-   "function": "用研磨液加上研磨墊，同時以化學與機械方式把晶圓表面磨平，並移除多餘的銅或氧化層。",
-   "purpose": "讓每一層都平坦，下一層微影才能對焦；也是銅鑲嵌製程定義導線的步驟。",
-   "subsystems": ["研磨平台與研磨墊", "研磨頭（多區壓力控制）", "研磨液供應", "墊修整器 (conditioner)", "研磨後清洗模組", "即時膜厚或終點量測"],
-   "data": "研磨頭壓力、平台扭力、即時終點訊號；研磨後的厚度量測會回授到下一片的研磨時間 (R2R)。",
-   "vendors": ["Applied Materials", "Ebara"], "chapters": ["04-07"]},
-  {"id": "wet", "name": "濕式清洗機", "en": "Wet Clean / Wet Bench", "area": "濕製程",
-   "function": "用化學液與純水清除顆粒、有機物、金屬污染，或進行濕式蝕刻與光阻去除。",
-   "purpose": "清潔度直接影響良率；每片晶圓在製程中會被清洗上百次。",
-   "subsystems": ["單晶圓旋轉清洗腔或批次槽", "化學品供應與溫度控制", "超純水與兆聲波 (megasonic)", "乾燥模組（防止圖形倒塌）"],
-   "data": "化學品濃度、溫度、流量與使用次數；化學品壽命管理與清洗後的顆粒量測是重點。",
-   "vendors": ["SCREEN", "Tokyo Electron (TEL)", "Lam Research", "ACM Research", "辛耘", "弘塑"], "chapters": ["04-03"]},
-  {"id": "plating", "name": "電鍍機", "en": "ECP (Electroplating)", "area": "薄膜",
-   "function": "以電化學方式把銅填入溝槽與通孔，或在封裝製程中鍍出凸塊與重分佈線。",
-   "purpose": "做出低電阻、無空洞的銅導線。",
-   "subsystems": ["電鍍槽與陽極", "添加劑濃度控制", "晶圓夾具與電流分布控制", "清洗與退火模組"],
-   "data": "電流波形、鍍液添加劑濃度；添加劑由化學分析系統定期量測補充。",
-   "vendors": ["Lam Research", "Applied Materials", "Ebara"], "chapters": ["06-01"]},
-  {"id": "cdsem", "name": "CD-SEM 線寬量測機", "en": "CD-SEM", "area": "量測",
-   "function": "用掃描式電子顯微鏡拍攝圖形影像，再由影像演算法量出線寬、間距與圖形輪廓。",
-   "purpose": "確認微影與蝕刻後的尺寸是否符合規格，是 APC 回授的主要資料來源。",
-   "subsystems": ["電子槍與電子光學柱", "晶圓載台與真空系統", "影像擷取", "量測配方 (recipe) 與圖形辨識", "影像運算伺服器"],
-   "data": "每個量測點產生 SEM 影像，由運算伺服器做邊緣偵測算出線寬；機台只上報量測結果數值，影像另存。",
-   "vendors": ["Hitachi High-Tech", "Applied Materials"], "chapters": ["07-01", "03-07"]},
-  {"id": "ocd", "name": "光學關鍵尺寸量測機 (OCD)", "en": "OCD / Scatterometry", "area": "量測",
-   "function": "量測光照到週期性結構後的反射光譜，再和模擬光譜比對，反推出線寬、高度、側壁角等立體尺寸。",
-   "purpose": "非破壞、速度快地量測 3D 結構，例如 FinFET、GAA 的各層尺寸。",
-   "subsystems": ["寬頻光源與光譜儀", "偏振光學", "建模與光譜比對軟體（RCWA）", "運算伺服器叢集"],
-   "data": "原始資料是光譜；最耗運算的是光譜擬合，所以必須搭配高效能運算伺服器或預先建好的光譜資料庫。",
-   "vendors": ["KLA", "Nova", "Onto Innovation"], "chapters": ["07-01"]},
-  {"id": "film", "name": "膜厚量測機", "en": "Film Thickness (Ellipsometry / Reflectometry)", "area": "量測",
-   "function": "以橢圓偏光或反射光譜量測薄膜厚度與折射率。",
-   "purpose": "確認沉積、氧化、CMP 後的膜厚，作為 R2R 回授依據。",
-   "subsystems": ["光源與偵測器", "多點量測載台", "光學模型擬合軟體"],
-   "data": "每片數個到數十個量測點，資料量小但量測頻率高，是 SPC 管制圖最常見的資料來源。",
-   "vendors": ["KLA", "Nova", "Onto Innovation"], "chapters": ["07-01"]},
-  {"id": "overlay", "name": "疊對量測機", "en": "Overlay Metrology", "area": "量測",
-   "function": "量測這一層圖形與前一層的對準偏移量。",
-   "purpose": "疊對誤差太大會讓接觸孔對不準導線；量測結果會回授給曝光機修正。",
-   "subsystems": ["影像式 (IBO) 或繞射式 (DBO) 光學系統", "疊對標記辨識", "修正模型計算"],
-   "data": "量出每個標記的 X/Y 偏移，再由軟體擬合出平移、旋轉、放大等修正參數送回微影 APC。",
-   "vendors": ["KLA", "ASML (YieldStar)"], "chapters": ["03-07"]},
-  {"id": "inspection", "name": "光學缺陷檢測機", "en": "Optical Wafer Inspection", "area": "檢測",
-   "function": "高速掃描整片晶圓，比對相鄰晶粒的影像差異，找出顆粒、刮傷、圖形缺陷的位置。",
-   "purpose": "及早發現缺陷與異常機台，是良率監控的第一道防線。",
-   "subsystems": ["寬頻電漿光源或雷射光源", "高速 TDI 感測器", "精密載台", "影像運算叢集（比對與缺陷判斷）"],
-   "data": "每片晶圓產生 TB 等級的原始影像，必須由機台專屬的影像運算叢集即時比對；上報的是缺陷座標清單 (KLARF) 而不是影像。",
-   "vendors": ["KLA", "Applied Materials", "Hitachi High-Tech"], "chapters": ["07-02"]},
-  {"id": "ebeam", "name": "電子束檢測與缺陷複查機", "en": "E-beam Inspection / Review SEM", "area": "檢測",
-   "function": "用電子束對光學檢測找到的缺陷拍高解析度影像，或偵測光學看不到的電性缺陷。",
-   "purpose": "確認缺陷種類與成因，回溯是哪一站、哪台機台造成的。",
-   "subsystems": ["電子光學柱（單束或多束）", "缺陷自動定位", "自動缺陷分類 (ADC) 伺服器"],
-   "data": "影像由 ADC 伺服器以機器學習分類，分類結果與影像送到良率管理系統。",
-   "vendors": ["KLA", "Applied Materials", "ASML (HMI)", "Hitachi High-Tech"], "chapters": ["07-02"]},
-  {"id": "mask-inspection", "name": "光罩檢測機", "en": "Mask / Reticle Inspection", "area": "檢測",
-   "function": "檢查光罩圖形與表面是否有缺陷或污染。",
-   "purpose": "光罩上的一個缺陷會被複製到每一個晶粒，必須在使用前與使用中定期檢查。",
-   "subsystems": ["深紫外光或 EUV 波長光學系統", "資料庫比對 (die-to-database)", "運算叢集"],
-   "data": "需要把光罩設計資料庫與影像即時比對，運算量極大。",
-   "vendors": ["KLA", "Lasertec"], "chapters": ["03-06"]},
-  {"id": "amhs", "name": "自動化物料搬運系統", "en": "AMHS (OHT / Stocker)", "area": "自動化",
-   "function": "用天花板軌道上的天車 (OHT) 把裝晶圓的 FOUP 在機台與倉儲間搬運。",
-   "purpose": "讓上萬批晶圓在數百台機台間自動流動，減少人為錯誤與等待時間。",
-   "subsystems": ["天車與軌道", "倉儲 (stocker)", "機台 Load Port 介面 (E84)", "物料控制系統 (MCS)"],
-   "data": "由 MCS 接收 MES 的搬運指令並調度車輛；搬運延遲直接影響生產週期時間。",
-   "vendors": ["Daifuku", "Murata Machinery"], "chapters": ["09-01"]},
-  {"id": "dicing", "name": "切割與研磨機", "en": "Dicing Saw / Grinder", "area": "後段封裝",
-   "function": "把晶圓背面研磨薄化，再切割成一顆顆晶粒。",
-   "purpose": "3D 堆疊與先進封裝需要把晶圓磨到數十微米；切割品質影響晶粒強度。",
-   "subsystems": ["鑽石刀片或雷射切割", "背面研磨主軸", "貼膜與撕膜", "厚度量測"],
-   "data": "主軸負載、刀片磨耗、厚度；薄化後的晶圓翹曲需要監控。",
-   "vendors": ["DISCO", "Tokyo Seimitsu (ACCRETECH)"], "chapters": ["08-01", "02-02"]},
-  {"id": "bonder", "name": "鍵合機", "en": "Bonder (TCB / Hybrid Bonding)", "area": "後段封裝",
-   "function": "把晶粒對準並接合到另一顆晶粒或晶圓上：熱壓鍵合用凸塊，混合鍵合直接讓銅對銅、介電層對介電層接合。",
-   "purpose": "實現 HBM 堆疊、CoWoS、SoIC 等先進封裝的高密度連接。",
-   "subsystems": ["高精度對準光學", "加熱加壓鍵合頭", "表面活化與清潔模組（混合鍵合）"],
-   "data": "對準誤差需達次微米甚至百奈米等級，每次鍵合都記錄對準與溫度壓力曲線。",
-   "vendors": ["BESI", "ASMPT", "Applied Materials", "EV Group", "Tokyo Electron (TEL)"], "chapters": ["08-03", "08-04"]},
-  {"id": "prober", "name": "晶圓針測機與探針卡", "en": "Wafer Prober & Probe Card", "area": "測試",
-   "function": "讓探針卡上的探針接觸晶圓上每顆晶粒的接點，配合測試機進行電性測試。",
-   "purpose": "在封裝前篩出不良晶粒，避免浪費封裝成本，並把測試結果回饋給製程改善。",
-   "subsystems": ["晶圓載台與溫控（高低溫測試）", "對位相機", "探針卡", "與測試機的介面"],
-   "data": "產生每顆晶粒的測試結果與分 bin 圖 (wafer map)，送到良率管理系統與製程資料比對。",
-   "vendors": ["Tokyo Electron (TEL)", "Tokyo Seimitsu (ACCRETECH)", "FormFactor", "旺矽 (MPI)"], "chapters": ["08-06"]},
-  {"id": "ate", "name": "自動測試設備", "en": "ATE (Automated Test Equipment)", "area": "測試",
-   "function": "對晶片送入測試向量並量測輸出，判斷功能、速度與功耗是否合格。",
-   "purpose": "確保出貨晶片的品質，並依速度或功耗分級。",
-   "subsystems": ["測試頭與通道板卡", "高速數位、類比與電源量測模組", "測試程式與工作站"],
-   "data": "測試資料量大（每顆晶片數千項參數），以 STDF 格式上傳給良率與測試資料分析系統。",
-   "vendors": ["Advantest", "Teradyne"], "chapters": ["08-06"]}
+ {
+  "id": "scanner",
+  "name": "曝光機（掃描式步進機）",
+  "en": "Scanner / Stepper",
+  "area": "微影（黃光）",
+  "function": "把光罩上的電路圖案，以縮小 4 倍的倍率投影到塗了光阻的晶圓上，一個曝光區 (field) 接一個曝光區掃描完成。",
+  "purpose": "定義每一層電路的圖形與尺寸，決定電晶體能做到多小，是整個晶圓廠最昂貴、最關鍵的站別。",
+  "subsystems": [
+   "光源（KrF/ArF 準分子雷射、EUV 錫電漿光源）",
+   "照明系統與投影物鏡（EUV 為反射鏡）",
+   "光罩載台與晶圓載台（奈米級同步掃描）",
+   "對準與水平量測感測器",
+   "浸潤式水罩（ArFi）"
+  ],
+  "data": "每片晶圓產生對準、水平高度圖、劑量與焦距等資料；疊對修正值由 APC 系統依前層量測結果回授給機台。",
+  "vendors": [
+   "ASML",
+   "Nikon",
+   "Canon"
+  ],
+  "chapters": [
+   "03-02",
+   "03-03",
+   "03-04",
+   "03-05"
+  ]
+ },
+ {
+  "id": "track",
+  "name": "塗佈顯影機",
+  "en": "Coater / Developer (Track)",
+  "area": "微影（黃光）",
+  "function": "在曝光前後處理晶圓：塗佈光阻與抗反射層、軟烤、曝後烤 (PEB)、顯影、清洗，通常與曝光機直接連線 (inline)。",
+  "purpose": "讓光阻厚度、均勻度與烘烤溫度精準一致，曝光後才能得到正確的線寬。",
+  "subsystems": [
+   "旋轉塗佈杯 (spin coater)",
+   "精密熱板與冷板",
+   "顯影噴嘴",
+   "與曝光機的晶圓介面",
+   "化學品供應與排氣"
+  ],
+  "data": "記錄每片的塗佈轉速、熱板溫度曲線、顯影時間；溫度偏差會直接反映在線寬上，常是 FDC 監控重點。",
+  "vendors": [
+   "Tokyo Electron (TEL)",
+   "SCREEN"
+  ],
+  "chapters": [
+   "03-01"
+  ]
+ },
+ {
+  "id": "etch-conductor",
+  "name": "導體蝕刻機",
+  "en": "Conductor Etch",
+  "area": "蝕刻",
+  "function": "用電漿蝕刻矽、多晶矽與金屬，把光阻圖形轉移到下層材料，例如閘極、鰭片 (fin)。",
+  "purpose": "做出垂直、尺寸精準的結構；蝕刻輪廓與線寬直接影響電晶體特性。",
+  "subsystems": [
+   "電漿源（多為感應耦合 ICP）",
+   "射頻電源與阻抗匹配器",
+   "靜電吸盤 (ESC) 與背面氦氣溫控",
+   "氣體流量控制器 (MFC)",
+   "光學發射光譜 (OES) 終點偵測"
+  ],
+  "data": "射頻功率、反射功率、腔壓、氣體流量、OES 光譜每秒多筆；終點偵測必須即時運算，常由機台內或外掛運算模組處理。",
+  "vendors": [
+   "Lam Research",
+   "Tokyo Electron (TEL)",
+   "Applied Materials"
+  ],
+  "chapters": [
+   "04-01",
+   "04-02"
+  ]
+ },
+ {
+  "id": "etch-dielectric",
+  "name": "介電質蝕刻機",
+  "en": "Dielectric Etch",
+  "area": "蝕刻",
+  "function": "蝕刻氧化矽、氮化矽、低介電材料，做出接觸孔、通孔與 3D NAND 的高深寬比孔洞。",
+  "purpose": "在絕緣層中開出導線與接觸的位置；深寬比越高越難控制。",
+  "subsystems": [
+   "電容耦合電漿源 (CCP)，常用雙頻或多頻射頻",
+   "高功率偏壓電源",
+   "腔體溫控與聚焦環 (focus ring)",
+   "終點偵測"
+  ],
+  "data": "與導體蝕刻類似；高深寬比蝕刻時間長，腔體狀態漂移需要靠 FDC 與定期清腔管理。",
+  "vendors": [
+   "Lam Research",
+   "Tokyo Electron (TEL)"
+  ],
+  "chapters": [
+   "04-02",
+   "06-01"
+  ]
+ },
+ {
+  "id": "cvd",
+  "name": "化學氣相沉積機",
+  "en": "CVD (PECVD / LPCVD)",
+  "area": "薄膜",
+  "function": "通入反應氣體，在晶圓表面以化學反應長出薄膜，例如氧化矽、氮化矽、碳摻雜氧化物。",
+  "purpose": "提供絕緣層、硬遮罩、保護層與填洞材料。",
+  "subsystems": [
+   "反應腔與噴氣頭 (showerhead)",
+   "加熱座 (heater pedestal)",
+   "射頻電漿源（PECVD）",
+   "前驅物輸送與真空系統"
+  ],
+  "data": "腔溫、壓力、射頻與氣體流量；膜厚與應力由後續量測站確認後回授調整。",
+  "vendors": [
+   "Applied Materials",
+   "Lam Research",
+   "Tokyo Electron (TEL)",
+   "ASM International"
+  ],
+  "chapters": [
+   "04-04"
+  ]
+ },
+ {
+  "id": "pvd",
+  "name": "物理氣相沉積機（濺鍍）",
+  "en": "PVD / Sputtering",
+  "area": "薄膜",
+  "function": "用離子轟擊金屬靶材，讓金屬原子沉積到晶圓上，形成阻障層、晶種層與金屬層。",
+  "purpose": "為銅導線提供阻障層 (TaN/Ta) 與電鍍用的銅晶種層。",
+  "subsystems": [
+   "磁控濺鍍源與靶材",
+   "超高真空腔與群集式 (cluster) 傳送平台",
+   "預清洗腔",
+   "晶圓偏壓"
+  ],
+  "data": "靶材使用壽命 (kWh)、腔壓、功率；靶材壽命管理是排程與保養的重點。",
+  "vendors": [
+   "Applied Materials",
+   "Ulvac"
+  ],
+  "chapters": [
+   "04-05",
+   "06-01"
+  ]
+ },
+ {
+  "id": "ald",
+  "name": "原子層沉積機",
+  "en": "ALD",
+  "area": "薄膜",
+  "function": "交替通入兩種前驅物，每個循環只長一層原子厚度的薄膜。",
+  "purpose": "長出極薄、極均勻、能包覆 3D 結構的薄膜，例如高介電閘極氧化層、GAA 的間隔層。",
+  "subsystems": [
+   "高速氣閥（毫秒級切換）",
+   "反應腔與加熱座",
+   "前驅物源瓶與加熱管路",
+   "批次式或單晶圓式腔體"
+  ],
+  "data": "每個循環的閥門時序與壓力曲線；循環數決定厚度，閥門異常會在壓力波形上看出來。",
+  "vendors": [
+   "ASM International",
+   "Tokyo Electron (TEL)",
+   "Applied Materials",
+   "Lam Research"
+  ],
+  "chapters": [
+   "04-06",
+   "05-04"
+  ]
+ },
+ {
+  "id": "epi",
+  "name": "磊晶機",
+  "en": "Epitaxy",
+  "area": "薄膜",
+  "function": "在單晶基板上，沿著原本的晶格長出單晶薄膜，例如 SiGe 源汲極、GAA 的 Si/SiGe 疊層。",
+  "purpose": "提供高品質單晶層與應變工程，提升載子遷移率。",
+  "subsystems": [
+   "高溫反應腔（燈管加熱）",
+   "氫氣預清洗",
+   "前驅物（矽烷、鍺烷等）供應",
+   "溫度量測（高溫計）"
+  ],
+  "data": "溫度均勻性與氣體比例是關鍵；厚度與組成由 X 光或光學量測確認。",
+  "vendors": [
+   "Applied Materials",
+   "ASM International"
+  ],
+  "chapters": [
+   "02-03"
+  ]
+ },
+ {
+  "id": "furnace",
+  "name": "爐管",
+  "en": "Furnace (Batch Thermal)",
+  "area": "擴散／熱製程",
+  "function": "一次放入上百片晶圓，在高溫下進行氧化、退火、LPCVD 沉積。",
+  "purpose": "長出高品質熱氧化層，或以批次方式低成本沉積薄膜。",
+  "subsystems": [
+   "石英爐管與多區加熱器",
+   "晶舟 (boat) 與升降機構",
+   "氣體控制",
+   "冷卻與排氣"
+  ],
+  "data": "多區溫度曲線、氣體流量；一批次處理數小時，異常會影響整批晶圓，所以批次前後的監控片很重要。",
+  "vendors": [
+   "Tokyo Electron (TEL)",
+   "Kokusai Electric",
+   "ASM International"
+  ],
+  "chapters": [
+   "05-01"
+  ]
+ },
+ {
+  "id": "rtp",
+  "name": "快速熱處理機",
+  "en": "RTP / Anneal",
+  "area": "擴散／熱製程",
+  "function": "在數秒到毫秒內把晶圓加熱到上千度，活化摻雜並修復佈植損傷。",
+  "purpose": "在活化摻雜的同時限制擴散，讓接面保持很淺。",
+  "subsystems": [
+   "鹵素燈陣列或雷射加熱",
+   "高溫計溫度量測",
+   "快速冷卻",
+   "反射腔設計"
+  ],
+  "data": "溫度曲線（升溫速率、峰值溫度）是唯一關鍵，常以高頻取樣監控。",
+  "vendors": [
+   "Applied Materials",
+   "Mattson",
+   "SCREEN"
+  ],
+  "chapters": [
+   "05-03"
+  ]
+ },
+ {
+  "id": "implanter",
+  "name": "離子佈植機",
+  "en": "Ion Implanter",
+  "area": "離子佈植",
+  "function": "把硼、磷、砷等離子加速後射入晶圓，精確控制摻雜的劑量與深度。",
+  "purpose": "形成源汲極、井區與調整臨界電壓。",
+  "subsystems": [
+   "離子源",
+   "質量分析磁鐵（篩選離子種類）",
+   "加速器",
+   "掃描與劑量量測（法拉第杯）",
+   "晶圓傾角控制"
+  ],
+  "data": "射束電流、能量、劑量均勻度；劑量錯誤無法重工，所以機台有多重互鎖檢查。",
+  "vendors": [
+   "Applied Materials",
+   "Axcelis",
+   "Sumitomo Heavy Industries Ion Technology"
+  ],
+  "chapters": [
+   "05-02"
+  ]
+ },
+ {
+  "id": "cmp",
+  "name": "化學機械研磨機",
+  "en": "CMP",
+  "area": "平坦化",
+  "function": "用研磨液加上研磨墊，同時以化學與機械方式把晶圓表面磨平，並移除多餘的銅或氧化層。",
+  "purpose": "讓每一層都平坦，下一層微影才能對焦；也是銅鑲嵌製程定義導線的步驟。",
+  "subsystems": [
+   "研磨平台與研磨墊",
+   "研磨頭（多區壓力控制）",
+   "研磨液供應",
+   "墊修整器 (conditioner)",
+   "研磨後清洗模組",
+   "即時膜厚或終點量測"
+  ],
+  "data": "研磨頭壓力、平台扭力、即時終點訊號；研磨後的厚度量測會回授到下一片的研磨時間 (R2R)。",
+  "vendors": [
+   "Applied Materials",
+   "Ebara"
+  ],
+  "chapters": [
+   "04-07"
+  ]
+ },
+ {
+  "id": "wet",
+  "name": "濕式清洗機",
+  "en": "Wet Clean / Wet Bench",
+  "area": "濕製程",
+  "function": "用化學液與純水清除顆粒、有機物、金屬污染，或進行濕式蝕刻與光阻去除。",
+  "purpose": "清潔度直接影響良率；每片晶圓在製程中會被清洗上百次。",
+  "subsystems": [
+   "單晶圓旋轉清洗腔或批次槽",
+   "化學品供應與溫度控制",
+   "超純水與兆聲波 (megasonic)",
+   "乾燥模組（防止圖形倒塌）"
+  ],
+  "data": "化學品濃度、溫度、流量與使用次數；化學品壽命管理與清洗後的顆粒量測是重點。",
+  "vendors": [
+   "SCREEN",
+   "Tokyo Electron (TEL)",
+   "Lam Research",
+   "ACM Research",
+   "辛耘",
+   "弘塑"
+  ],
+  "chapters": [
+   "04-03"
+  ]
+ },
+ {
+  "id": "plating",
+  "name": "電鍍機",
+  "en": "ECP (Electroplating)",
+  "area": "薄膜",
+  "function": "以電化學方式把銅填入溝槽與通孔，或在封裝製程中鍍出凸塊與重分佈線。",
+  "purpose": "做出低電阻、無空洞的銅導線。",
+  "subsystems": [
+   "電鍍槽與陽極",
+   "添加劑濃度控制",
+   "晶圓夾具與電流分布控制",
+   "清洗與退火模組"
+  ],
+  "data": "電流波形、鍍液添加劑濃度；添加劑由化學分析系統定期量測補充。",
+  "vendors": [
+   "Lam Research",
+   "Applied Materials",
+   "Ebara"
+  ],
+  "chapters": [
+   "06-01"
+  ]
+ },
+ {
+  "id": "cdsem",
+  "name": "CD-SEM 線寬量測機",
+  "en": "CD-SEM",
+  "area": "量測",
+  "function": "用掃描式電子顯微鏡拍攝圖形影像，再由影像演算法量出線寬、間距與圖形輪廓。",
+  "purpose": "確認微影與蝕刻後的尺寸是否符合規格，是 APC 回授的主要資料來源。",
+  "subsystems": [
+   "電子槍與電子光學柱",
+   "晶圓載台與真空系統",
+   "影像擷取",
+   "量測配方 (recipe) 與圖形辨識",
+   "影像運算伺服器"
+  ],
+  "data": "每個量測點產生 SEM 影像，由運算伺服器做邊緣偵測算出線寬；機台只上報量測結果數值，影像另存。",
+  "vendors": [
+   "Hitachi High-Tech",
+   "Applied Materials"
+  ],
+  "chapters": [
+   "07-01",
+   "03-07"
+  ]
+ },
+ {
+  "id": "ocd",
+  "name": "光學關鍵尺寸量測機 (OCD)",
+  "en": "OCD / Scatterometry",
+  "area": "量測",
+  "function": "量測光照到週期性結構後的反射光譜，再和模擬光譜比對，反推出線寬、高度、側壁角等立體尺寸。",
+  "purpose": "非破壞、速度快地量測 3D 結構，例如 FinFET、GAA 的各層尺寸。",
+  "subsystems": [
+   "寬頻光源與光譜儀",
+   "偏振光學",
+   "建模與光譜比對軟體（RCWA）",
+   "運算伺服器叢集"
+  ],
+  "data": "原始資料是光譜；最耗運算的是光譜擬合，所以必須搭配高效能運算伺服器或預先建好的光譜資料庫。",
+  "vendors": [
+   "KLA",
+   "Nova",
+   "Onto Innovation"
+  ],
+  "chapters": [
+   "07-01"
+  ]
+ },
+ {
+  "id": "film",
+  "name": "膜厚量測機",
+  "en": "Film Thickness (Ellipsometry / Reflectometry)",
+  "area": "量測",
+  "function": "以橢圓偏光或反射光譜量測薄膜厚度與折射率。",
+  "purpose": "確認沉積、氧化、CMP 後的膜厚，作為 R2R 回授依據。",
+  "subsystems": [
+   "光源與偵測器",
+   "多點量測載台",
+   "光學模型擬合軟體"
+  ],
+  "data": "每片數個到數十個量測點，資料量小但量測頻率高，是 SPC 管制圖最常見的資料來源。",
+  "vendors": [
+   "KLA",
+   "Nova",
+   "Onto Innovation"
+  ],
+  "chapters": [
+   "07-01"
+  ]
+ },
+ {
+  "id": "overlay",
+  "name": "疊對量測機",
+  "en": "Overlay Metrology",
+  "area": "量測",
+  "function": "量測這一層圖形與前一層的對準偏移量。",
+  "purpose": "疊對誤差太大會讓接觸孔對不準導線；量測結果會回授給曝光機修正。",
+  "subsystems": [
+   "影像式 (IBO) 或繞射式 (DBO) 光學系統",
+   "疊對標記辨識",
+   "修正模型計算"
+  ],
+  "data": "量出每個標記的 X/Y 偏移，再由軟體擬合出平移、旋轉、放大等修正參數送回微影 APC。",
+  "vendors": [
+   "KLA",
+   "ASML (YieldStar)"
+  ],
+  "chapters": [
+   "03-07"
+  ]
+ },
+ {
+  "id": "inspection",
+  "name": "光學缺陷檢測機",
+  "en": "Optical Wafer Inspection",
+  "area": "檢測",
+  "function": "高速掃描整片晶圓，比對相鄰晶粒的影像差異，找出顆粒、刮傷、圖形缺陷的位置。",
+  "purpose": "及早發現缺陷與異常機台，是良率監控的第一道防線。",
+  "subsystems": [
+   "寬頻電漿光源或雷射光源",
+   "高速 TDI 感測器",
+   "精密載台",
+   "影像運算叢集（比對與缺陷判斷）"
+  ],
+  "data": "每片晶圓產生 TB 等級的原始影像，必須由機台專屬的影像運算叢集即時比對；上報的是缺陷座標清單 (KLARF) 而不是影像。",
+  "vendors": [
+   "KLA",
+   "Applied Materials",
+   "Hitachi High-Tech"
+  ],
+  "chapters": [
+   "07-02"
+  ]
+ },
+ {
+  "id": "ebeam",
+  "name": "電子束檢測與缺陷複查機",
+  "en": "E-beam Inspection / Review SEM",
+  "area": "檢測",
+  "function": "用電子束對光學檢測找到的缺陷拍高解析度影像，或偵測光學看不到的電性缺陷。",
+  "purpose": "確認缺陷種類與成因，回溯是哪一站、哪台機台造成的。",
+  "subsystems": [
+   "電子光學柱（單束或多束）",
+   "缺陷自動定位",
+   "自動缺陷分類 (ADC) 伺服器"
+  ],
+  "data": "影像由 ADC 伺服器以機器學習分類，分類結果與影像送到良率管理系統。",
+  "vendors": [
+   "KLA",
+   "Applied Materials",
+   "ASML (HMI)",
+   "Hitachi High-Tech"
+  ],
+  "chapters": [
+   "07-02"
+  ]
+ },
+ {
+  "id": "mask-inspection",
+  "name": "光罩檢測機",
+  "en": "Mask / Reticle Inspection",
+  "area": "檢測",
+  "function": "檢查光罩圖形與表面是否有缺陷或污染。",
+  "purpose": "光罩上的一個缺陷會被複製到每一個晶粒，必須在使用前與使用中定期檢查。",
+  "subsystems": [
+   "深紫外光或 EUV 波長光學系統",
+   "資料庫比對 (die-to-database)",
+   "運算叢集"
+  ],
+  "data": "需要把光罩設計資料庫與影像即時比對，運算量極大。",
+  "vendors": [
+   "KLA",
+   "Lasertec"
+  ],
+  "chapters": [
+   "03-06"
+  ]
+ },
+ {
+  "id": "amhs",
+  "name": "自動化物料搬運系統",
+  "en": "AMHS (OHT / Stocker)",
+  "area": "自動化",
+  "function": "用天花板軌道上的天車 (OHT) 把裝晶圓的 FOUP 在機台與倉儲間搬運。",
+  "purpose": "讓上萬批晶圓在數百台機台間自動流動，減少人為錯誤與等待時間。",
+  "subsystems": [
+   "天車與軌道",
+   "倉儲 (stocker)",
+   "機台 Load Port 介面 (E84)",
+   "物料控制系統 (MCS)"
+  ],
+  "data": "由 MCS 接收 MES 的搬運指令並調度車輛；搬運延遲直接影響生產週期時間。",
+  "vendors": [
+   "Daifuku",
+   "Murata Machinery"
+  ],
+  "chapters": [
+   "09-01"
+  ]
+ },
+ {
+  "id": "dicing",
+  "name": "切割與研磨機",
+  "en": "Dicing Saw / Grinder",
+  "area": "後段封裝",
+  "function": "把晶圓背面研磨薄化，再切割成一顆顆晶粒。",
+  "purpose": "3D 堆疊與先進封裝需要把晶圓磨到數十微米；切割品質影響晶粒強度。",
+  "subsystems": [
+   "鑽石刀片或雷射切割",
+   "背面研磨主軸",
+   "貼膜與撕膜",
+   "厚度量測"
+  ],
+  "data": "主軸負載、刀片磨耗、厚度；薄化後的晶圓翹曲需要監控。",
+  "vendors": [
+   "DISCO",
+   "Tokyo Seimitsu (ACCRETECH)"
+  ],
+  "chapters": [
+   "08-01",
+   "02-02"
+  ]
+ },
+ {
+  "id": "bonder",
+  "name": "鍵合機",
+  "en": "Bonder (TCB / Hybrid Bonding)",
+  "area": "後段封裝",
+  "function": "把晶粒對準並接合到另一顆晶粒或晶圓上：熱壓鍵合用凸塊，混合鍵合直接讓銅對銅、介電層對介電層接合。",
+  "purpose": "實現 HBM 堆疊、CoWoS、SoIC 等先進封裝的高密度連接。",
+  "subsystems": [
+   "高精度對準光學",
+   "加熱加壓鍵合頭",
+   "表面活化與清潔模組（混合鍵合）"
+  ],
+  "data": "對準誤差需達次微米甚至百奈米等級，每次鍵合都記錄對準與溫度壓力曲線。",
+  "vendors": [
+   "BESI",
+   "ASMPT",
+   "Applied Materials",
+   "EV Group",
+   "Tokyo Electron (TEL)"
+  ],
+  "chapters": [
+   "08-03",
+   "08-04"
+  ]
+ },
+ {
+  "id": "prober",
+  "name": "晶圓針測機與探針卡",
+  "en": "Wafer Prober & Probe Card",
+  "area": "測試",
+  "function": "讓探針卡上的探針接觸晶圓上每顆晶粒的接點，配合測試機進行電性測試。",
+  "purpose": "在封裝前篩出不良晶粒，避免浪費封裝成本，並把測試結果回饋給製程改善。",
+  "subsystems": [
+   "晶圓載台與溫控（高低溫測試）",
+   "對位相機",
+   "探針卡",
+   "與測試機的介面"
+  ],
+  "data": "產生每顆晶粒的測試結果與分 bin 圖 (wafer map)，送到良率管理系統與製程資料比對。",
+  "vendors": [
+   "Tokyo Electron (TEL)",
+   "Tokyo Seimitsu (ACCRETECH)",
+   "FormFactor",
+   "旺矽 (MPI)"
+  ],
+  "chapters": [
+   "08-06"
+  ]
+ },
+ {
+  "id": "ate",
+  "name": "自動測試設備",
+  "en": "ATE (Automated Test Equipment)",
+  "area": "測試",
+  "function": "對晶片送入測試向量並量測輸出，判斷功能、速度與功耗是否合格。",
+  "purpose": "確保出貨晶片的品質，並依速度或功耗分級。",
+  "subsystems": [
+   "測試頭與通道板卡",
+   "高速數位、類比與電源量測模組",
+   "測試程式與工作站"
+  ],
+  "data": "測試資料量大（每顆晶片數千項參數），以 STDF 格式上傳給良率與測試資料分析系統。",
+  "vendors": [
+   "Advantest",
+   "Teradyne"
+  ],
+  "chapters": [
+   "08-06"
+  ]
+ },
+ {
+  "id": "upw",
+  "name": "超純水系統",
+  "en": "Ultra-Pure Water (UPW) System",
+  "area": "廠務",
+  "function": "把自來水或回收水經前處理、逆滲透、電去離子、紫外線氧化、拋光與超過濾，做成幾乎不含離子、有機物與微粒的超純水，供應清洗與 CMP 等製程。",
+  "purpose": "晶圓每一次濕式清洗都要用大量超純水，水中的離子、微粒或有機物都可能直接變成缺陷。",
+  "subsystems": [
+   "前處理（過濾、活性碳、軟化）",
+   "逆滲透 (RO)",
+   "電去離子 (EDI)",
+   "紫外線氧化 (TOC 去除)",
+   "拋光混床樹脂與脫氣膜",
+   "超過濾 (UF) 與循環供水迴路"
+  ],
+  "data": "線上監測電阻率（理論上限約 18.2 MΩ·cm）、TOC、溶氧、微粒、矽；數據進廠務監控系統 (FMCS)，異常時要能追溯影響到哪些機台。",
+  "vendors": [
+   "Kurita",
+   "Organo",
+   "Veolia",
+   "Nomura Micro Science"
+  ],
+  "chapters": [
+   "13-03"
+  ]
+ },
+ {
+  "id": "scrubber",
+  "name": "局部洗滌器",
+  "en": "Local Scrubber (Point-of-Use Abatement)",
+  "area": "廠務",
+  "function": "裝在機台排氣出口，用燃燒、電漿或加熱分解有毒與溫室氣體，再用水洗去除酸性產物與粉塵。",
+  "purpose": "蝕刻、沉積排出的氣體可能有毒、可燃或是高暖化潛勢的含氟氣體，必須在源頭先處理再送中央排氣。",
+  "subsystems": [
+   "燃燒室或電漿反應器",
+   "水洗塔與循環水",
+   "粉塵收集",
+   "火焰與溫度監控、連鎖保護"
+  ],
+  "data": "燃燒溫度、水流量、壓差與狀態訊號回傳 FMCS；洗滌器故障時機台必須停止通氣，屬於重要的連鎖訊號。",
+  "vendors": [
+   "Edwards",
+   "Ebara",
+   "CS Clean Solutions"
+  ],
+  "chapters": [
+   "13-09"
+  ]
+ },
+ {
+  "id": "drypump",
+  "name": "乾式真空泵",
+  "en": "Dry Vacuum Pump",
+  "area": "廠務",
+  "function": "放在 Sub-Fab，替機台反應腔抽真空；乾式設計不使用油，避免油氣回流污染腔體。",
+  "purpose": "蝕刻、沉積、離子佈植等機台都要在真空下運作，真空泵故障會讓機台直接停機。",
+  "subsystems": [
+   "多段螺桿或羅茨式轉子",
+   "馬達與冷卻水",
+   "氮氣吹淨",
+   "溫度與電流監控"
+  ],
+  "data": "電流、溫度、振動等趨勢可做預測保養，在故障前安排更換。",
+  "vendors": [
+   "Edwards",
+   "Ebara",
+   "Pfeiffer Vacuum",
+   "Kashiyama"
+  ],
+  "chapters": [
+   "13-09"
+  ]
+ },
+ {
+  "id": "ffu",
+  "name": "風機過濾機組",
+  "en": "Fan Filter Unit (FFU)",
+  "area": "廠務",
+  "function": "安裝在無塵室天花板，由風機把空氣推過高效率濾網 (HEPA/ULPA)，形成由上往下的潔淨氣流。",
+  "purpose": "持續把微粒帶離晶圓周圍，維持無塵室的潔淨度等級。",
+  "subsystems": [
+   "直流無刷風機",
+   "HEPA／ULPA 濾網",
+   "風量控制器",
+   "群控通訊介面"
+  ],
+  "data": "數千台 FFU 由群控系統監控轉速與故障；風量與壓差是無塵室潔淨度的關鍵指標。",
+  "vendors": [
+   "—"
+  ],
+  "chapters": [
+   "13-02",
+   "13-01"
+  ]
+ },
+ {
+  "id": "gascabinet",
+  "name": "氣瓶櫃與閥箱",
+  "en": "Gas Cabinet & Valve Manifold Box (VMB)",
+  "area": "廠務",
+  "function": "氣瓶櫃安全存放特殊氣體鋼瓶並減壓供氣；閥箱把一條主管路分配到多台機台。",
+  "purpose": "特殊氣體常有毒、可燃或自燃，必須在密閉、排氣、可偵測的環境中供應，並能在異常時自動關斷。",
+  "subsystems": [
+   "鋼瓶與自動切換",
+   "減壓閥與吹淨管路",
+   "排氣與氣體偵測器",
+   "緊急關斷閥與控制器"
+  ],
+  "data": "壓力、流量、鋼瓶剩餘量與氣體偵測訊號進 FMCS 與氣體偵測系統 (GMS)；偵測到洩漏會連鎖關斷供氣。",
+  "vendors": [
+   "Air Liquide",
+   "Linde",
+   "Entegris",
+   "—"
+  ],
+  "chapters": [
+   "13-06",
+   "13-12"
+  ]
+ },
+ {
+  "id": "chiller",
+  "name": "冰水主機與製程冷卻水",
+  "en": "Chiller & Process Cooling Water (PCW)",
+  "area": "廠務",
+  "function": "冰水主機產生冰水供空調與熱交換；製程冷卻水 (PCW) 以穩定的溫度與壓力帶走機台熱量。",
+  "purpose": "曝光機、蝕刻機、真空泵都需要穩定冷卻；冷卻中斷或溫度飄移會讓機台警報或停機。",
+  "subsystems": [
+   "離心式冰水主機",
+   "冷卻水塔",
+   "板式熱交換器",
+   "循環泵與過濾器"
+  ],
+  "data": "供回水溫度、壓力、流量與能耗；冷凍系統是晶圓廠主要的耗電來源之一，也是節能重點。",
+  "vendors": [
+   "Trane",
+   "Carrier",
+   "Johnson Controls (York)",
+   "Daikin"
+  ],
+  "chapters": [
+   "13-08",
+   "13-13"
+  ]
+ },
+ {
+  "id": "ups",
+  "name": "不斷電系統與電壓補償",
+  "en": "UPS & Dynamic Voltage Compensation",
+  "area": "廠務",
+  "function": "在市電中斷或電壓瞬間下降時，用電池、飛輪或電力電子設備立即補上電力，接著由緊急發電機接手。",
+  "purpose": "幾十毫秒的電壓驟降就可能讓機台停機、整批晶圓報廢，關鍵負載必須有不斷電保護。",
+  "subsystems": [
+   "整流與逆變器",
+   "電池或飛輪儲能",
+   "靜態轉換開關",
+   "緊急發電機"
+  ],
+  "data": "電壓、電流、電力品質事件紀錄；電壓驟降事件要能和機台當機時間比對，評估影響範圍。",
+  "vendors": [
+   "ABB",
+   "Schneider Electric",
+   "Eaton",
+   "Vertiv"
+  ],
+  "chapters": [
+   "13-05"
+  ]
+ }
 ]

@@ -71,6 +71,7 @@ nav:
     - 第 1 章　半導體材料與能帶理論: part-01/01-01.md
     - 第 2 章　載子、摻雜與傳輸: part-01/01-02.md
   - 互動學習:
+    - 圖卡庫: cards.md
     - 設備機台圖鑑: equipment.md
     - 機台到工程師的資料流: dataflow.md
     - 互動實驗室: labs.md

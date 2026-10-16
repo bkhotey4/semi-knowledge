@@ -643,6 +643,59 @@
     }).catch(function () { root.textContent = "設備圖鑑載入失敗。"; });
   }
 
+  // ── 圖卡庫 ───────────────────────────────────
+  function downloadPng(src, name) {
+    fetch(src).then(function (r) { return r.text(); }).then(function (svgText) {
+      var blobUrl = URL.createObjectURL(new Blob([svgText], { type: "image/svg+xml" }));
+      var img = new Image();
+      img.onload = function () {
+        var scale = 2, canvas = document.createElement("canvas");
+        canvas.width = (img.naturalWidth || 960) * scale; canvas.height = (img.naturalHeight || 600) * scale;
+        var g = canvas.getContext("2d");
+        g.fillStyle = "#ffffff"; g.fillRect(0, 0, canvas.width, canvas.height);
+        g.drawImage(img, 0, 0, canvas.width, canvas.height);
+        URL.revokeObjectURL(blobUrl);
+        canvas.toBlob(function (blob) {
+          var a = el("a", { href: URL.createObjectURL(blob), download: name + ".png" });
+          document.body.appendChild(a); a.click(); a.remove();
+        }, "image/png");
+      };
+      img.src = blobUrl;
+    });
+  }
+  function initCardLibrary(root) {
+    fetch(dataUrl("cards.json"), { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (cards) {
+      var kinds = ["全部", "核心概念", "章節重點"], current = "全部";
+      var chips = el("div", { class: "ix-row" }), grid = el("div", { class: "ix-card-lib" });
+      function render() {
+        chips.replaceChildren();
+        kinds.forEach(function (k) {
+          var count = cards.filter(function (c) { return k === "全部" || c.kind === k; }).length;
+          chips.appendChild(el("button", { class: "ix-btn" + (k === current ? " primary" : ""), text: k + "（" + count + "）", onclick: function () { current = k; render(); } }));
+        });
+        grid.replaceChildren();
+        cards.filter(function (c) { return current === "全部" || c.kind === current; }).forEach(function (c) {
+          var src = new URL(c.src, siteBase()).href;
+          var links = el("div", { class: "ix-muted" });
+          c.chapters.forEach(function (ch, i) {
+            if (i) links.appendChild(document.createTextNode("、"));
+            links.appendChild(ch.written ? el("a", { href: pageUrl(ch.url), text: "第 " + ch.n + " 章" }) : el("span", { text: "第 " + ch.n + " 章（撰寫中）" }));
+          });
+          grid.appendChild(el("div", { class: "ix-card-item" },
+            el("a", { href: src, target: "_blank", rel: "noopener" }, el("img", { src: src, alt: c.title, loading: "lazy" })),
+            el("div", { class: "ix-row" },
+              el("span", { class: "ix-tag", text: c.kind }), el("strong", { text: c.title })),
+            links,
+            el("div", { class: "ix-row" },
+              el("a", { class: "ix-btn", href: src, target: "_blank", rel: "noopener", text: "放大" }),
+              el("button", { class: "ix-btn", text: "下載 PNG", onclick: function () { downloadPng(src, c.title); } }))));
+        });
+      }
+      root.append(chips, grid);
+      render();
+    }).catch(function () { root.textContent = "圖卡載入失敗。"; });
+  }
+
   // ── 章節測驗 ───────────────────────────────────
   function initQuiz(root) {
     var id = root.getAttribute("data-quiz");
@@ -791,6 +844,7 @@
     document.querySelectorAll(".flashcards:not([data-ready])").forEach(function (n) { n.setAttribute("data-ready", "1"); initFlashcards(n); });
     document.querySelectorAll(".progress-widget:not([data-ready])").forEach(function (n) { n.setAttribute("data-ready", "1"); initProgress(n); });
     document.querySelectorAll(".equipment-atlas:not([data-ready])").forEach(function (n) { n.setAttribute("data-ready", "1"); initAtlas(n); });
+    document.querySelectorAll(".card-library:not([data-ready])").forEach(function (n) { n.setAttribute("data-ready", "1"); initCardLibrary(n); });
     document.querySelectorAll(".lab[data-lab]:not([data-ready])").forEach(function (n) {
       var fn = LABS[n.getAttribute("data-lab")];
       if (!fn) return;
