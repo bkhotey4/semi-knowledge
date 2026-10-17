@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 7 5 L 1 8 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 7 5 L 1 8 z" fill="#0f172a"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- ================= CUB 中央動力廠房 ================= -->
+  <rect x="25" y="55" width="165" height="360" rx="4" fill="#e2e8f0" stroke="#0f172a" stroke-width="2"/>
+  <text x="107" y="85" font-family="sans-serif" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">中央動力廠房 (CUB)</text>
+
+  <!-- CUB 內部設施單元 -->
+  <rect x="40" y="110" width="135" height="55" fill="#ffffff" stroke="#475569" stroke-width="1.5" rx="3"/>
+  <text x="107" y="142" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">變電站 / 柴油發電機</text>
+
+  <rect x="40" y="180" width="135" height="55" fill="#ffffff" stroke="#475569" stroke-width="1.5" rx="3"/>
+  <text x="107" y="212" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">冰水機組 / 冷卻水系統</text>
+
+  <rect x="40" y="250" width="135" height="55" fill="#ffffff" stroke="#475569" stroke-width="1.5" rx="3"/>
+  <text x="107" y="282" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">超純水系統 (UPW)</text>
+
+  <rect x="40" y="320" width="135" height="55" fill="#ffffff" stroke="#475569" stroke-width="1.5" rx="3"/>
+  <text x="107" y="352" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">大宗氣體與化學品庫</text>
+
+  <!-- ================= 公用管廊架 (Utility Bridge) ================= -->
+  <rect x="190" y="235" width="80" height="155" fill="#e2e8f0" stroke="#475569" stroke-dasharray="4,3" stroke-width="1.5"/>
+  <text x="230" y="222" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">公用管廊架</text>
+
+  <!-- 管廊管線示範線條 -->
+  <line x1="175" y1="260" x2="270" y2="260" stroke="#0284c7" stroke-width="3"/>
+  <line x1="175" y1="290" x2="270" y2="290" stroke="#475569" stroke-width="3"/>
+  <line x1="175" y1="320" x2="270" y2="320" stroke="#0284c7" stroke-width="3"/>
+  <line x1="175" y1="350" x2="270" y2="350" stroke="#475569" stroke-width="3"/>
+
+  <!-- ================= 晶圓廠主建物 (Fab) ================= -->
+  <!-- 主外框 -->
+  <rect x="270" y="55" width="505" height="360" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+
+  <!-- 頂層：天花板靜壓室 (Plenum) -->
+  <rect x="270" y="55" width="445" height="65" fill="#e2e8f0"/>
+  <text x="475" y="80" font-family="sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">頂層：天花板靜壓室 (Plenum)</text>
+
+  <!-- FFU 機組陣列 -->
+  <rect x="300" y="100" width="380" height="20" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+  <line x1="340" y1="100" x2="340" y2="120" stroke="#0284c7" stroke-width="1.5"/>
+  <line x1="380" y1="100" x2="380" y2="120" stroke="#0284c7" stroke-width="1.5"/>
+  <line x1="420" y1="100" x2="420" y2="120" stroke="#0284c7" stroke-width="1.5"/>
+  <line x1="460" y1="100" x2="460" y2="120" stroke="#0284c7" stroke-width="1.5"/>
+  <line x1="500" y1="100" x2="500" y2="120" stroke="#0284c7" stroke-width="1.5"/>
+  <line x1="540" y1="100" x2="540" y2="120" stroke="#0284c7" stroke-width="1.5"/>
+  <line x1="580" y1="100" x2="580" y2="120" stroke="#0284c7" stroke-width="1.5"/>
+  <line x1="620" y1="100" x2="620" y2="120" stroke="#0284c7" stroke-width="1.5"/>
+  <line x1="660" y1="100" x2="660" y2="120" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="690" y="95" font-family="sans-serif" font-size="14" fill="#0284c7" font-weight="bold">FFU 濾網組</text>
+
+  <!-- 中層：無塵室主樓層 (Cleanroom Floor) -->
+  <line x1="270" y1="120" x2="715" y2="120" stroke="#0f172a" stroke-width="1.5"/>
+  <text x="360" y="145" font-family="sans-serif" font-size="15" font-weight="bold" fill="#0f172a">中層：潔淨室主生產層</text>
+
+  <!-- OHT 天車軌道與晶圓傳送盒 -->
+  <line x1="300" y1="155" x2="680" y2="155" stroke="#475569" stroke-width="3"/>
+  <rect x="420" y="150" width="30" height="15" fill="#475569" rx="2"/>
+  <rect x="540" y="150" width="30" height="15" fill="#475569" rx="2"/>
+  <text x="490" y="145" font-family="sans-serif" font-size="14" fill="#475569">OHT 天車系統</text>
+
+  <!-- 製程機台微環境 (如微影 / 蝕刻機台) -->
+  <rect x="370" y="175" width="110" height="65" fill="#e2e8f0" stroke="#0f172a" stroke-width="2" rx="2"/>
+  <text x="425" y="205" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">乾式製程機台</text>
+  <text x="425" y="225" font-family="sans-serif" font-size="14" fill="#475569" text-anchor="middle">(微影 / 蝕刻)</text>
+
+  <rect x="520" y="175" width="110" height="65" fill="#e2e8f0" stroke="#0f172a" stroke-width="2" rx="2"/>
+  <text x="575" y="205" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">薄膜沉積機台</text>
+  <text x="575" y="225" font-family="sans-serif" font-size="14" fill="#475569" text-anchor="middle">(CVD / PVD)</text>
+
+  <!-- 高架地板與華夫格板 (Waffle Slab) -->
+  <rect x="270" y="240" width="445" height="16" fill="#475569"/>
+  <!-- 華夫格孔洞 -->
+  <rect x="290" y="243" width="20" height="10" fill="#ffffff"/>
+  <rect x="330" y="243" width="20" height="10" fill="#ffffff"/>
+  <rect x="370" y="243" width="20" height="10" fill="#ffffff"/>
+  <rect x="410" y="243" width="20" height="10" fill="#ffffff"/>
+  <rect x="450" y="243" width="20" height="10" fill="#ffffff"/>
+  <rect x="490" y="243" width="20" height="10" fill="#ffffff"/>
+  <rect x="530" y="243" width="20" height="10" fill="#ffffff"/>
+  <rect x="570" y="243" width="20" height="10" fill="#ffffff"/>
+  <rect x="610" y="243" width="20" height="10" fill="#ffffff"/>
+  <rect x="650" y="243" width="20" height="10" fill="#ffffff"/>
+  <text x="280" y="235" font-family="sans-serif" font-size="14" fill="#475569" font-weight="bold">穿孔高架地板與華夫格板</text>
+
+  <!-- 底層：Sub-Fab -->
+  <text x="360" y="275" font-family="sans-serif" font-size="15" font-weight="bold" fill="#0f172a">底層：下層設施層 (Sub-Fab)</text>
+
+  <!-- Sub-Fab 設備群 -->
+  <!-- 乾式真空泵 -->
+  <rect x="365" y="300" width="80" height="50" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" rx="2"/>
+  <text x="405" y="325" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">乾式真空泵</text>
+  <text x="405" y="342" font-family="sans-serif" font-size="14" fill="#475569" text-anchor="middle">(Vacuum)</text>
+
+  <!-- 本地尾氣處理 (POU Scrubber) -->
+  <rect x="475" y="295" width="80" height="60" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" rx="2"/>
+  <text x="515" y="325" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">尾氣洗滌器</text>
+  <text x="515" y="345" font-family="sans-serif" font-size="14" fill="#475569" text-anchor="middle">(Scrubber)</text>
+
+  <!-- 邊緣運算與電源櫃 -->
+  <rect x="585" y="300" width="85" height="55" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" rx="2"/>
+  <text x="627" y="325" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">邊緣運算機架</text>
+  <text x="627" y="345" font-family="sans-serif" font-size="14" fill="#475569" text-anchor="middle">/ RF 產生器</text>
+
+  <!-- 貫穿高架地板的管線 -->
+  <line x1="405" y1="240" x2="405" y2="300" stroke="#475569" stroke-width="2"/>
+  <line x1="445" y1="325" x2="475" y2="325" stroke="#475569" stroke-width="2"/>
+  <line x1="515" y1="355" x2="515" y2="395" stroke="#475569" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <text x="520" y="390" font-family="sans-serif" font-size="14" fill="#475569">排往廠務主管線</text>
+
+  <!-- 右側回風道 (Return Air Shaft) -->
+  <rect x="715" y="55" width="60" height="360" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5"/>
+  <text x="745" y="230" font-family="sans-serif" font-size="15" font-weight="bold" fill="#0284c7" text-anchor="middle" writing-mode="vertical-rl">循環回風道</text>
+
+  <!-- 氣流方向指引 (垂直層流向下，側邊向上回風) -->
+  <line x1="335" y1="125" x2="335" y2="230" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+  <line x1="500" y1="125" x2="500" y2="165" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+  <line x1="655" y1="125" x2="655" y2="230" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- Sub-Fab 內流動箭頭 -->
+  <line x1="650" y1="370" x2="705" y2="370" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+  <!-- 回風道向上箭頭 -->
+  <line x1="745" y1="340" x2="745" y2="255" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+  <line x1="745" y1="180" x2="745" y2="95" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+  <!-- 靜壓室回流箭頭 -->
+  <line x1="720" y1="75" x2="640" y2="75" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- 地基隔震層標註 -->
+  <rect x="270" y="405" width="505" height="10" fill="#475569"/>
+  <text x="475" y="435" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">防震基樁與獨立機座 (Vibration Isolation)</text>
+</svg>

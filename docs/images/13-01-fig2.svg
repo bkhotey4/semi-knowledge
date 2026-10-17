@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- 藍色氣流箭頭標記 -->
+    <marker id="flow-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0284c7"/>
+    </marker>
+    <!-- 橘色動作路徑箭頭標記 -->
+    <marker id="action-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ea580c"/>
+    </marker>
+    <!-- 深色標籤箭頭標記 -->
+    <marker id="dark-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- ================= 頂部：天車系統 (OHT) 與天花板導軌 ================= -->
+  <!-- 天花板懸吊鋼樑與導軌 -->
+  <rect x="50" y="25" width="700" height="12" fill="#f1f5f9" stroke="#1e293b" stroke-width="2"/>
+  <line x1="50" y1="31" x2="750" y2="31" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="400" y="20" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">天花板導軌系統（非接觸供電 IPT 迴路）</text>
+
+  <!-- OHT 天車車體 -->
+  <rect x="100" y="45" width="170" height="45" rx="4" fill="#f1f5f9" stroke="#1e293b" stroke-width="2"/>
+  <circle cx="125" cy="45" r="5" fill="#1e293b"/>
+  <circle cx="245" cy="45" r="5" fill="#1e293b"/>
+  <text x="185" y="73" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">高架天車 (OHT)</text>
+
+  <!-- 吊升機構與吊帶 -->
+  <line x1="135" y1="90" x2="135" y2="155" stroke="#ea580c" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="235" y1="90" x2="235" y2="155" stroke="#ea580c" stroke-width="2" stroke-dasharray="4 3"/>
+  <path d="M 125 155 L 245 155 L 240 165 L 130 165 Z" fill="#1e293b"/>
+  <!-- 吊降動態指示箭頭 -->
+  <line x1="255" y1="100" x2="255" y2="145" stroke="#ea580c" stroke-width="2" marker-end="url(#action-arrow)"/>
+  <text x="265" y="128" font-family="sans-serif" font-size="14" fill="#ea580c">垂直吊降</text>
+
+  <!-- ================= 下方主要腔體：EFEM 與製程機台 ================= -->
+  <!-- EFEM 腔體外框 -->
+  <rect x="290" y="145" width="310" height="260" fill="#f1f5f9" stroke="#1e293b" stroke-width="2"/>
+  <text x="445" y="427" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">設備前端模組 (EFEM, ISO Class 1–2)</text>
+
+  <!-- 製程機台/真空傳輸室介面 (右側) -->
+  <rect x="600" y="180" width="150" height="225" fill="#ffffff" stroke="#1e293b" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="675" y="295" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">真空進出室</text>
+  <text x="675" y="318" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">(Load Lock)</text>
+  <line x1="600" y1="230" x2="600" y2="350" stroke="#1e293b" stroke-width="4"/>
+
+  <!-- EFEM 頂部 FFU (風機濾網機組) -->
+  <rect x="300" y="155" width="290" height="32" fill="#0d9488" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="445" y="177" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">風機濾網機組 (FFU / ULPA)</text>
+
+  <!-- EFEM 內部垂直層流氣流箭頭 (典型值 0.45 m/s) -->
+  <g stroke="#0284c7" stroke-width="2" marker-end="url(#flow-arrow)">
+    <line x1="330" y1="195" x2="330" y2="280"/>
+    <line x1="380" y1="195" x2="380" y2="280"/>
+    <line x1="430" y1="195" x2="430" y2="280"/>
+    <line x1="480" y1="195" x2="480" y2="280"/>
+    <line x1="530" y1="195" x2="530" y2="280"/>
+    <line x1="570" y1="195" x2="570" y2="280"/>
+  </g>
+  <text x="505" y="240" font-family="sans-serif" font-size="14" fill="#0284c7" font-weight="bold">單向垂直層流</text>
+
+  <!-- EFEM 內部傳輸機械手臂示意 -->
+  <circle cx="445" cy="335" r="16" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+  <path d="M 445 335 L 390 325 L 330 330" fill="none" stroke="#1e293b" stroke-width="3"/>
+  <rect x="300" y="327" width="30" height="6" rx="2" fill="#0d9488"/>
+  <text x="445" y="375" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">大氣機械手臂</text>
+
+  <!-- EFEM 底部多孔回風格柵 -->
+  <line x1="300" y1="395" x2="590" y2="395" stroke="#1e293b" stroke-width="3" stroke-dasharray="5 3"/>
+  <text x="445" y="390" font-family="sans-serif" font-size="12" fill="#1e293b" text-anchor="middle">多孔排風格柵板</text>
+
+  <!-- ================= 左側：裝載埠 (Load Port) 與 FOUP ================= -->
+  <!-- 裝載埠結構臺座 -->
+  <rect x="90" y="285" width="190" height="120" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+  <text x="180" y="395" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">裝載埠 (Load Port)</text>
+
+  <!-- 動態定位銷 Kinematic Pins -->
+  <polygon points="120,285 125,278 130,285" fill="#1e293b"/>
+  <polygon points="210,285 215,278 220,285" fill="#1e293b"/>
+  <text x="170" y="315" font-family="sans-serif" font-size="14" fill="#1e293b">動態定位銷</text>
+
+  <!-- FOUP 晶圓盒本體 (放置於對接座上) -->
+  <rect x="110" y="170" width="140" height="108" rx="6" fill="#ffffff" stroke="#0d9488" stroke-width="2.5"/>
+  <text x="180" y="210" font-family="sans-serif" font-size="15" font-weight="bold" fill="#0d9488" text-anchor="middle">晶圓傳送盒</text>
+  <text x="180" y="230" font-family="sans-serif" font-size="14" fill="#0d9488" text-anchor="middle">(FOUP)</text>
+  <!-- FOUP 內部晶圓片示意 -->
+  <line x1="125" y1="245" x2="215" y2="245" stroke="#0d9488" stroke-width="2"/>
+  <line x1="125" y1="252" x2="215" y2="252" stroke="#0d9488" stroke-width="2"/>
+  <line x1="125" y1="259" x2="215" y2="259" stroke="#0d9488" stroke-width="2"/>
+
+  <!-- ================= 對接開門路徑與微環境正壓防護 ================= -->
+  <!-- FIMS 開門對接介面與氣密墊圈 -->
+  <rect x="250" y="175" width="40" height="103" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+  <!-- 對接開門機構抽離動作路徑 -->
+  <path d="M 265 215 L 285 215 L 285 270" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-dasharray="4 3" marker-end="url(#action-arrow)"/>
+  <text x="215" y="162" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ea580c">門片抽離與收納路徑</text>
+
+  <!-- 正壓防護與氣流溢出屏障 (阻絕外圍微粒) -->
+  <g stroke="#0284c7" stroke-width="2" marker-end="url(#flow-arrow)">
+    <line x1="288" y1="185" x2="245" y2="185"/>
+    <line x1="288" y1="272" x2="245" y2="272"/>
+  </g>
+  <rect x="295" y="295" width="135" height="26" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="362" y="313" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0284c7" text-anchor="middle">正壓外吹 (ΔP ≥ 1 Pa)</text>
+
+  <!-- 外部無塵室標籤 -->
+  <text x="70" y="130" font-family="sans-serif" font-size="14" fill="#1e293b">無塵室大環境</text>
+  <text x="70" y="150" font-family="sans-serif" font-size="14" fill="#1e293b">(ISO Class 5–6)</text>
+</svg>
