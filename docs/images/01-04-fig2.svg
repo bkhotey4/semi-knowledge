@@ -1,0 +1,56 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <!-- 定義箭頭 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000000"/>
+    </marker>
+  </defs>
+
+  <!-- 空乏區 (Depletion Region) -->
+  <path d="M 100 150 L 100 240 Q 150 260 220 240 T 400 240 Q 550 240 600 320 Q 700 340 700 150 Z" fill="#d1e8ff" stroke="#000000" stroke-width="1" stroke-dasharray="4"/>
+
+  <!-- P型基板 (Substrate) -->
+  <rect x="100" y="150" width="600" height="250" fill="none" stroke="#000000" stroke-width="2"/>
+  <text x="350" y="380" font-family="sans-serif" font-size="18" fill="#000000">P型基板 (P-substrate)</text>
+
+  <!-- n+ 源極與汲極 -->
+  <rect x="100" y="150" width="120" height="70" fill="#ffcc99" stroke="#000000" stroke-width="1.5"/>
+  <rect x="580" y="150" width="120" height="70" fill="#ffcc99" stroke="#000000" stroke-width="1.5"/>
+  <text x="135" y="195" font-family="sans-serif" font-size="16" fill="#000000">n+</text>
+  <text x="615" y="195" font-family="sans-serif" font-size="16" fill="#000000">n+</text>
+
+  <!-- 閘極氧化層 (Oxide) -->
+  <rect x="220" y="142" width="360" height="8" fill="#f0f0f0" stroke="#000000" stroke-width="1"/>
+
+  <!-- 閘極 (Gate) -->
+  <rect x="220" y="100" width="360" height="42" fill="#ffcc99" stroke="#000000" stroke-width="1.5"/>
+  <text x="365" y="128" font-family="sans-serif" font-size="18" fill="#000000">閘極 (Gate)</text>
+
+  <!-- 反轉通道 (Inversion Channel) - 夾斷形狀 -->
+  <polygon points="220,150 500,150 220,165" fill="#000000"/>
+  <text x="250" y="190" font-family="sans-serif" font-size="16" fill="#000000">反轉通道</text>
+
+  <!-- 夾斷點標示 -->
+  <circle cx="500" cy="150" r="4" fill="#ff0000"/>
+  <line x1="500" y1="150" x2="500" y2="190" stroke="#000000" stroke-width="1" stroke-dasharray="2"/>
+  <text x="475" y="210" font-family="sans-serif" font-size="16" fill="#000000">夾斷點</text>
+
+  <!-- 端點標記 -->
+  <text x="130" y="80" font-family="sans-serif" font-size="18" font-weight="bold" fill="#000000">源極 (S)</text>
+  <text x="610" y="80" font-family="sans-serif" font-size="18" font-weight="bold" fill="#000000">汲極 (D)</text>
+  
+  <!-- 電子流向箭頭 -->
+  <line x1="250" y1="158" x2="480" y2="151" stroke="#000000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="520" y1="151" x2="570" y2="151" stroke="#000000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="320" y="230" font-family="sans-serif" font-size="14" fill="#000000">電子漂移方向</text>
+
+  <!-- 物理條件標註 -->
+  <text x="320" y="40" font-family="sans-serif" font-size="18" fill="#000000">飽和區條件：V_DS &gt; V_GS - V_th</text>
+  <text x="400" y="280" font-family="sans-serif" font-size="16" fill="#000000">空乏區擴張</text>
+
+  <!-- 圖名 -->
+  <text x="300" y="430" font-family="sans-serif" font-size="20" font-weight="bold" fill="#000000">MOSFET 夾斷現象示意圖</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <!-- 定義箭頭 -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orientation="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#000000"/>
+    </marker>
+  </defs>
+
+  <!-- 背景區域標示 -->
+  <rect x="50" y="80" width="120" height="320" fill="#f0f0f0" stroke="#000000" stroke-width="1"/>
+  <rect x="170" y="80" width="100" height="320" fill="#e1f5fe" stroke="#000000" stroke-width="1"/>
+  <rect x="270" y="80" width="480" height="320" fill="none" stroke="#000000" stroke-width="1"/>
+
+  <!-- 區域文字標籤 -->
+  <text x="110" y="60" font-family="sans-serif" font-size="16" text-anchor="middle" font-weight="bold">金屬 (Metal)</text>
+  <text x="220" y="60" font-family="sans-serif" font-size="16" text-anchor="middle" font-weight="bold">氧化層 (Oxide)</text>
+  <text x="510" y="60" font-family="sans-serif" font-size="16" text-anchor="middle" font-weight="bold">P型半導體 (P-type Si)</text>
+
+  <!-- 費米能階 (Fermi Levels) -->
+  <!-- 金屬費米能階 EFm (施加正電壓 VG > 0，能階下降) -->
+  <line x1="60" y1="340" x2="160" y2="340" stroke="#ff0000" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="65" y="335" font-family="sans-serif" font-size="14" fill="#ff0000">EFm</text>
+
+  <!-- 半導體費米能階 EFs (保持水平) -->
+  <line x1="270" y1="260" x2="740" y2="260" stroke="#ff0000" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="700" y="255" font-family="sans-serif" font-size="14" fill="#ff0000">EFs</text>
+
+  <!-- 半導體能帶 (Energy Bands) -->
+  <!-- 導帶 Ec -->
+  <path d="M 270 200 Q 350 200, 500 120 L 740 120" fill="none" stroke="#0000ff" stroke-width="2.5" transform="translate(0,0)"/>
+  <!-- 修正彎曲方向：VG > 0, 向下彎曲 -->
+  <path d="M 270 240 Q 350 240, 500 120" fill="none" stroke="none"/> <!-- 輔助計算 -->
+  
+  <!-- 重新繪製向下彎曲的能帶 -->
+  <!-- 導帶 Ec: 界面處能量較低 -->
+  <path d="M 270 220 Q 380 220, 550 120 L 740 120" fill="none" stroke="#0000ff" stroke-width="2"/>
+  <text x="700" y="115" font-family="sans-serif" font-size="14" fill="#0000ff">Ec</text>
+
+  <!-- 本質費米能階 Ei -->
+  <path d="M 270 320 Q 380 320, 550 220 L 740 220" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="700" y="215" font-family="sans-serif" font-size="14">Ei</text>
+
+  <!-- 價帶 Ev -->
+  <path d="M 270 420 Q 380 420, 550 320 L 740 320" fill="none" stroke="#0000ff" stroke-width="2"/>
+  <text x="700" y="315" font-family="sans-serif" font-size="14" fill="#0000ff">Ev</text>
+
+  <!-- 氧化層能帶傾斜 (線性電位降) -->
+  <line x1="170" y1="120" x2="270" y2="220" stroke="#0000ff" stroke-width="2"/>
+  <line x1="170" y1="320" x2="270" y2="420" stroke="#0000ff" stroke-width="2"/>
+
+  <!-- 反轉層電子 (Inversion Layer Electrons) -->
+  <circle cx="280" cy="205" r="4" fill="#000000"/>
+  <circle cx="280" cy="190" r="4" fill="#000000"/>
+  <circle cx="280" cy="175" r="4" fill="#000000"/>
+  <text x="290" y="180" font-family="sans-serif" font-size="14">反轉層電子 (Electrons)</text>
+
+  <!-- 耗盡區空間電荷 (Depletion Region Space Charge) -->
+  <g fill="none" stroke="#000000" stroke-width="1">
+    <rect x="320" y="340" width="12" height="12"/>
+    <line x1="322" y1="346" x2="330" y2="346"/>
+    <rect x="360" y="340" width="12" height="12"/>
+    <line x1="362" y1="346" x2="370" y2="346"/>
+    <rect x="400" y="340" width="12" height="12"/>
+    <line x1="402" y1="346" x2="410" y2="346"/>
+    <rect x="440" y="340" width="12" height="12"/>
+    <line x1="442" y1="346" x2="450" y2="346"/>
+  </g>
+  <text x="320" y="375" font-family="sans-serif" font-size="14">耗盡區受體離子 (NA-)</text>
+
+  <!-- 標註電位與寬度 -->
+  <line x1="270" y1="435" x2="550" y2="435" stroke="#000000" stroke-width="1" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="410" y="430" font-family="sans-serif" font-size="14" text-anchor="middle">最大耗盡寬度 Wd,max</text>
+
+  <!-- 閘極電壓標示 -->
+  <line x1="110" y1="340" x2="110" y2="260" stroke="#000000" stroke-width="1" marker-start="url(#arrow)"/>
+  <text x="115" y="300" font-family="sans-serif" font-size="14">qVG</text>
+
+  <!-- 表面電位標示 -->
+  <line x1="275" y1="220" x2="275" y2="320" stroke="#000000" stroke-width="1" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="285" y="300" font-family="sans-serif" font-size="14">qψs ≈ 2qφB</text>
+
+</svg>
