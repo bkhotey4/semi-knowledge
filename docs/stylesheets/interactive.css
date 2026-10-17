@@ -118,3 +118,8 @@
 .ix-card-lib { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 12px; }
 .ix-card-item { border: 1px solid var(--md-default-fg-color--lightest); border-radius: 10px; padding: 10px; }
 .ix-tag { font-size: .75em; padding: 1px 8px; border-radius: 10px; background: var(--md-accent-fg-color--transparent); color: var(--md-accent-fg-color); border: 1px solid var(--md-accent-fg-color); }
+
+/* 設備機型圖鑑 */
+.ix-model-body { display: grid; grid-template-columns: minmax(260px, 1.1fr) 1fr; gap: 16px; margin-top: 10px; align-items: start; }
+@media (max-width: 760px) { .ix-model-body { grid-template-columns: 1fr; } }
+.ix-model-img img { width: 100%; height: auto; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 10px; background: #fff; }

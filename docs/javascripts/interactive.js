@@ -643,6 +643,65 @@
     }).catch(function () { root.textContent = "設備圖鑑載入失敗。"; });
   }
 
+  // ── 設備機型圖鑑 ───────────────────────────────
+  function initModels(root) {
+    root.classList.add("ix-card");
+    Promise.all([
+      fetch(dataUrl("models.json"), { cache: "no-cache" }).then(function (r) { return r.json(); }),
+      fetch(dataUrl("chapters.json"), { cache: "no-cache" }).then(function (r) { return r.json(); }).catch(function () { return []; })
+    ]).then(function (res) {
+      var models = res[0], chapters = {};
+      res[1].forEach(function (c) { chapters[c.id] = c; });
+      var vendors = ["全部"].concat(models.map(function (m) { return m.vendor; }).filter(function (v, i, a) { return a.indexOf(v) === i; }));
+      var areas = ["全部製程"].concat(models.map(function (m) { return m.area; }).filter(function (v, i, a) { return a.indexOf(v) === i; }));
+      var vendor = "全部", area = "全部製程", query = "";
+      var chips = el("div", { class: "ix-row" }), areaSel = el("select", { class: "ix-select" }), list = el("div");
+      areas.forEach(function (a) { areaSel.appendChild(el("option", { value: a, text: a })); });
+      areaSel.addEventListener("change", function () { area = areaSel.value; render(); });
+      var search = el("input", { type: "search", placeholder: "搜尋機型、廠商或技術，例如 EUV、Kiyo、CMP", class: "ix-search" });
+      search.addEventListener("input", function () { query = search.value.trim().toLowerCase(); render(); });
+      function render() {
+        chips.replaceChildren();
+        vendors.forEach(function (v) {
+          chips.appendChild(el("button", { class: "ix-btn" + (v === vendor ? " primary" : ""), text: v, onclick: function () { vendor = v; render(); } }));
+        });
+        list.replaceChildren();
+        var shown = models.filter(function (m) {
+          var hay = (m.vendor + m.family + m.summary + m.lineup + m.tech.join(" ")).toLowerCase();
+          return (vendor === "全部" || m.vendor === vendor) && (area === "全部製程" || m.area === area) && (!query || hay.indexOf(query) >= 0);
+        });
+        list.appendChild(el("p", { class: "ix-muted", text: "共 " + shown.length + " 個機型系列" }));
+        shown.forEach(function (m) {
+          var img = new URL("tools/" + m.tool + ".svg", siteBase()).href;
+          var tech = el("ul", {});
+          m.tech.forEach(function (t) { tech.appendChild(el("li", { text: t })); });
+          var links = el("div", { class: "ix-muted" });
+          m.chapters.forEach(function (id) {
+            var c = chapters[id];
+            if (!c) return;
+            if (links.childNodes.length) links.appendChild(document.createTextNode("、"));
+            links.appendChild(c.written ? el("a", { href: pageUrl(c.url), text: "第 " + c.n + " 章 " + c.title }) : el("span", { text: "第 " + c.n + " 章 " + c.title + "（撰寫中）" }));
+          });
+          list.appendChild(el("details", { class: "ix-tool ix-model" },
+            el("summary", {},
+              el("span", { class: "ix-tag", text: m.vendor }), document.createTextNode(" "),
+              el("strong", { text: m.family }), el("span", { class: "ix-muted", text: "　" + m.area }),
+              el("div", { text: m.summary })),
+            el("div", { class: "ix-model-body" },
+              el("a", { href: img, target: "_blank", rel: "noopener", class: "ix-model-img" }, el("img", { src: img, alt: m.family + " 示意圖", loading: "lazy" })),
+              el("div", {},
+                el("p", {}, el("strong", { text: "代表型號：" }), document.createTextNode(m.lineup)),
+                el("p", {}, el("strong", { text: "核心技術：" })), tech,
+                el("p", {}, el("strong", { text: "主電腦與附屬電腦：" }), document.createTextNode(m.computing)),
+                links.childNodes.length ? el("div", {}, el("strong", { text: "相關章節：" }), links) : null))));
+        });
+        if (!shown.length) list.appendChild(el("p", { class: "ix-muted", text: "沒有符合的機型。" }));
+      }
+      root.append(search, chips, el("div", { class: "ix-row" }, el("span", { class: "ix-muted", text: "製程：" }), areaSel), list);
+      render();
+    }).catch(function () { root.textContent = "機型資料載入失敗。"; });
+  }
+
   // ── 圖卡庫 ───────────────────────────────────
   function downloadPng(src, name) {
     fetch(src).then(function (r) { return r.text(); }).then(function (svgText) {
@@ -845,6 +904,7 @@
     document.querySelectorAll(".progress-widget:not([data-ready])").forEach(function (n) { n.setAttribute("data-ready", "1"); initProgress(n); });
     document.querySelectorAll(".equipment-atlas:not([data-ready])").forEach(function (n) { n.setAttribute("data-ready", "1"); initAtlas(n); });
     document.querySelectorAll(".card-library:not([data-ready])").forEach(function (n) { n.setAttribute("data-ready", "1"); initCardLibrary(n); });
+    document.querySelectorAll(".model-atlas:not([data-ready])").forEach(function (n) { n.setAttribute("data-ready", "1"); initModels(n); });
     document.querySelectorAll(".lab[data-lab]:not([data-ready])").forEach(function (n) {
       var fn = LABS[n.getAttribute("data-lab")];
       if (!fn) return;
