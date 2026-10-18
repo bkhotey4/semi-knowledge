@@ -1,0 +1,55 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#C0392B" />
+    </marker>
+    <marker id="arrowhead-rev" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#C0392B" />
+    </marker>
+  </defs>
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <!-- 基板 Substrate -->
+  <polygon points="100,380 700,380 750,330 150,330" fill="#E0E0E0" stroke="#999999" stroke-width="1"/>
+  <rect x="100" y="380" width="600" height="40" fill="#D0D0D0" stroke="#999999" stroke-width="1"/>
+  <text x="350" y="410" font-family="sans-serif" font-size="16" fill="#666666">矽基板 (Substrate)</text>
+
+  <!-- 鰭片 Fin (後半段) -->
+  <polygon points="500,330 540,290 540,190 500,230" fill="#4A90E2" stroke="#2E5A8E" stroke-width="1"/>
+  <polygon points="540,290 690,290 690,190 540,190" fill="#5DADE2" stroke="#2E5A8E" stroke-width="1"/>
+  
+  <!-- 閘極 Gate (跨越結構) -->
+  <path d="M350,330 L350,210 L450,210 L450,330 L490,290 L490,170 L390,170 L390,290 Z" fill="#F4D03F" stroke="#B7950B" stroke-width="1"/>
+  <polygon points="350,210 390,170 490,170 450,210" fill="#F1C40F" stroke="#B7950B" stroke-width="1"/>
+  <text x="385" y="155" font-family="sans-serif" font-size="18" font-weight="bold" fill="#B7950B">閘極 (Gate)</text>
+
+  <!-- 鰭片 Fin (前半段) -->
+  <rect x="150" y="230" width="350" height="100" fill="#5DADE2" stroke="#2E5A8E" stroke-width="1"/>
+  <polygon points="150,230 190,190 540,190 500,230" fill="#85C1E9" stroke="#2E5A8E" stroke-width="1"/>
+  
+  <!-- 標註源極與汲極 -->
+  <text x="180" y="280" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2E5A8E">源極 (Source)</text>
+  <text x="560" y="250" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2E5A8E">汲極 (Drain)</text>
+  <text x="220" y="215" font-family="sans-serif" font-size="14" fill="#2E5A8E">鰭片 (Fin)</text>
+
+  <!-- 幾何尺寸標註 -->
+  <!-- H_fin -->
+  <line x1="130" y1="230" x2="130" y2="330" stroke="#C0392B" stroke-width="1.5" marker-start="url(#arrowhead-rev)" marker-end="url(#arrowhead)"/>
+  <text x="80" y="285" font-family="sans-serif" font-size="14" fill="#C0392B">H_fin</text>
+  
+  <!-- W_fin -->
+  <line x1="150" y1="215" x2="190" y2="175" stroke="#C0392B" stroke-width="1.5" marker-start="url(#arrowhead-rev)" marker-end="url(#arrowhead)"/>
+  <text x="125" y="190" font-family="sans-serif" font-size="14" fill="#C0392B">W_fin</text>
+
+  <!-- 有效通道寬度說明 -->
+  <rect x="480" y="40" width="280" height="80" rx="5" fill="#F8F9F9" stroke="#CCD1D1" stroke-width="1"/>
+  <text x="495" y="70" font-family="sans-serif" font-size="16" fill="#333333">有效通道寬度 (Effective Width):</text>
+  <text x="515" y="100" font-family="sans-serif" font-size="18" font-weight="bold" fill="#C0392B">W_eff = 2H_fin + W_fin</text>
+
+  <!-- 三面控制示意箭頭 -->
+  <path d="M330,280 Q310,280 330,280" stroke="#C0392B" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M420,150 Q420,170 420,165" stroke="#C0392B" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="280" y="130" font-family="sans-serif" font-size="14" fill="#C0392B">三面受控通道 (Tri-gate)</text>
+  <line x1="330" y1="135" x2="360" y2="190" stroke="#C0392B" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="330" y1="135" x2="410" y2="175" stroke="#C0392B" stroke-width="1" stroke-dasharray="4"/>
+</svg>
