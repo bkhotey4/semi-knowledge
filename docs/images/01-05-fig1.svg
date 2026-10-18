@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- 藍色垂直電場箭頭 -->
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 7 5 L 1 8 z" fill="#0284c7" />
+    </marker>
+    <!-- 紅色橫向電場箭頭 -->
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 7 5 L 1 8 z" fill="#dc2626" />
+    </marker>
+    <!-- 黑色指示線箭頭 -->
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 7 5 L 1 8 z" fill="#1e293b" />
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff" />
+
+  <!-- p型基板區域外框 -->
+  <rect x="70" y="140" width="660" height="260" fill="#ffffff" stroke="#1e293b" stroke-width="2" />
+
+  <!-- 空乏區背景（淡灰底色呈現空乏區擴展與重疊） -->
+  <!-- 源極側空乏區與汲極側深層擴展重疊形成的合併區域 -->
+  <path d="M 120 140 
+           C 120 250, 160 280, 270 280 
+           C 340 280, 370 260, 420 260 
+           C 480 260, 520 320, 640 320 
+           C 710 320, 710 240, 710 140 
+           L 570 140 
+           C 570 190, 550 210, 490 210 
+           C 420 210, 380 180, 360 140 
+           L 260 140 
+           C 260 190, 240 210, 180 210 
+           C 140 210, 120 180, 120 140 Z" 
+        fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3" />
+
+  <!-- 次表面打穿重疊區高亮邊界 (Punch-Through Region) -->
+  <path d="M 320 200 C 370 195, 430 200, 470 210 C 440 250, 360 250, 320 200 Z" 
+        fill="#ffffff" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,3" />
+
+  <!-- 源極 n+ 擴散區 -->
+  <rect x="130" y="140" width="120" height="60" fill="#cbd5e1" stroke="#1e293b" stroke-width="2" />
+  <!-- 汲極 n+ 擴散區 -->
+  <rect x="550" y="140" width="120" height="60" fill="#cbd5e1" stroke="#1e293b" stroke-width="2" />
+
+  <!-- 閘極氧化層 (SiO2) -->
+  <rect x="290" y="132" width="220" height="8" fill="#ffffff" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- 閘極電極 (Gate) -->
+  <rect x="290" y="80" width="220" height="52" fill="#cbd5e1" stroke="#1e293b" stroke-width="2" />
+
+  <!-- 閘極垂直電力線 (E_y)：受控度隨深度劇降 -->
+  <line x1="330" y1="140" x2="330" y2="185" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow-blue)" />
+  <line x1="370" y1="140" x2="370" y2="175" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow-blue)" />
+  <line x1="400" y1="140" x2="400" y2="165" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow-blue)" />
+  <line x1="430" y1="140" x2="430" y2="175" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow-blue)" />
+  <line x1="470" y1="140" x2="470" y2="185" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow-blue)" />
+
+  <!-- 汲極高壓橫向侵入電力線 (E_x)：穿透通道中央並直抵源極 -->
+  <!-- 表面近通道處橫向電力線 -->
+  <path d="M 550 155 C 490 162, 420 165, 345 160" fill="none" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)" />
+  <!-- 體內橫向電場主幹 (引致能障降低 DIBL) -->
+  <path d="M 550 180 C 470 195, 380 190, 265 175" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow-red)" />
+  <!-- 次表面打穿路徑電力線 (Punch-Through Path) -->
+  <path d="M 560 210 C 480 235, 370 235, 260 205" fill="none" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)" />
+  <!-- 深層擴散電力線 -->
+  <path d="M 570 240 C 500 275, 410 270, 270 230" fill="none" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)" />
+
+  <!-- 區域與電極標籤 (字級 14~18，繁體中文) -->
+  <text x="400" y="112" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">多晶矽閘極 (Gate)</text>
+  <text x="190" y="175" font-family="sans-serif" font-size="15" fill="#1e293b" text-anchor="middle">源極 n+ (0 V)</text>
+  <text x="610" y="175" font-family="sans-serif" font-size="15" fill="#1e293b" text-anchor="middle">汲極 n+ (高偏壓)</text>
+  <text x="400" y="380" font-family="sans-serif" font-size="16" fill="#1e293b" text-anchor="middle">p型矽基板 (p-Si Substrate)</text>
+
+  <!-- 閘極長度與結構維度標示 -->
+  <line x1="290" y1="70" x2="510" y2="70" stroke="#1e293b" stroke-width="1.5" />
+  <line x1="290" y1="65" x2="290" y2="75" stroke="#1e293b" stroke-width="1.5" />
+  <line x1="510" y1="65" x2="510" y2="75" stroke="#1e293b" stroke-width="1.5" />
+  <text x="400" y="62" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">通道長度 L ≈ λ</text>
+
+  <text x="525" y="125" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="start">閘極氧化層 (t_ox)</text>
+  <line x1="520" y1="128" x2="480" y2="134" stroke="#1e293b" stroke-width="1" marker-end="url(#arrow-dark)" />
+
+  <!-- 物理效應指示標籤 -->
+  <!-- 垂直電場說明 -->
+  <text x="310" y="35" font-family="sans-serif" font-size="14" fill="#0284c7" text-anchor="middle">垂直電場 E_y</text>
+  <text x="310" y="52" font-family="sans-serif" font-size="14" fill="#0284c7" text-anchor="middle">(閘極控制權減弱)</text>
+  <path d="M 330 55 C 345 70, 360 80, 370 135" fill="none" stroke="#0284c7" stroke-width="1" marker-end="url(#arrow-blue)" />
+
+  <!-- 橫向侵入與能障降低說明 -->
+  <text x="640" y="45" font-family="sans-serif" font-size="14" fill="#dc2626" text-anchor="middle">橫向電力線侵入通道 (E_x)</text>
+  <text x="640" y="65" font-family="sans-serif" font-size="14" fill="#dc2626" text-anchor="middle">引致能障降低 (DIBL)</text>
+  <path d="M 600 72 C 570 95, 520 120, 480 155" fill="none" stroke="#dc2626" stroke-width="1" marker-end="url(#arrow-red)" />
+
+  <!-- 次表面打穿與空乏區合併說明 -->
+  <text x="400" y="305" font-family="sans-serif" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">次表面打穿路徑 (Punch-Through)</text>
+  <text x="400" y="325" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">汲極與源極空乏區重疊合併</text>
+  <line x1="400" y1="290" x2="400" y2="245" stroke="#dc2626" stroke-width="1.2" marker-end="url(#arrow-red)" />
+
+  <!-- 接面深度標示 -->
+  <line x1="110" y1="140" x2="110" y2="200" stroke="#1e293b" stroke-width="1" />
+  <line x1="105" y1="140" x2="115" y2="140" stroke="#1e293b" stroke-width="1" />
+  <line x1="105" y1="200" x2="115" y2="200" stroke="#1e293b" stroke-width="1" />
+  <text x="100" y="175" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="end">接面深度 x_j</text>
+</svg>
