@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2c3e50"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#d35400"/>
+    </marker>
+  </defs>
+
+  <!-- 1. 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- 2. 長晶爐本體與熱場結構 -->
+  <!-- 水冷爐壁輪廓 -->
+  <rect x="200" y="30" width="400" height="395" rx="20" fill="none" stroke="#bdc3c7" stroke-width="2" stroke-dasharray="8 4"/>
+
+  <!-- 石墨加熱器 (左右兩側) -->
+  <rect x="235" y="210" width="22" height="135" rx="3" fill="#d35400"/>
+  <rect x="543" y="210" width="22" height="135" rx="3" fill="#d35400"/>
+  <!-- 加熱器溝槽示意 -->
+  <line x1="235" y1="245" x2="257" y2="245" stroke="#ffffff" stroke-width="2"/>
+  <line x1="235" y1="280" x2="257" y2="280" stroke="#ffffff" stroke-width="2"/>
+  <line x1="235" y1="315" x2="257" y2="315" stroke="#ffffff" stroke-width="2"/>
+  <line x1="543" y1="245" x2="565" y2="245" stroke="#ffffff" stroke-width="2"/>
+  <line x1="543" y1="280" x2="565" y2="280" stroke="#ffffff" stroke-width="2"/>
+  <line x1="543" y1="315" x2="565" y2="315" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- 石墨坩堝套 (Graphite Susceptor) 外層 -->
+  <path d="M 276 200 L 276 305 C 276 360 325 372 400 372 C 475 372 524 360 524 305 L 524 200 L 512 200 L 512 302 C 512 348 470 358 400 358 C 330 358 288 348 288 302 L 288 200 Z" fill="#2c3e50"/>
+
+  <!-- 石英坩堝 (Quartz Crucible) 內層 -->
+  <path d="M 288 200 L 288 302 C 288 348 330 358 400 358 C 470 358 512 348 512 302 L 512 200 L 298 200 L 298 300 C 298 338 335 346 400 346 C 465 346 502 338 502 300 L 502 200 Z" fill="#bdc3c7"/>
+
+  <!-- 矽熔湯 (Silicon Melt, ~1420 °C) -->
+  <path d="M 298 252 Q 330 254 362 253 C 367 248 371 245 372 245 L 428 245 C 429 245 433 248 438 253 Q 470 254 502 252 L 502 300 C 502 338 465 346 400 346 C 335 346 298 338 298 300 Z" fill="#d35400" opacity="0.85"/>
+
+  <!-- 坩堝支撐石墨軸 -->
+  <rect x="393" y="372" width="14" height="53" fill="#2c3e50"/>
+
+  <!-- 3. 單晶矽提拉機構 -->
+  <!-- 上方提拉軸 -->
+  <rect x="397" y="35" width="6" height="60" fill="#2c3e50"/>
+
+  <!-- 晶種夾具 -->
+  <polygon points="390,95 410,95 405,115 395,115" fill="#2c3e50"/>
+
+  <!-- 種晶 (Seed Crystal) -->
+  <rect x="398" y="115" width="4" height="20" fill="#5d6d7e"/>
+
+  <!-- 細頸 (Dash Neck) 與放肩、等徑晶棒主體 -->
+  <path d="M 398 135 L 402 135 L 401 150 L 428 185 L 428 245 C 428 245 429 249 438 253 L 362 253 C 371 249 372 245 372 245 L 372 185 L 399 150 Z" fill="#5d6d7e"/>
+
+  <!-- 固液界面處的彎月面 (Meniscus) 突顯線條 -->
+  <path d="M 362 253 C 369 251 372 247 372 245" fill="none" stroke="#2c3e50" stroke-width="2"/>
+  <path d="M 438 253 C 431 251 428 247 428 245" fill="none" stroke="#2c3e50" stroke-width="2"/>
+  <!-- 固液交界面 -->
+  <line x1="372" y1="245" x2="428" y2="245" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="3 2"/>
+
+  <!-- 4. 動力學箭頭 (提拉、旋轉) -->
+  <!-- 提拉速率 vp 向上箭頭 -->
+  <line x1="375" y1="85" x2="375" y2="45" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 晶棒旋轉方向 (順時針示意) -->
+  <path d="M 382 72 A 20 8 0 0 1 418 72" fill="none" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 坩堝旋轉方向 (逆時針反向旋轉示意) -->
+  <path d="M 422 405 A 24 8 0 0 1 378 405" fill="none" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- 坩堝支撐上升箭頭 -->
+  <line x1="420" y1="420" x2="420" y2="385" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 5. 專業圖表標註與指引線 -->
+  <!-- 左側標註 -->
+  <line x1="180" y1="55" x2="368" y2="55" stroke="#2c3e50" stroke-width="1"/>
+  <text x="170" y="60" font-family="sans-serif" font-size="15" fill="#2c3e50" text-anchor="end">晶棒提拉軸 (速度 vp, 轉速 Ωs)</text>
+
+  <line x1="180" y1="108" x2="390" y2="108" stroke="#2c3e50" stroke-width="1"/>
+  <text x="170" y="113" font-family="sans-serif" font-size="15" fill="#2c3e50" text-anchor="end">晶種夾具與種晶 (Dash 縮頸)</text>
+
+  <line x1="180" y1="210" x2="372" y2="210" stroke="#2c3e50" stroke-width="1"/>
+  <text x="170" y="215" font-family="sans-serif" font-size="15" fill="#2c3e50" text-anchor="end">單晶矽棒 (Silicon Ingot)</text>
+
+  <line x1="180" y1="275" x2="235" y2="275" stroke="#2c3e50" stroke-width="1"/>
+  <text x="170" y="280" font-family="sans-serif" font-size="15" fill="#2c3e50" text-anchor="end">石墨電阻加熱器</text>
+
+  <!-- 右側標註 -->
+  <line x1="620" y1="230" x2="435" y2="248" stroke="#2c3e50" stroke-width="1"/>
+  <text x="630" y="235" font-family="sans-serif" font-size="15" fill="#2c3e50" text-anchor="start">固液生長介面與彎月面 (Meniscus)</text>
+
+  <line x1="620" y1="270" x2="470" y2="275" stroke="#2c3e50" stroke-width="1"/>
+  <text x="630" y="275" font-family="sans-serif" font-size="15" fill="#2c3e50" text-anchor="start">高純度矽熔湯 (~1420 °C)</text>
+
+  <line x1="620" y1="310" x2="508" y2="300" stroke="#2c3e50" stroke-width="1"/>
+  <text x="630" y="315" font-family="sans-serif" font-size="15" fill="#2c3e50" text-anchor="start">石英坩堝 (內層)</text>
+
+  <line x1="620" y1="345" x2="520" y2="335" stroke="#2c3e50" stroke-width="1"/>
+  <text x="630" y="350" font-family="sans-serif" font-size="15" fill="#2c3e50" text-anchor="start">石墨保護套 (外層)</text>
+
+  <line x1="620" y1="405" x2="425" y2="405" stroke="#2c3e50" stroke-width="1"/>
+  <text x="630" y="410" font-family="sans-serif" font-size="15" fill="#2c3e50" text-anchor="start">坩堝支撐旋轉軸 (反向轉速 Ωc)</text>
+</svg>
