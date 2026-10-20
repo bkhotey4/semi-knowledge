@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0284c7"/>
+    </marker>
+  </defs>
+
+  <!-- 1. 白色背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- 圖名 -->
+  <text x="400" y="38" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#0f172a">化學機械拋光設備架構示意圖</text>
+
+  <!-- 2. 下方結構：旋轉研磨平台與研磨墊 -->
+  <!-- 研磨平台 (Platen) -->
+  <rect x="80" y="340" width="640" height="45" rx="4" fill="#64748b"/>
+  <!-- 研磨墊 (Polishing Pad) -->
+  <rect x="90" y="322" width="620" height="18" rx="2" fill="#d97706"/>
+  <!-- 平台旋轉軸心 -->
+  <rect x="375" y="385" width="50" height="40" fill="#475569"/>
+  <!-- 研磨液流動薄層 (Slurry Film) -->
+  <rect x="90" y="318" width="620" height="4" fill="#38bdf8"/>
+
+  <!-- 平台旋轉與標註 -->
+  <path d="M 360 415 Q 400 425 440 415" fill="none" stroke="#1e293b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="400" y="368" font-family="sans-serif" font-size="15" fill="#ffffff" font-weight="bold" text-anchor="middle">旋轉研磨平台 (Platen)</text>
+  <text x="690" y="312" font-family="sans-serif" font-size="14" fill="#b45309" text-anchor="end">研磨墊 (Polishing Pad)</text>
+
+  <!-- 3. 中央上方：研磨液噴嘴與供液系統 -->
+  <rect x="375" y="70" width="50" height="75" rx="3" fill="#64748b"/>
+  <polygon points="380,145 420,145 408,175 392,175" fill="#475569"/>
+  <!-- 噴灑研磨液流動垂直箭頭與液滴 -->
+  <line x1="400" y1="180" x2="400" y2="310" stroke="#0284c7" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#arrow-blue)"/>
+  <text x="400" y="62" font-family="sans-serif" font-size="15" fill="#0f172a" font-weight="bold" text-anchor="middle">研磨液噴嘴</text>
+  <text x="415" y="245" font-family="sans-serif" font-size="14" fill="#0284c7" text-anchor="start">流動研磨液層 (Slurry)</text>
+
+  <!-- 4. 左側結構：金剛石修整器 (Diamond Conditioner) -->
+  <!-- 驅動軸 -->
+  <rect x="180" y="95" width="20" height="135" fill="#64748b"/>
+  <!-- 修整器基體 -->
+  <rect x="140" y="230" width="100" height="40" rx="3" fill="#475569"/>
+  <!-- 金剛石修整面 (微顆粒齒狀) -->
+  <path d="M 140 270 L 145 274 L 150 270 L 155 274 L 160 270 L 165 274 L 170 270 L 175 274 L 180 270 L 185 274 L 190 270 L 195 274 L 200 270 L 205 274 L 210 270 L 215 274 L 220 270 L 225 274 L 230 270 L 235 274 L 240 270" fill="none" stroke="#0f172a" stroke-width="2"/>
+  <!-- 修整器向下壓力與自轉箭頭 -->
+  <line x1="190" y1="65" x2="190" y2="90" stroke="#1e293b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M 160 140 Q 190 125 220 140" fill="none" stroke="#1e293b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- 標註 -->
+  <text x="190" y="55" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">修整器下壓力</text>
+  <text x="140" y="185" font-family="sans-serif" font-size="15" fill="#0f172a" font-weight="bold" text-anchor="end">金剛石修整器</text>
+  <text x="140" y="205" font-family="sans-serif" font-size="14" fill="#475569" text-anchor="end">(鑽石修整輪)</text>
+
+  <!-- 5. 右側結構：晶圓載具 (Carrier Head) 與晶圓 -->
+  <!-- 晶圓載具主體驅動軸 -->
+  <rect x="585" y="95" width="30" height="100" fill="#64748b"/>
+  <!-- 晶圓載具本體 -->
+  <rect x="490" y="195" width="220" height="65" rx="4" fill="#475569"/>
+  <!-- 晶圓擋環 (Retaining Ring) 兩側突出 -->
+  <rect x="490" y="260" width="16" height="58" fill="#1e293b"/>
+  <rect x="694" y="260" width="16" height="58" fill="#1e293b"/>
+  <!-- 載具緩衝墊 (Backing Film) -->
+  <rect x="506" y="260" width="188" height="50" fill="#94a3b8"/>
+  <!-- 晶圓 (Wafer, 夾持於緩衝墊下方接觸研磨面) -->
+  <rect x="506" y="310" width="188" height="8" rx="1" fill="#0284c7"/>
+
+  <!-- 載具向下施力與旋轉標註 -->
+  <line x1="600" y1="50" x2="600" y2="85" stroke="#1e293b" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 565 140 Q 600 120 635 140" fill="none" stroke="#1e293b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- 標註文字 -->
+  <text x="600" y="40" font-family="sans-serif" font-size="15" fill="#0f172a" font-weight="bold" text-anchor="middle">向下研磨壓力 P</text>
+  <text x="725" y="225" font-family="sans-serif" font-size="16" fill="#0f172a" font-weight="bold" text-anchor="start">晶圓載具</text>
+  <text x="725" y="247" font-family="sans-serif" font-size="14" fill="#475569" text-anchor="start">(Carrier Head)</text>
+  <text x="725" y="285" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="start">固定環 (Retaining Ring)</text>
+  <text x="725" y="318" font-family="sans-serif" font-size="15" fill="#0284c7" font-weight="bold" text-anchor="start">晶圓 (Wafer)</text>
+</svg>

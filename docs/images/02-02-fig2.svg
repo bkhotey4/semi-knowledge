@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#DC2626"/>
+    </marker>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- ==================== (a) 彎曲度 Bow ==================== -->
+  <text x="40" y="34" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1E293B">
+    (a) 彎曲度（Bow）：中夾面中心相對於三點支撐基準面之垂直位移
+  </text>
+
+  <!-- 晶圓截面實體 (凹/凸弧形) -->
+  <path d="M 120,135 Q 400,65 680,135 L 680,150 Q 400,80 120,150 Z" fill="#E2E8F0" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- 中夾面 (Median Surface) -->
+  <path d="M 120,142.5 Q 400,72.5 680,142.5" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="6,3"/>
+
+  <!-- 基準平面 (三點支撐擬合基準面) -->
+  <line x1="90" y1="142.5" x2="710" y2="142.5" stroke="#64748B" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- 三點支撐點符號 (剖面顯示外緣支撐) -->
+  <polygon points="140,158 133,172 147,172" fill="#64748B"/>
+  <polygon points="660,158 653,172 667,172" fill="#64748B"/>
+  <line x1="125" y1="172" x2="155" y2="172" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="645" y1="172" x2="675" y2="172" stroke="#64748B" stroke-width="1.5"/>
+
+  <!-- Bow 垂直位移箭頭 (中心) -->
+  <line x1="400" y1="142.5" x2="400" y2="74.5" stroke="#DC2626" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <circle cx="400" cy="142.5" r="3" fill="#DC2626"/>
+  <circle cx="400" cy="72.5" r="3" fill="#2563EB"/>
+
+  <!-- 標籤說明 -->
+  <text x="412" y="112" font-family="sans-serif" font-size="15" font-weight="bold" fill="#DC2626">Bow 位移量</text>
+  <text x="500" y="82" font-family="sans-serif" font-size="14" fill="#2563EB">晶圓中夾面</text>
+  <text x="715" y="147" font-family="sans-serif" font-size="14" fill="#64748B">邊緣參考基準面</text>
+  <text x="160" y="180" font-family="sans-serif" font-size="14" fill="#64748B">三點支撐處</text>
+
+  <!-- 中間水平分隔線 -->
+  <line x1="40" y1="215" x2="760" y2="215" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- ==================== (b) 翹曲度 Warp ==================== -->
+  <text x="40" y="248" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1E293B">
+    (b) 翹曲度（Warp）：中夾面相對於最小平方擬合面之全幅峰谷距
+  </text>
+
+  <!-- 自由狀態波浪形晶圓截面實體 -->
+  <path d="M 120,362 C 220,402 300,402 400,342 C 480,292 560,282 680,312 L 680,327 C 560,297 480,307 400,357 C 300,417 220,417 120,377 Z" fill="#E2E8F0" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- 中夾面 (波浪狀) -->
+  <path d="M 120,369.5 C 220,409.5 300,409.5 400,349.5 C 480,299.5 560,289.5 680,319.5" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="6,3"/>
+
+  <!-- 最小平方法擬合參考平面 -->
+  <line x1="90" y1="352" x2="710" y2="352" stroke="#64748B" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- 波谷點 (Valley) 與 波峰點 (Peak) -->
+  <!-- 波谷約在 x=260, y=407；波峰約在 x=540, y=293 -->
+  <circle cx="260" cy="407" r="3" fill="#2563EB"/>
+  <circle cx="540" cy="293" r="3" fill="#2563EB"/>
+
+  <!-- 峰谷延伸水平輔助線 -->
+  <line x1="540" y1="293" x2="750" y2="293" stroke="#64748B" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="260" y1="407" x2="750" y2="407" stroke="#64748B" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Warp 雙向測量箭頭 -->
+  <line x1="735" y1="301" x2="735" y2="399" stroke="#DC2626" stroke-width="2" marker-start="url(#arrow-red)" marker-end="url(#arrow-red)"/>
+
+  <!-- 標籤說明 -->
+  <text x="548" y="285" font-family="sans-serif" font-size="14" fill="#2563EB">最高點（Peak）</text>
+  <text x="210" y="427" font-family="sans-serif" font-size="14" fill="#2563EB">最低點（Valley）</text>
+  <text x="480" y="370" font-family="sans-serif" font-size="14" fill="#64748B">最小平方擬合平面</text>
+  <text x="640" y="356" font-family="sans-serif" font-size="15" font-weight="bold" fill="#DC2626">Warp (全幅距)</text>
+</svg>
