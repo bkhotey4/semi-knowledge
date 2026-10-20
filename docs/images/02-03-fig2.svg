@@ -1,0 +1,58 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333333"/>
+    </marker>
+  </defs>
+
+  <g transform="translate(50, 40)">
+    <text x="0" y="-10" font-family="sans-serif" font-size="16" font-weight="bold">1. 施主晶圓準備與植入</text>
+    <rect x="0" y="0" width="200" height="60" fill="#d1d1d1" stroke="#333333" stroke-width="1"/>
+    <rect x="0" y="60" width="200" height="15" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <line x1="0" y1="40" x2="200" y2="40" stroke="#ff0000" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="210" y="35" font-family="sans-serif" font-size="14" fill="#333333">施主晶圓 (Donor Si)</text>
+    <text x="210" y="55" font-family="sans-serif" font-size="14" fill="#ff0000">氫離子植入脆弱層</text>
+    <text x="210" y="72" font-family="sans-serif" font-size="14" fill="#333333">氧化層 (SiO2)</text>
+  </g>
+
+  <g transform="translate(450, 40)">
+    <text x="0" y="-10" font-family="sans-serif" font-size="16" font-weight="bold">2. 支撐晶圓</text>
+    <rect x="0" y="35" width="200" height="60" fill="#d1d1d1" stroke="#333333" stroke-width="1"/>
+    <text x="210" y="70" font-family="sans-serif" font-size="14" fill="#333333">支撐晶圓 (Handle Si)</text>
+  </g>
+
+  <line x1="150" x2="380" y1="130" y2="180" stroke="#666666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="550" x2="420" y1="130" y2="180" stroke="#666666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <g transform="translate(300, 200)">
+    <text x="0" y="-15" font-family="sans-serif" font-size="16" font-weight="bold">3. 晶圓鍵合 (Bonding)</text>
+    <rect x="0" y="0" width="200" height="40" fill="#d1d1d1" stroke="#333333" stroke-width="1"/>
+    <line x1="0" y1="20" x2="200" y2="20" stroke="#ff0000" stroke-width="2" stroke-dasharray="5,3"/>
+    <rect x="0" y="40" width="200" height="15" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <rect x="0" y="55" width="200" height="40" fill="#d1d1d1" stroke="#333333" stroke-width="1"/>
+    <text x="210" y="52" font-family="sans-serif" font-size="14" fill="#333333">鍵合界面</text>
+  </g>
+
+  <line x1="400" x2="400" y1="305" y2="335" stroke="#666666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <g transform="translate(100, 350)">
+    <text x="0" y="-10" font-family="sans-serif" font-size="16" font-weight="bold">4. 熱劈裂與薄層轉移</text>
+    <rect x="0" y="0" width="200" height="20" fill="#d1d1d1" stroke="#333333" stroke-width="1"/>
+    <text x="210" y="15" font-family="sans-serif" font-size="14" fill="#333333">剩餘施主晶圓 (可回收)</text>
+    
+    <g transform="translate(400, 0)">
+      <rect x="0" y="0" width="200" height="20" fill="#d1d1d1" stroke="#333333" stroke-width="1"/>
+      <rect x="0" y="20" width="200" height="15" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+      <rect x="0" y="35" width="200" height="40" fill="#d1d1d1" stroke="#333333" stroke-width="1"/>
+      <text x="210" y="15" font-family="sans-serif" font-size="14" fill="#333333">頂層矽 (Top Si)</text>
+      <text x="210" y="32" font-family="sans-serif" font-size="14" fill="#333333">埋入氧化層 (BOX)</text>
+      <text x="210" y="60" font-family="sans-serif" font-size="14" fill="#333333">基底矽基板 (Substrate)</text>
+      <text x="50" y="90" font-family="sans-serif" font-size="16" font-weight="bold" fill="#00008b">SOI 結構完成</text>
+    </g>
+    
+    <path d="M 220 10 L 380 10" stroke="#ff4500" stroke-width="2" stroke-dasharray="4" marker-end="url(#arrowhead)"/>
+    <text x="250" y="0" font-family="sans-serif" font-size="14" fill="#ff4500">沿脆弱層劈裂</text>
+  </g>
+</svg>
