@@ -214,12 +214,6 @@
    "- **2026-10-20**　高頻寬記憶體（HBM）的底座晶片與邏輯控制器逐漸轉向採用先進的 3 奈米製程製造。此技術趨勢與高頻寬記憶體架構、邏輯晶片與記憶體晶片的異質整合原理高度相關。（來源：[三星首度用台積電3奈米造HBM！輝達為何要求三大記憶體廠統一製程？ - 數位時代](https://news.google.com/rss/articles/CBMidEFVX3lxTE5zTkg4cTg2ZVo3X2NnNnpwVkFBQmQ5aVJfTFhla3l0UmI1Q291Q1JabHZRLUkteTJsdlkzbUNWaGkzWGNVQW8wM3dIZ2dtbnVnV2dEa0RaOVN2blk2M1p6YzBYUkxXQk5TWG9kci05SjBka3pU?oc=5)）",
    "- **2026-10-16**　此進展涉及高頻寬記憶體（HBM）之先進封裝與測試產能擴建。HBM 利用矽穿孔（TSV）與微凸塊技術將多層 DRAM 晶粒進行垂直三維堆疊，能顯著縮短連線長度並大幅提升頻寬密度，本章探討其堆疊架構、散熱管理與晶圓級測試之製程挑戰。（來源：[台灣美光先進封裝與測試二廠啟用，深化 AI 時代高頻寬記憶體布局 - TechNews 科技新報](https://news.google.com/rss/articles/CBMiswFBVV95cUxOc0VCOEhkS3FuNU00U2NTV2RUYmR5OG00LTdlYkgwTVo2b3RWTWwxaXE3WnVoNjN6Vi1pdWZKeUdidUNkU1luLUZySUNRR3N6aFJITjh2TWNYMUhmTXJXUE11dy1pVmhnODI1b0t3R093U1BmUXhOUVBsNi1YcEZXb0p6dWdpb3A4bE1EMGlURm03R0FWQmo1TXJ6eHJIUjhTd3hqczllc2Fnd3ZJTGNYbkhibw?oc=5)）"
   ],
-  "02-04": [
-   "- **2026-10-21**　英飛凌與 Wolfspeed 簽訂八吋碳化矽晶圓供應協議。這反映出寬能隙半導體材料從六吋過渡至八吋大尺寸晶圓的產業趨勢，與化合物半導體材料特性及晶圓加工規格的章節內容相呼應。（來源：[英飛凌與Wolfspeed簽訂8吋碳化矽晶圓供應協議強化供應鏈韌性- 股市爆料同學會 - CMoney](https://news.google.com/rss/articles/CBMiWEFVX3lxTE8tRndQWm9oS2NMd21CY1ctWDYxYlU5TUNrcFdVWm5rdWhmSGdsTmRlM05QZ180ZUU5Qzd1MDNqUWY5ZW1MeXBiQzFmRndlOVhBUmtCblZGTFE?oc=5)）",
-   "- **2026-10-20**　功率半導體大廠加速推動 8 吋碳化矽（SiC）晶圓的供應與應用布局。這與寬能隙半導體的材料特性及大尺寸單晶成長製程實作密切相關。（來源：[英飛凌加速8吋碳化矽布局！與Wolfspeed簽供應協議，支援電動車與AI資料中心需求 - Yahoo新聞](https://news.google.com/rss/articles/CBMiwgNBVV95cUxPWWpLQ2dVeGtnRnJBY01zOGtBazQta2EwZEJLYmsxZkczZTR2Y3hYZ2JwRW9kY1BScTlmc2lNV2RHN2RuYXlSU2dYY2ZMakQ1QV9zemF2MXRMNWtzMlk0cTJVZjFUSzF5RkVWUDFOMEtjb0xyNUJ3dUNhNGNFU1VUemJOeTdLdjJ0SHJKaDJoWUJKVHk5NDhaNEV0M29qcF95VlpjaElCR3hPLVJMc0dMVW1UcUtlUkFZNEthSzJsbl9FSjU1Ymd5ZnFxTDQwRWdCYkZIRHh4OGQ0VU1XRWZxT1d4andsQ0M1eGFtWUNRUDBrSnNQRTdMSXkzMHNsRnJoYy1MbFkxQWJma0RYQWlHMC1CNC02bFlCSVk5TVo3UnVmUkZVYlM2eExIc0dNV3A5ckFvY3V5MEI3bTViX0tOQWxvOVhybElTVUZ3UHBzQXM3N0RRTWRsOHlDTUxMVnFfOHpvdmtlNE5yRDJVaXEyT3BvUllGWXhSX3VCaUM5SEp5cFpZRktJdTRSZWgwaWdJVktOU1JZNjR2RGY2N0E2OFVzYlFHLWJtWlpsNVQ1bEh5dVJrZzAycWJGU3hrdE92c0E?oc=5)）",
-   "- **2026-10-19**　次世代半導體材料研發聚焦於氧化鎵等寬能隙材料，旨在打造更具省電效益的功率元件。這呼應了化合物與寬能隙半導體章節中，利用大能隙材料在高電壓與高溫環境下的優異載子傳輸特性來提升能源效率的物理原理。（來源：[台灣人在柏林做 AI 資料中心想吃的「漢堡肉」，NextGO Epi 押注下代省電材料氧化鎵 - TechNews 科技新報](https://news.google.com/rss/articles/CBMiVEFVX3lxTE1aS1FfbjBpVlJJdWZLUXhQOFhwY21yUW4tSFdWREQ3T0R2dXFGenFnRkJKVGhWbE1IcEZ3aVhKckJfLVFSNXF4ZmVocEgySE5oR01uWQ?oc=5)）",
-   "- **2026-10-17**　半導體廠積極佈局8吋碳化矽（SiC）產線並準備進入量產。碳化矽屬於寬能隙半導體材料，具備高崩潰電場與高導熱率等特性，適用於高功率與高溫元件製程。（來源：[世界訂單升溫，布局8吋SiC產線拚年底量產 - 台視全球資訊網](https://news.google.com/rss/articles/CBMinAFBVV95cUxOYm5qdkNxUEdKNWVibS1IekZqTTVwSU1zYmRIWWxyZ3BVbnU2WF9ocGRuS3hHYXd2cTB1cnZxUnBrX0E4MENOQTJxQlVJNEJGdV9lZVJvY3c0R3Z1aGpnWWstN0FMQzlBLTZzTnM3dUtoQVc1SzJwOC1XOVBObEhkMjNyTklMNWctczNFUl8tYUVadkF3LW9mQ0NuWXc?oc=5)）"
-  ],
   "08-05": [
    "- **2026-10-20**　半導體廠積極擴展 300 毫米磷化銦（InP）產線以推進矽光子技術量產。此發展與矽光子與共同封裝光學（CPO）中的光通訊材料及異質整合製程原理相輔相成。（來源：[Intel 押注矽光子！OCP 2026 稱握有唯一量產 300 mm 磷化銦產線 - UNIKO's Hardware](https://news.google.com/rss/articles/CBMicEFVX3lxTE9lNllWSWtNOTFLT1FVbUNDbjJvUmppQlNTSFlJOEpfcGtZV3VmaVlET3Q4clNGQ0Nhb0RjSHFjaGp2VlNDbEhrYW16M1VqQUlpVFV0RW1qSFdKblJOR0gtZVpBRFFpaFQ3c3h3RUs1MlQ?oc=5)）",
    "- **2026-10-19**　Intel 發表採用 300mm 矽光子製程打造的下一代 AI 系統架構，將傳統銅線傳輸轉換為光互連技術。這與矽光子與共同封裝光學章節中，利用半導體製程實現光學訊號傳輸以突破金屬導線 RC 延遲與頻寬限制的原理高度相關。（來源：[從銅線走向光互連：Intel以300mm矽光子製程打造下一代AI系統架構 - XFastest News](https://news.google.com/rss/articles/CBMiygJBVV95cUxNSmxvangzSWFuNkRWb3NWbFNzU1NWMW1KNGZEYW5FaXp5U3h0QVdXdWd6YVhwZzRrNnR3VFNTNHBkVUQxRnZQYXFFMS04ei1ETHV5RThSODBrNXo4Y2pVQVVJS1dwM2s3UU1oTXQ4SmJkbUlfX09NbkRiRUJOOWVGQm12YkpsVG1OQmlOajNUeHJROWJ2c2tzVjlvYlV4WUtNY3d2akZJakV5UFZ1cEV1aFNpR3k5ZnA1SUlMdHI2MVY0TjF5QWxYUzk2a213dnhsbmNmNmVGOFgzSmZ1RTBlTUhxcVlGZVZZZHVmbVJCYUYxbndfVGp2VGE4cVY2TTVLMjRzaGI5Nkc3MTA3ZlJ1bUFlMlhtSkQ2NElYT3dPdl9RNVpRejVZbEhYUGNLR0xNNXJYVHF4ZVU2X2piY0IwRTAzcFJMSi02Znc?oc=5)）",
@@ -238,7 +232,8 @@
   "01-06": "2026-10-19",
   "02-01": "2026-10-20",
   "02-02": "2026-10-20",
-  "02-03": "2026-10-21"
+  "02-03": "2026-10-21",
+  "02-04": "2026-10-21"
  },
  "recent_updates": [
   {

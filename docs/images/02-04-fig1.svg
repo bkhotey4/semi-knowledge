@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#263238"/>
+    </marker>
+  </defs>
+
+  <!-- 1. 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- 2. 半導體主體結構 -->
+  <!-- N- 漂移層 -->
+  <rect x="100" y="110" width="600" height="190" fill="#e3f2fd" stroke="#263238" stroke-width="2"/>
+
+  <!-- P型井區 (P-Well) -->
+  <path d="M 150 110 L 330 110 A 15 15 0 0 1 345 125 L 345 160 A 20 20 0 0 1 325 180 L 170 180 A 20 20 0 0 1 150 160 Z" fill="#ffcdd2" stroke="#263238" stroke-width="2"/>
+  <path d="M 470 110 L 650 110 A 20 20 0 0 1 650 160 L 630 180 A 20 20 0 0 1 475 180 L 455 160 A 15 15 0 0 1 455 125 L 470 110 Z" fill="#ffcdd2" stroke="#263238" stroke-width="2"/>
+
+  <!-- N+ 源極區 -->
+  <rect x="250" y="110" width="70" height="30" fill="#e3f2fd" stroke="#263238" stroke-width="1.5"/>
+  <rect x="480" y="110" width="70" height="30" fill="#e3f2fd" stroke="#263238" stroke-width="1.5"/>
+
+  <!-- N+ 4H-SiC 基板 -->
+  <rect x="100" y="300" width="600" height="60" fill="#e3f2fd" stroke="#263238" stroke-width="2"/>
+
+  <!-- 3. 頂部閘極與絕緣層結構 -->
+  <!-- 閘極氧化層與層間介電質 (包覆氧化層) -->
+  <rect x="300" y="50" width="200" height="60" fill="#ffffff" stroke="#263238" stroke-width="2"/>
+  
+  <!-- 多晶矽閘極 (Poly-Si Gate) -->
+  <rect x="320" y="60" width="160" height="35" fill="#263238" stroke="#263238" stroke-width="1"/>
+
+  <!-- 4. 金屬電極 -->
+  <!-- 源極金屬 (左、右) -->
+  <polygon points="100,40 280,40 280,95 300,95 300,110 100,110" fill="#90a4ae" stroke="#263238" stroke-width="2"/>
+  <polygon points="700,40 520,40 520,95 500,95 500,110 700,110" fill="#90a4ae" stroke="#263238" stroke-width="2"/>
+
+  <!-- 汲極金屬 (底部) -->
+  <rect x="100" y="360" width="600" height="35" fill="#90a4ae" stroke="#263238" stroke-width="2"/>
+
+  <!-- 5. 導通電流路徑 (垂直導通箭頭) -->
+  <path d="M 275 115 L 335 115 Q 375 125 385 170 L 385 360" fill="none" stroke="#263238" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <path d="M 525 115 L 465 115 Q 425 125 415 170 L 415 360" fill="none" stroke="#263238" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+
+  <!-- 6. 標籤與文字 -->
+  <!-- 源極金屬標籤 -->
+  <text x="190" y="75" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">源極金屬 (Source)</text>
+  <text x="610" y="75" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">源極金屬 (Source)</text>
+
+  <!-- 閘極標籤 -->
+  <text x="400" y="83" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">多晶矽閘極</text>
+  <text x="400" y="42" font-family="sans-serif" font-size="14" fill="#263238" text-anchor="middle">氧化層 (SiO₂)</text>
+
+  <!-- N+ 源極標籤 -->
+  <text x="285" y="131" font-family="sans-serif" font-size="14" font-weight="bold" fill="#263238" text-anchor="middle">N+</text>
+  <text x="515" y="131" font-family="sans-serif" font-size="14" font-weight="bold" fill="#263238" text-anchor="middle">N+</text>
+
+  <!-- P-Well 標籤 -->
+  <text x="210" y="155" font-family="sans-serif" font-size="15" font-weight="bold" fill="#263238" text-anchor="middle">P型井區 (P-Well)</text>
+  <text x="590" y="155" font-family="sans-serif" font-size="15" font-weight="bold" fill="#263238" text-anchor="middle">P型井區 (P-Well)</text>
+
+  <!-- 通道標記 -->
+  <text x="315" y="103" font-family="sans-serif" font-size="14" fill="#263238" text-anchor="middle">通道</text>
+  <text x="485" y="103" font-family="sans-serif" font-size="14" fill="#263238" text-anchor="middle">通道</text>
+
+  <!-- N- 漂移層標籤 -->
+  <text x="240" y="240" font-family="sans-serif" font-size="16" font-weight="bold" fill="#263238" text-anchor="middle">輕摻雜 N- 漂移層 (4H-SiC Drift Layer)</text>
+
+  <!-- 電流路徑標籤 -->
+  <text x="400" y="270" font-family="sans-serif" font-size="14" font-weight="bold" fill="#263238" text-anchor="middle">高壓導通電流路徑</text>
+
+  <!-- N+ 基板標籤 -->
+  <text x="400" y="335" font-family="sans-serif" font-size="16" font-weight="bold" fill="#263238" text-anchor="middle">N+ 碳化矽基板 (Substrate)</text>
+
+  <!-- 汲極金屬標籤 -->
+  <text x="400" y="383" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">汲極金屬 (Drain)</text>
+
+  <!-- 圖標題 -->
+  <text x="400" y="428" font-family="sans-serif" font-size="16" font-weight="bold" fill="#263238" text-anchor="middle">圖 10.X 平面型 SiC 功率 MOSFET 結構剖面示意圖</text>
+</svg>

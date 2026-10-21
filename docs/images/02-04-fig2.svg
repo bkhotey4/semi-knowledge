@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#ffffff"/>
+  <defs>
+    <marker id="arr-dark" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0f172a"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- 總圖名 -->
+  <text x="400" y="32" font-family="sans-serif" font-size="18" font-weight="bold" fill="#0f172a" text-anchor="middle">GaN HEMT 極化效應與二維電子氣 (2DEG) 形成機制</text>
+
+  <!-- 左圖：異質接面與極化分佈 -->
+  <g>
+    <!-- 晶向生長箭頭 -->
+    <line x1="45" y1="360" x2="45" y2="90" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+    <text x="35" y="225" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle" transform="rotate(-90 35 225)">[0001] 生長方向 (Ga-face)</text>
+
+    <!-- AlGaN 位障層 -->
+    <rect x="70" y="70" width="310" height="100" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+    <text x="80" y="95" font-family="sans-serif" font-size="15" font-weight="bold" fill="#0f172a">AlGaN 位障層 (張應變)</text>
+
+    <!-- 表面負電荷符號 -->
+    <text x="90" y="118" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2563eb">−  −  −  −  −  −  −  −  −</text>
+    <text x="245" y="118" font-family="sans-serif" font-size="14" fill="#2563eb">表面受體/中性態</text>
+
+    <!-- AlGaN 極化向量 -->
+    <line x1="140" y1="126" x2="140" y2="162" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arr-red)"/>
+    <text x="155" y="150" font-family="sans-serif" font-size="14" font-weight="bold" fill="#dc2626">P<tspan font-size="11">總</tspan> = P<tspan font-size="11">SP</tspan> + P<tspan font-size="11">PE</tspan></text>
+
+    <!-- GaN 通道層 -->
+    <rect x="70" y="170" width="310" height="230" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+    <text x="80" y="270" font-family="sans-serif" font-size="15" font-weight="bold" fill="#0f172a">GaN 通道層 (弛豫晶格)</text>
+
+    <!-- 異質介面固定極化正電荷 -->
+    <line x1="70" y1="170" x2="380" y2="170" stroke="#0f172a" stroke-width="2"/>
+    <text x="90" y="165" font-family="sans-serif" font-size="16" font-weight="bold" fill="#dc2626">+  +  +  +  +  +  +  +  +</text>
+    <text x="245" y="165" font-family="sans-serif" font-size="14" font-weight="bold" fill="#dc2626">+σ<tspan font-size="11">pol</tspan> (固定極化正電荷)</text>
+
+    <!-- GaN 自發極化向量 -->
+    <line x1="140" y1="285" x2="140" y2="335" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arr-red)"/>
+    <text x="155" y="315" font-family="sans-serif" font-size="14" font-weight="bold" fill="#dc2626">P<tspan font-size="11">SP</tspan> (自發極化)</text>
+
+    <!-- 2DEG 電荷聚集帶 -->
+    <rect x="72" y="176" width="306" height="18" fill="#f1f5f9"/>
+    <text x="90" y="190" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2563eb">−  −  −  −  −  −  −  −  −</text>
+    
+    <!-- 2DEG 結構端標籤 -->
+    <line x1="260" y1="215" x2="195" y2="193" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+    <text x="268" y="222" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2563eb">二維電子氣 (2DEG)</text>
+    <text x="268" y="240" font-family="sans-serif" font-size="14" fill="#0f172a">面密度 ~10¹³ cm⁻²</text>
+  </g>
+
+  <!-- 右圖：異質接面能帶圖 -->
+  <g>
+    <!-- 座標軸 -->
+    <line x1="435" y1="400" x2="435" y2="65" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+    <text x="435" y="55" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">能量 E</text>
+
+    <line x1="435" y1="400" x2="775" y2="400" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+    <text x="765" y="425" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="end">深　度 z</text>
+
+    <!-- 異質介面垂直輔助線 -->
+    <line x1="565" y1="65" x2="565" y2="400" stroke="#0f172a" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="565" y="55" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">異質介面</text>
+    <text x="500" y="80" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">AlGaN</text>
+    <text x="635" y="80" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">GaN</text>
+
+    <!-- 費米能階 EF -->
+    <line x1="435" y1="260" x2="760" y2="260" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="6 3"/>
+    <text x="760" y="253" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="end">E<tspan font-size="11">F</tspan> (費米能階)</text>
+
+    <!-- 傳導帶底 EC 曲線與三角形勢阱 -->
+    <path d="M 445 110 L 565 240" fill="none" stroke="#2563eb" stroke-width="3"/>
+    <line x1="565" y1="240" x2="565" y2="320" stroke="#2563eb" stroke-width="2" stroke-dasharray="2 2"/>
+    <path d="M 565 320 C 580 320 600 240 655 220 L 760 220" fill="none" stroke="#2563eb" stroke-width="3"/>
+
+    <!-- 能帶文字標籤 -->
+    <text x="450" y="130" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2563eb">E<tspan font-size="11">C</tspan> (傳導帶底)</text>
+    
+    <!-- 帶階不連續量 ΔEC -->
+    <line x1="575" y1="240" x2="575" y2="320" stroke="#0f172a" stroke-width="1"/>
+    <line x1="571" y1="240" x2="579" y2="240" stroke="#0f172a" stroke-width="1"/>
+    <line x1="571" y1="320" x2="579" y2="320" stroke="#0f172a" stroke-width="1"/>
+    <text x="583" y="285" font-family="sans-serif" font-size="14" fill="#0f172a">ΔE<tspan font-size="11">C</tspan></text>
+
+    <!-- 2DEG 三角形量子井蓄積區標示 -->
+    <path d="M 565 260 L 565 320 C 575 320 588 285 595 260 Z" fill="#2563eb"/>
+    <circle cx="572" cy="285" r="3" fill="#ffffff"/>
+    <circle cx="580" cy="275" r="3" fill="#ffffff"/>
+
+    <line x1="680" y1="325" x2="588" y2="292" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+    <text x="685" y="325" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2563eb">二維電子氣 (2DEG)</text>
+    <text x="685" y="345" font-family="sans-serif" font-size="14" fill="#0f172a">三角形勢阱 (E<tspan font-size="11">C</tspan> &lt; E<tspan font-size="11">F</tspan>)</text>
+  </g>
+</svg>
