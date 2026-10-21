@@ -1,0 +1,78 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <!-- 定義箭頭 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000000"/>
+    </marker>
+    <marker id="redarrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D40000"/>
+    </marker>
+  </defs>
+
+  <!-- 標題 -->
+  <text x="400" y="40" font-family="sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#000000">化學增幅型光阻反應機制 (Chemically Amplified Resist Mechanism)</text>
+
+  <!-- 第一階段：曝光與光酸產生 -->
+  <text x="120" y="90" font-family="sans-serif" font-size="16" font-weight="bold" fill="#000000">1. 曝光 (Exposure)</text>
+  <!-- 入射光 -->
+  <line x1="120" y1="110" x2="120" y2="160" stroke="#D40000" stroke-width="2" marker-end="url(#redarrowhead)"/>
+  <line x1="140" y1="110" x2="140" y2="160" stroke="#D40000" stroke-width="2" marker-end="url(#redarrowhead)"/>
+  <text x="150" y="135" font-family="sans-serif" font-size="14" fill="#D40000">入射光 (hν)</text>
+
+  <!-- PAG -->
+  <rect x="70" y="170" width="120" height="60" fill="none" stroke="#0066CC" stroke-width="2"/>
+  <text x="130" y="195" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#0066CC">光酸產生劑</text>
+  <text x="130" y="215" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#0066CC">(PAG)</text>
+
+  <!-- 產生質子 -->
+  <line x1="190" y1="200" x2="260" y2="200" stroke="#000000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <circle cx="290" cy="200" r="15" fill="#D40000"/>
+  <text x="290" y="205" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#ffffff">H+</text>
+  <text x="290" y="235" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#D40000">光酸 (Acid)</text>
+
+  <!-- 第二階段：曝後烤與催化循環 -->
+  <text x="450" y="90" font-family="sans-serif" font-size="16" font-weight="bold" fill="#000000">2. 曝後烤 (PEB) 與催化循環</text>
+  
+  <!-- 聚合物基質區域 -->
+  <rect x="380" y="110" width="380" height="280" rx="10" ry="10" fill="none" stroke="#888888" stroke-dasharray="5,5"/>
+  <text x="570" y="375" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#888888">聚合物基質 (Polymer Matrix)</text>
+
+  <!-- 具保護基之樹脂 -->
+  <line x1="420" y1="160" x2="520" y2="160" stroke="#888888" stroke-width="4"/>
+  <rect x="440" y="140" width="40" height="20" fill="#0066CC"/>
+  <text x="460" y="130" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#0066CC">保護基 (R)</text>
+  <text x="400" y="165" font-family="sans-serif" font-size="14" text-anchor="end" fill="#000000">疏水性樹脂</text>
+
+  <!-- 去保護反應路徑 -->
+  <path d="M 310 200 Q 400 200 440 170" fill="none" stroke="#D40000" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#redarrowhead)"/>
+  
+  <!-- 反應中心標註 -->
+  <text x="550" y="210" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#D40000" font-weight="bold">去保護反應 (Deprotection)</text>
+  <text x="550" y="235" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#D40000">熱能活化 (ΔT)</text>
+
+  <!-- 可溶性樹脂 -->
+  <line x1="580" y1="160" x2="680" y2="160" stroke="#888888" stroke-width="4"/>
+  <circle cx="620" cy="160" r="10" fill="#00A000"/>
+  <text x="620" y="140" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#00A000">羥基 (-OH)</text>
+  <text x="700" y="165" font-family="sans-serif" font-size="14" text-anchor="start" fill="#000000">親水性樹脂</text>
+
+  <!-- 副產物 -->
+  <path d="M 550 160 L 580 120" fill="none" stroke="#888888" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="590" y="115" font-family="sans-serif" font-size="14" fill="#888888">揮發性副產物</text>
+
+  <!-- 催化循環虛線箭頭 -->
+  <path d="M 550 175 A 60 60 0 1 1 480 250" fill="none" stroke="#D40000" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#redarrowhead)"/>
+  <text x="580" y="300" font-family="sans-serif" font-size="14" fill="#D40000">質子再生與擴散</text>
+  <text x="580" y="320" font-family="sans-serif" font-size="14" fill="#D40000">(Catalytic Cycle)</text>
+
+  <!-- 下一個反應位點 -->
+  <line x1="420" y1="280" x2="520" y2="280" stroke="#888888" stroke-width="4"/>
+  <rect x="440" y="260" width="40" height="20" fill="#0066CC"/>
+  <path d="M 470 260 L 470 260" marker-end="url(#redarrowhead)"/> <!-- 示意指向下一個 -->
+
+  <!-- 說明文字 -->
+  <text x="50" y="420" font-family="sans-serif" font-size="14" fill="#000000">註：單一光子產生的質子可誘發數百次去保護反應，顯著提升感度。</text>
+</svg>
