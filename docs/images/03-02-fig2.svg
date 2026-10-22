@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#1e293b"/>
+    </marker>
+    <marker id="arrow-down" viewBox="0 0 10 10" refX="5" refY="6" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 2 1 L 5 8 L 8 1 z" fill="#1e293b"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- 圖名 -->
+  <text x="400" y="30" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1e293b" text-anchor="middle">交替式相位移光罩 (Alt-PSM) 物理機制與成像分佈</text>
+
+  <!-- 入射光標示與箭頭 -->
+  <text x="400" y="52" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">入射平面波 (λ)</text>
+  <line x1="265" y1="42" x2="265" y2="60" stroke="#1e293b" stroke-width="1.5" marker-end="url(#arrow-down)"/>
+  <line x1="535" y1="42" x2="535" y2="60" stroke="#1e293b" stroke-width="1.5" marker-end="url(#arrow-down)"/>
+
+  <!-- 光罩結構：石英基板 (Quartz) -->
+  <path d="M 130,66 L 670,66 L 670,110 L 600,110 L 600,92 L 470,92 L 470,110 L 130,110 Z" fill="#e2e8f0" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="210" y="84" font-family="sans-serif" font-size="14" fill="#1e293b">石英基板 (折射率 n)</text>
+
+  <!-- 蝕刻深度標記 d -->
+  <line x1="608" y1="92" x2="608" y2="110" stroke="#1e293b" stroke-width="1.2"/>
+  <line x1="604" y1="92" x2="612" y2="92" stroke="#1e293b" stroke-width="1"/>
+  <line x1="604" y1="110" x2="612" y2="110" stroke="#1e293b" stroke-width="1"/>
+  <text x="618" y="105" font-family="sans-serif" font-size="14" fill="#1e293b">d = λ / 2(n-1)</text>
+
+  <!-- 鉻遮光層 (Cr) -->
+  <rect x="130" y="110" width="70" height="12" fill="#1e293b"/>
+  <rect x="330" y="110" width="140" height="12" fill="#1e293b"/>
+  <rect x="600" y="110" width="70" height="12" fill="#1e293b"/>
+
+  <!-- 光罩開口區域文字 -->
+  <text x="265" y="138" font-family="sans-serif" font-size="15" fill="#1e293b" font-weight="bold" text-anchor="middle">0° 透光區</text>
+  <text x="400" y="138" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">鉻遮光層 (Cr)</text>
+  <text x="535" y="138" font-family="sans-serif" font-size="15" fill="#1e293b" font-weight="bold" text-anchor="middle">180° (π) 透光區</text>
+
+  <!-- 垂直對應虛線 -->
+  <line x1="265" y1="145" x2="265" y2="395" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="535" y1="145" x2="535" y2="395" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="400" y1="122" x2="400" y2="400" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- 中段：電場振幅 E(x) 分佈 -->
+  <line x1="120" y1="225" x2="680" y2="225" stroke="#1e293b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="120" y="185" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2563eb">電場振幅 E(x)</text>
+  <text x="690" y="229" font-family="sans-serif" font-size="14" fill="#1e293b">空間位置 x</text>
+  <text x="265" y="175" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">+E₀ (同相)</text>
+  <text x="535" y="285" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">-E₀ (反相)</text>
+
+  <!-- 電場曲線 (反相對稱穿過零點) -->
+  <path d="M 150,225 C 185,225 215,185 265,185 C 315,185 355,225 400,225 C 445,225 485,265 535,265 C 585,265 615,225 650,225" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <circle cx="400" cy="225" r="4.5" fill="#2563eb"/>
+  <text x="400" y="212" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">振幅反相交越零點 (E = 0)</text>
+
+  <!-- 下段：光強度 I(x) = |E|^2 分佈 -->
+  <line x1="120" y1="395" x2="680" y2="395" stroke="#1e293b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="120" y="330" font-family="sans-serif" font-size="15" font-weight="bold" fill="#dc2626">光強度 I(x) = |E|²</text>
+  <text x="690" y="399" font-family="sans-serif" font-size="14" fill="#1e293b">空間位置 x</text>
+  <text x="265" y="322" font-family="sans-serif" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">強度峰值 I₀</text>
+  <text x="535" y="322" font-family="sans-serif" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">強度峰值 I₀</text>
+
+  <!-- 光強曲線 (完全降至零) -->
+  <path d="M 150,395 C 185,395 215,330 265,330 C 315,330 355,395 400,395 C 445,395 485,330 535,330 C 585,330 615,395 650,395" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <circle cx="400" cy="395" r="4.5" fill="#dc2626"/>
+  <text x="400" y="422" font-family="sans-serif" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">完全相消干涉消光位置 (I = 0，對比度極大化)</text>
+</svg>

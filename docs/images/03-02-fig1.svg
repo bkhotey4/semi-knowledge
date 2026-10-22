@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <defs>
+    <!-- 箭頭標記 (最多5色: #111827, #005bb5, #008b45, #c81e1e, #e5e7eb) -->
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#005bb5"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#008b45"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#c81e1e"/>
+    </marker>
+  </defs>
+
+  <!-- 中心光軸線 -->
+  <line x1="400" y1="20" x2="400" y2="425" stroke="#111827" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="408" y="38" fill="#111827" font-family="sans-serif" font-size="14">光軸</text>
+
+  <!-- 1. 上方：斜向入射光線 -->
+  <line x1="560" y1="25" x2="408" y2="86" stroke="#005bb5" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+  <line x1="520" y1="25" x2="395" y2="86" stroke="#005bb5" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="568" y="35" fill="#005bb5" font-family="sans-serif" font-size="15" font-weight="bold">斜向入射光束</text>
+  <text x="568" y="55" fill="#005bb5" font-family="sans-serif" font-size="14">sin θin = λ / 2p</text>
+
+  <!-- 2. 光罩層 (Mask) -->
+  <line x1="180" y1="90" x2="620" y2="90" stroke="#111827" stroke-width="1.5"/>
+  <!-- 光罩鉻層 (遮光圖案，週期 p) -->
+  <rect x="250" y="82" width="30" height="8" fill="#e5e7eb" stroke="#111827" stroke-width="1.5"/>
+  <rect x="310" y="82" width="30" height="8" fill="#e5e7eb" stroke="#111827" stroke-width="1.5"/>
+  <rect x="370" y="82" width="30" height="8" fill="#e5e7eb" stroke="#111827" stroke-width="1.5"/>
+  <rect x="430" y="82" width="30" height="8" fill="#e5e7eb" stroke="#111827" stroke-width="1.5"/>
+  <rect x="490" y="82" width="30" height="8" fill="#e5e7eb" stroke="#111827" stroke-width="1.5"/>
+  <text x="630" y="95" fill="#111827" font-family="sans-serif" font-size="15" font-weight="bold">光罩 (週期 p)</text>
+
+  <!-- 3. 中層：繞射光線路徑 (0階、+1階、-1階) -->
+  <!-- -1階光 (超出孔徑，虛線，紅) -->
+  <line x1="400" y1="90" x2="155" y2="245" stroke="#c81e1e" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-red)"/>
+  <!-- 0階光 (左側孔徑邊緣，藍) -->
+  <line x1="400" y1="90" x2="274" y2="245" stroke="#005bb5" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+  <!-- +1階光 (右側孔徑邊緣，綠) -->
+  <line x1="400" y1="90" x2="526" y2="245" stroke="#008b45" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+
+  <!-- 光束標註文字 -->
+  <text x="60" y="180" fill="#c81e1e" font-family="sans-serif" font-size="14">-1 階繞射光</text>
+  <text x="60" y="200" fill="#c81e1e" font-family="sans-serif" font-size="14">(落於孔徑外，截斷)</text>
+
+  <text x="210" y="160" fill="#005bb5" font-family="sans-serif" font-size="15" font-weight="bold">0 階光</text>
+  <text x="180" y="180" fill="#005bb5" font-family="sans-serif" font-size="14">sin θ₀ = -λ / 2p</text>
+
+  <text x="495" y="160" fill="#008b45" font-family="sans-serif" font-size="15" font-weight="bold">+1 階光</text>
+  <text x="495" y="180" fill="#008b45" font-family="sans-serif" font-size="14">sin θ₊₁ = +λ / 2p</text>
+
+  <!-- 4. 投影物鏡光瞳平面 (Pupil Plane) -->
+  <!-- 左光闌實體 -->
+  <rect x="50" y="248" width="200" height="12" fill="#e5e7eb" stroke="#111827" stroke-width="1.5"/>
+  <!-- 右光闌實體 -->
+  <rect x="550" y="248" width="200" height="12" fill="#e5e7eb" stroke="#111827" stroke-width="1.5"/>
+  <!-- 光瞳孔徑收集開口線標示 -->
+  <line x1="250" y1="254" x2="550" y2="254" stroke="#111827" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="270" cy="254" r="5" fill="#005bb5"/>
+  <circle cx="530" cy="254" r="5" fill="#008b45"/>
+  <circle cx="150" cy="254" r="5" fill="#c81e1e"/>
+
+  <text x="400" y="238" text-anchor="middle" fill="#111827" font-family="sans-serif" font-size="15" font-weight="bold">投影物鏡光瞳平面 (孔徑收集極限 ±NA)</text>
+  <text x="400" y="278" text-anchor="middle" fill="#111827" font-family="sans-serif" font-size="14">兩光斑對稱分布於光瞳邊緣 (|sin θ| ≤ NA)</text>
+
+  <!-- 5. 光瞳至晶圓聚焦成像 (雙光束干涉) -->
+  <line x1="270" y1="254" x2="395" y2="395" stroke="#005bb5" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+  <line x1="530" y1="254" x2="405" y2="395" stroke="#008b45" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+
+  <!-- 6. 晶圓平面與干涉成像 -->
+  <line x1="180" y1="400" x2="620" y2="400" stroke="#111827" stroke-width="2"/>
+  <!-- 晶圓表面的干涉明暗條紋 -->
+  <rect x="340" y="401" width="15" height="10" fill="#111827"/>
+  <rect x="370" y="401" width="15" height="10" fill="#111827"/>
+  <rect x="400" y="401" width="15" height="10" fill="#111827"/>
+  <rect x="430" y="401" width="15" height="10" fill="#111827"/>
+  <text x="630" y="405" fill="#111827" font-family="sans-serif" font-size="15" font-weight="bold">晶圓平面</text>
+  <text x="400" y="435" text-anchor="middle" fill="#111827" font-family="sans-serif" font-size="15">雙光束干涉成像：空間頻率 f = 1/p (解析度倍增極限 k₁ → 0.25)</text>
+</svg>
