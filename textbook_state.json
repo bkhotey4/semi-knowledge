@@ -256,14 +256,39 @@
   "https://news.google.com/rss/articles/CBMiVkFVX3lxTE90RG5ZVmZmcndySDVEZmN6WFdacTNpNC1VdzVvQWdqVVFRdW9tUXdIQTR2UmpXNXlPY0NfWkxHejJhNVN2TUtfVVk1TlZtTVZiWmVkckdB?oc=5",
   "https://news.google.com/rss/articles/CBMid0FVX3lxTE1pQmV6NzlkSl9GblgwamhYaFcxbXNLSjRBbDZsYWJ4YzVXRXNHcEV5Nl9FNDYxMnFadFhKeXoxaWtQY3lrTEFDeUZmSjZoU2pQRTgydHJQRU1VWmZ1TWpNZDhXbHZ1OERrWHlmbjhXNnJqdlpvQkhn?oc=5",
   "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBHcUtjek45bzRDTk12Z21lZFpvekRxY2xPM09PMHFNbjRycjc3OUViclpySE1QTVE2QnVLNVJ3V1lLRDNEckpLWkprTQ?oc=5",
-  "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5vN0FWcDBoeEQxd00yRWFOTmhWRlpaaVFqUWpfamI0V2NCMEpGMzdVWUdYT1hFc0xqSkdlZHZxYzNFR1JPOVJqZEFLV1c1VU81bTV5cnduV1FGd9IBX0FVX3lxTE5WWVVzMU9sNTFtVU1ZbXBPVVVrYk1Kci1JbDB1TG9CZEh2dzh3WUNid0hvWkV3UUNOa3FRY0NHWVpENGFxTnpFeUdfYzB5VGo2R3pYREJHMUt4VHBPR204?oc=5"
+  "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5vN0FWcDBoeEQxd00yRWFOTmhWRlpaaVFqUWpfamI0V2NCMEpGMzdVWUdYT1hFc0xqSkdlZHZxYzNFR1JPOVJqZEFLV1c1VU81bTV5cnduV1FGd9IBX0FVX3lxTE5WWVVzMU9sNTFtVU1ZbXBPVVVrYk1Kci1JbDB1TG9CZEh2dzh3WUNid0hvWkV3UUNOa3FRY0NHWVpENGFxTnpFeUdfYzB5VGo2R3pYREJHMUt4VHBPR204?oc=5",
+  "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1GN2E5OVZwWTlOVnZ3Ri1MeGhTMTJRTnlUbm1rWGZ1c3JxRUVPZVFJSnRmVEFSX1d4Rk1sZGd3RzdGeVNjU2JHczdHNTVXUQ?oc=5",
+  "https://news.google.com/rss/articles/CBMiWEFVX3lxTE16c05ER3F2WE80WlhGeWdOdmFfV1czREpYZHcyMVZkNk9SWkFhOXdhWWRkMWg0enVqb0tuQWs0eEJ2QUltWnhPR3lnUzlWeThrMTJLX0tnd24?oc=5",
+  "https://news.google.com/rss/articles/CBMiggFBVV95cUxNUzlhNWs4a3drZnhKR3pCSHFLbjZialFwenlucDh3b1JiNk1EWkNRY1RsQ1Z1X19qNjI2WFd4cnFnRWxmQ2diWVVYVURXaW54R1ZRbjYwUnhpRzRHb0ZlLWl2UHR4VHNxNWpqRGYzWHBhdGNhQndCamZORnRLeXdHc2VB?oc=5",
+  "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9rOXY4NTc5NUFlRDktZm9XZVZuQm1QMTRfdXVXUENBMXJhZU85eWJ4OWFILU5qRVFpSTktVnJUS1JseGFOV2I2anItSkM4dVJwekHSAVBBVV95cUxONW93aGd2WjA0Y3FHUkRKVWFBNlJzWGpiQUtod0k5VDlvUjVtYmFPSkpSR0pxaDliZmdJN1pPa1A3aEFIZXVJeXFnbHJHdm9yOQ?oc=5",
+  "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1RWjVhSTlyN2tDOXN3WFlrc0N5MDJ4Q1RPeklveWJqQjg5R3NTRnp0LVVEVXpyZmtrYW4zUE9KTm4xZl9zQThnbzBROXVES1Q0SUNsZmpwTWlVZ9IBX0FVX3lxTFBERndTY195OEkwUDA4VG1xTE1WUFdEdFBqZmJMYUlUbVlZQWpoc1JtRl84VlQyTFpvcVBiMEw3OXhiRF9aUzRnd292cV9IRUFlV0RUYm53NzIxd0lpTFYw?oc=5",
+  "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8tQ3lUczc2X21oRVlFdUJSSHRRLVVTR1RkVGV4bjRNZ2NBZzFMeG9qZFk1VzBxMzd0dWYyNzBGV3kxVnFxdW5BSnVqUTE5VmRJM3JWWUpndDVSemQ20gFiQVVfeXFMTlFvWjJHYUdzd2F5SktqSU1jdjVDSHlzNGNBSlRiR0ZWbHNDQWRGak9ZYzdURzhha0VCVGFPcVVmWXgwMG5idEdmVWZTVFNmMmJQcm1QaTJpWXY2SkNBYzdmc3c?oc=5",
+  "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBvd0xDYloyTjB2ZjAzcGE2QU9KVVVCWFZnT1ZZX1dfdzZGM0kwS1FQR2FBNm9KcGYxUUYyTW5DXzhHY3AyMFU5dGV6QURMTC14QWc?oc=5",
+  "https://news.google.com/rss/articles/CBMingNBVV95cUxOdlVoRnFfX0kzZGE0cGlOdUVoTnQ5aXJvUXEzMmpjTjJoZVJPclRhNG1tVmFNQ0NqWTdYQ0lPS2R6YmJKcXNDTm5wZUMyVVNyTUw0MW9CZ1ZOOWhCZ1NNMUhNUVd4XzZJRVJvN2RtcGhKRG82TkNqMDZuS2VoLWhsWGZKYmhoT3NlWnFMblVYcE0wd0lmRm5kNDl0dGdhdDI0THctbzVlaXVUOFNrUmVIaENyWFVRZVExQlVDb2xBYm5fb3BxWEdiVUZiUlRMWlhOV2FrdW9wNGVhdkcwSHplN0tyRUtLRlQxWmtyRjJ0RGN0VWE1dXVyUDZXSXdEanVoZUN3ZTJ0TUJsSDVvTXhTWEF5YWl1Z3BDQjVYbEZBTEFJRGtLX25tdVJXb3VjaWdnSDEwUG80LWxWcWh0bGYwMlZVcC03UmwwSHJ4QVdPUUxjM3pqMzcyZFNKR3R5V2h3STEyczVtQWJEcnVUaHduRkRaMGJTb2RHbE0xT2hOeE9OU0RtUHh0YWllaXU3bTdhNG5RMkVqOExBeG14SVE?oc=5",
+  "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1IbVFLTjQtZTA4NFhkVTczdlEtbzVlenVVRS1fd1RhMzV3cHVMbHNpQTJZYUVWREhPVTZTWFFjUUZmVjlGVGg2VXRFVUd6U3VQV0dsUGRsdVFvWG9lRVVCazJmWkNKUGR0?oc=5",
+  "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWldhQU1nTkRrLXpRUmdQWk5haXFNQzFoUUgtYUtHNkxNSW53eC12aEZjNkd6T3RiRWNTQXVlbnhwXzR4d1FaME9kSXJqQ3ZyLWYwNlhDWDZfcTRHaWQwMDExSktlMEg5LWRrbEI3TkFPQVFIZGFCNkR4WENNcDNWQ0k3NUctdm1WeTBtZmpR?oc=5",
+  "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBUNG9qU3hPSTQwTDlTUEsxdHVkb2hHV0ROUlhEcXhRTVlkUVlXR3pOVzA3UjZXZEFuWEtQZTd0cDg5SGI5VXhjSWc3WnFGb0NVN3pxd1FB?oc=5",
+  "https://news.google.com/rss/articles/CBMiS0FVX3lxTE51Mjl2c0JwS18wdTlZR1pwME9mZHZRUWpPZW40dmU0SGhQTXNFcjBoNHdqVlNmQU9KSGpMWGxELXJ4dWpCVmh3UXVlaw?oc=5",
+  "https://news.google.com/rss/articles/CBMiggFBVV95cUxOVklRSHZ1dkdXblFOdkh5c2Q5XzBndHNCOGNaWDZsRlBFaUJoZjVLc1VqMEFnZGlVRnFkYjVfYUVQX1FFcjhVQmFvb1FOdWFtM2pzOXZzOTFGNE4xWThnenhPZV80dFM1UUhjTFlpd00yY3AxYl94MmNhRnRCTGtrMFlB?oc=5",
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1rZGJ2MGxYX2ZzdzlLMlJFbGlfLThfcUNQNk9xYWNCT0xpdzV6bDdDN3FaODV6QWRFMURxYjNKT1RTaThYQ1l4b2tjdkk0eTBxSDFlZEI2S2dGWlXSAWBBVV95cUxQc2FhT3kzQlNwWW01QVBBanRQUk12Z2UzM0kwejg2cGdWNU5TVjlpY2F5el9BUDZSTW0tMHA4TWZ0SGNnNWZDVjl6VHQyUVdGRXVuRVZJd2tieFpYemFYbk8?oc=5",
+  "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBTbXc1THo5YkF1dWVHc1V6dWFHQTZOQWVrMXdNaHRFUEpXREpSdkRpUWxDejlxWkZ3Y2hrREdqYmJYdERZMklqaV9wOXVUcVpBaGM0OTNVMlVueC01UF9Hb01LSGPSAWRBVV95cUxQU213NUx6OWJBdXVlR3NVenVhR0E2TkFlazF3TWh0RVBKV0RKUnZEaVFsQ3o5cVpGd2Noa0RHamJiWHREWTJJamlfcDl1VHFaQWhjNDkzVTJVbngtNVBfR29NS0hj?oc=5",
+  "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9HVEQ5eDVyN3dkRUxNNlpNd052MHFnVDVYdUljYTd4ejk4ZDJWM0ZKM3ViMTZySWlrb1p1Z3NHWE9xS2FKbE9fVUE3d0lULTdZenR4cm4tLTYzcThQYmNmVGJhWDVPRHfSAWdBVV95cUxPR1REOXg1cjd3ZEVMTTZaTXdOdjBxZ1Q1WHVJY2E3eHo5OGQyVjNGSjN1YjE2cklpa29adWdzR1hPcUthSmxPX1VBN3dJVC03WXp0eHJuLS02M3E4UGJjZlRiYVg1T0R3?oc=5",
+  "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9nOVpheGhzTXk3TDJFN1Z6ZmlSbTVELTRxanotZktDVmZYeXJfd1NtV1lUa2haZ1EzRmFkRnZ0ckh5TFNEa3EtSE1GXzBWcmdGdEduQ3JmNy1Idw?oc=5",
+  "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSUlwUFVFQ0JkUDlzLVJ5MFZCS3k4Y0E3Q0tUWVJmLS1GcV9uTUVsUXRUSnR6NTRhUUpzcnNqdmR1Sm1rdTJRN0I4R2h3eTUwczEzNFBSTUVsdDhEaXN6dTVBalVJSWZiQThoWlBVVWcwQ3lMQ1RobFFxbGk1cU1oUUFBbmdWbXhTSnhPNldR?oc=5",
+  "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1DVUt1bC1lamxoWkYzZENIMlN1OVZCLWRKVE5sVkRJT3RjWlVlVGJ2c1JpekN2clpOQUV2ZEcyczZPOFJpcmt0V293NjIyMjlFd1pPeUVqUW8?oc=5",
+  "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA0WUlYdDRRM0M5U2lqWk1VZmloSnFLdVllY1hsdUpOLWdEVmxTYllYQk9yN2h6TVl3SHdvT0o4RGtJWnEyaUwxZXRqUEo?oc=5",
+  "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBsVTdRTFM1d1lHU3VhcFB4a0U1VVBWMzVWOUFFbkRfR2hNUmxjcllJbEhmeDktNURiNFRKWVdLb3IxU29uTEVWSVVPaU1DZw?oc=5",
+  "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNM3FieWJWTVBMck8yYk5scm1RQW50eWlrSGNHR2Zhd0hmbGs4TF9LYURENTVaX29QUXJ1ZUZ3R0Z0SUlVNHU0Qm1zTnQ0QjZrc28tLUttck0wQ25KRFVtVHdFbTAzNVk5TFNzWENmblNYT2h1VkpHamRMOTA1NzdCZ09IbE1PWFdsOHc5OElXelZxZjRWTHNrZ2tfTlBUOGRZMmhmVWgtaXp6clJJa1Q5SG9OX3ZTYVpEbUozaExPYVQzNnQ4RHBuNnItMFdCMTh3MkE?oc=5",
+  "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFByNkNZOWRCSUZGd0pyUlB0ejYzMjgtQ2VJaDlOSWZvQV9xNVM0UlRFSGVIRHhscUN2MUlURkJLNVU1X1U?oc=5",
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1aMUVZSDlBLVVGUkRaSlF6dG1fM2FNTS1tQ3VqMWctVDZmZFNCYTFvQ0s5Y184S0JSc1hnamU4WnFpajl2RkRlVVVDVjJnQ05QUlNYeU1jSUplMjg?oc=5",
+  "https://news.google.com/rss/articles/CBMihgFBVV95cUxNb2luVzdrYl80el92eGRMMGZONjhOdGFvaVJpaVJoYzl1T2dlcWpheExvc2ZjMklrUlUweWlEQ29tdVBBNkFqeXA3RTE5cGVUcXlYVG5jaktGb0U0R05wdFU3RVVNcXRZTF9nQXg2T2szcTNXVUR4NHprOEFjTFlRa3NQekQ3QQ?oc=5",
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBFdXhOckNoV3NaaU12ek9kbXVvend5YXh1Q1VnZlBic2M5MUZmYXlxSF95TjczdGwwTzYxcHFJdXhndFNKOVEzc3FvYzNoTzNfTmUteDNNVjQ0MzTSAWBBVV95cUxNSjdVSUVXY0hsaFFJRmo1T1dQYjBpN1UxM3VnYkY3a1RGNDU3aFhiTkNBUG9sTGRCNkRsX0U3WnNGcE4xXzBwN1c2ay1vb0RjTTRFSUVWdDZZdWhzQVRNOW4?oc=5",
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE95QWVObm9QOGZISXN5eXRNb0ZzakhIQ1JNNVNOaFhQN3ZLRHNGMTQzd1g3ZDVoajc0X1dGQ3AzOXhzMEpKeXIyUjhTbHV2dWh6TzQ5N0RKTDlaWkU?oc=5",
+  "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9ZZ3hjbTdzcnAwOC1SM3VjMTZZZ2tPYjhGeVB4MlFIellZTUUzejA2cjd1RFlkUExGLWk5ZnV1TVI2UUdmaDJnTXFuLUhtQlA0?oc=5",
+  "https://news.google.com/rss/articles/CBMie0FVX3lxTE5Jc2dOb0hKZXAwQ09DWlhBaG1VMnh6Y1cxUVgwVE9KeE4ydEZYMkJPYnBtMHllS09ldXNFUkIxckNoY1RXXzFBU2F6YXg4QmVLYkR0X1dQREprVDF6SFRjdy00TFkyczRvWXJFd2pReWVCNlZCLVl0WmFMYw?oc=5",
+  "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUFlVNlpBbmZzOENCVl9jR1ZGdHdnQ3RMR2RjSmMtLUs0T3hOZlFiaWdEbEVFSXlua1ctUF9TaG9QVUIzdFZhY0xSdzNZU1JlUXBPMzVBR2lia2JUbHJRZnM0U2NwOWJwOHExb2FrUDd5VGdLOVdUUGdqY29Ra2U3V0czdmRhUDlpdm5sdE9tWFNqMGNiODV4SGlyNlI?oc=5"
  ],
  "pending_updates": {
-  "03-04": [
-   "- **2026-10-21**　新聞指出特定新廠計畫引進艾司摩爾（ASML）極紫外光曝光機。這呼應了極紫外光微影製程中波長與光源系統的基礎原理，以及先進製程節點中微影設備的實際應用。（來源：[馬斯克晶圓夢跨大步，Terafab 傳 2027 年進駐首台 ASML EUV 曝光機 - TechNews 科技新報](https://news.google.com/rss/articles/CBMieEFVX3lxTE4ycGQ4S09DSXQwd2pWeHFycU1pNmZFRGhsZ3g2QUlGT0FpN0dvQzIzWW1vcW9wZmxra3NXck5LVGFtajI5Rlp1V2VrS0NERGZIeEJfSGhJTV8yTGN6QWJrTG0wc0hiQ0NVTURpMUxFZ1BCWTNSalRybQ?oc=5)）",
-   "- **2026-10-18**　上海新創廠商展出極紫外光（EUV）光源樣機，探討短波長光源的研發進展。此技術核心涉及極紫外光微影系統的光源產生機制與高能量光學系統的解析度極限挑戰。（來源：[中國工博會 上海新創廠商展出研製EUV樣機 - Newtalk新聞](https://news.google.com/rss/articles/CBMiW0FVX3lxTE1KM1JxV1FUM3dya19WRmJpdzNXNEJFQUJzeWdEdHZ3OFNTeFNYQUI1bW9jV192R2s4QXFSa2h5Vnl6VjFXTW9IRUdkQmVka1JsdWJjMlRKVlhfY0U?oc=5)）",
-   "- **2026-10-16**　此進展涉及極紫外光（EUV）曝光機的核心光源研製。EUV 微影主要依賴雷射引發電漿（LPP）技術，以脈衝雷射轟擊熔融錫滴產生波長 13.5 奈米之極紫外光，光源的轉換效率與功率穩定性直接決定了微影設備的晶圓產能與解析能力。（來源：[陸產EUV光源樣機現身了 朗道燧岩展出高端曝光機心臟 - UDN](https://news.google.com/rss/articles/CBMiUEFVX3lxTE9KSk9oZnNwN0VpNjcwdERHYzVpQ1ZFU3dVOTFMUXlYSnNyQlZvTHBKXzBxWFRjbkxReWVtWDMtMTNBMXZDOTdUejMzVW42cjNJ0gFWQVVfeXFMTVQxcmpMeDVtVlFHb1dPdklka0IzMHdsMDFGZmFBc2hLcGpTckgzdk92amx1WEx5OUltem0tVjd3cWJONk9PN0dVbk9TRmpJSU9EeEFwNVE?oc=5)）"
-  ],
   "03-05": [
    "- **2026-10-22**　高數值孔徑極紫外光（High-NA EUV）微影系統導入全幅視野的光罩設計與成本考量，為進入次世代微縮的主流化關鍵。這呼應了 High-NA EUV 章節中關於光學系統解析度極限與設備整合的物理與製程原理。（來源：[台積電攜ASML衝12吋光罩 High-NA全幅視野與成本決定主流化 - 聚財網](https://news.google.com/rss/articles/CBMiTEFVX3lxTE5vVDk0Yzd4UlM4VXM3OVBsRkZ2U2JvbEJ4VDR2OWk3aG1sS0QtWTJnaGlhXzF2SkZ1X2ktQ3Y4bTNEVlhJMjg5bk5pdUI?oc=5)）",
    "- **2026-10-19**　蔡司指出 High-NA 光學系統已具備量產條件，預計於 2026 至 2027 年進入量產導入期。這呼應了高數值孔徑微影章節中，透過提升數值孔徑來改善微影解析度以延續摩爾定律的關鍵技術進展。（來源：[（專訪）蔡司SMO總裁：High-NA光學已具量產條件 2026、2027年訂單能見度明確 - DIGITIMES](https://news.google.com/rss/articles/CBMijgFBVV95cUxQd1lJaWZjVGtCMENyOW5tSnNmcWhYZVRIb3JNbWtIV19fVmdSdHRyRDJfS3dLSld2ZEhUMlZlMkJrNEdRN241OGhsdGtPTGh5TjlQUkFIbFZsLVQ2UmVHcHRXLXcxcnF0VE84SzBiT3RleVFOZ0dfaHJ1SjZ6NmdhaTVkZ0xGel9RbG9Fc1B3?oc=5)）",
@@ -285,6 +310,12 @@
   ],
   "08-03": [
    "- **2026-10-22**　長鑫存儲結合 12 吋晶圓與混合鍵合技術加速高階記憶體與 3D DRAM 布局。此技術應用屬於 3D 堆疊與混合鍵合章節的核心範疇，透過無凸塊的直接金屬接合提升垂直互連密度。（來源：[結合12吋混合鍵合技術 長鑫存儲加速高階記憶體與3D DRAM布局 - 鉅亨網](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1xajJwZE45SkNEbEE1b0x5VzdDSnlqcS1DelRBc2p6M3ZKQWFZZV9kTFlxN3VPWFZWbUd1WWFlbC1faWZpVzRyTXJ0NjR3ZFE?oc=5)）"
+  ],
+  "04-02": [
+   "- **2026-10-24**　中微交付高選擇比蝕刻設備以應用於先進3D元件製程。這與乾式蝕刻章節中探討的電漿蝕刻技術、蝕刻速率與材料間的高選擇比控制原理直接相關。（來源：[中微首台高選擇比蝕刻設備交付 跨入先進3D元件製程 - DIGITIMES](https://news.google.com/rss/articles/CBMijgFBVV95cUxOSUlwUFVFQ0JkUDlzLVJ5MFZCS3k4Y0E3Q0tUWVJmLS1GcV9uTUVsUXRUSnR6NTRhUUpzcnNqdmR1Sm1rdTJRN0I4R2h3eTUwczEzNFBSTUVsdDhEaXN6dTVBalVJSWZiQThoWlBVVWcwQ3lMQ1RobFFxbGk1cU1oUUFBbmdWbXhTSnhPNldR?oc=5)）"
+  ],
+  "10-06": [
+   "- **2026-10-24**　輝達與英飛凌採用氮化鎵（GaN）與3D IC設計推進800V供電系統以解決AI晶片功耗與散熱瓶頸。這呼應了小晶片與3D IC設計章節中對於高功率密度與系統級封裝的架構整合原理。（來源：[AI晶片功耗與散熱成瓶頸！NVIDIA與西門子EDA、英飛凌從3D IC設計推進800V供電 | 魏鑫陽 | 財經 - 風傳媒](https://news.google.com/rss/articles/CBMiTkFVX3lxTFBsVTdRTFM1d1lHU3VhcFB4a0U1VVBWMzVWOUFFbkRfR2hNUmxjcllJbEhmeDktNURiNFRKWVdLb3IxU29uTEVWSVVPaU1DZw?oc=5)）"
   ]
  },
  "written": {
@@ -302,9 +333,25 @@
   "02-04": "2026-10-21",
   "03-01": "2026-10-22",
   "03-02": "2026-10-23",
-  "03-03": "2026-10-23"
+  "03-03": "2026-10-23",
+  "03-04": "2026-10-24"
  },
  "recent_updates": [
+  {
+   "date": "2026-10-24",
+   "chapter": "02-04",
+   "summary": "英飛凌與輝達合作採用氮化鎵（GaN）技術提升800VDC系統效率。此發展對應化合物與寬能隙半導體章節中，寬能隙材料在高電壓與高頻率應用下的崩潰電場與導通電阻優勢。"
+  },
+  {
+   "date": "2026-10-24",
+   "chapter": "10-06",
+   "summary": "輝達與英飛凌採用氮化鎵（GaN）與3D IC設計推進800V供電系統以解決AI晶片功耗與散熱瓶頸。這呼應了小晶片與3D IC設計章節中對於高功率密度與系統級封裝的架構整合原理。"
+  },
+  {
+   "date": "2026-10-24",
+   "chapter": "04-02",
+   "summary": "中微交付高選擇比蝕刻設備以應用於先進3D元件製程。這與乾式蝕刻章節中探討的電漿蝕刻技術、蝕刻速率與材料間的高選擇比控制原理直接相關。"
+  },
   {
    "date": "2026-10-23",
    "chapter": "03-01",

@@ -1,0 +1,90 @@
+[
+ {
+  "file": "03-04-card1.svg",
+  "title": "EUV 微影物理與架構",
+  "type": "summary",
+  "card": {
+   "type": "summary",
+   "title": "EUV 微影物理與架構",
+   "points": [
+    "波長縮減至 13.5 nm 以突破瑞利準則解析度極限。",
+    "物質強烈吸收特性迫使系統轉向全反射式光學架構。",
+    "採用雷射激發錫電漿產生高功率極紫外光源。",
+    "隨機效應與光子散粒雜訊成為先進節點良率瓶頸。"
+   ],
+   "takeaway": "從折射轉向反射，克服吸收與隨機性是 EUV 技術核心。"
+  }
+ },
+ {
+  "file": "03-04-card2.svg",
+  "title": "RLS 權衡關係",
+  "type": "formula",
+  "card": {
+   "type": "formula",
+   "title": "RLS 權衡關係",
+   "formula": "R³ · L² · D ≈ Constant",
+   "symbols": [
+    [
+     "R",
+     "解析度 (Resolution)"
+    ],
+    [
+     "L",
+     "線邊緣粗糙度 (LER/LWR)"
+    ],
+    [
+     "D",
+     "曝光劑量 (Exposure Dose)"
+    ]
+   ],
+   "note": "描述解析度、粗糙度與靈敏度三者間的物理互鎖關係。",
+   "takeaway": "在不改變材料化學本質下，無法同時優化這三項關鍵參數。"
+  }
+ },
+ {
+  "file": "03-04-card3.svg",
+  "title": "DUV 與 EUV 微影技術對比",
+  "type": "compare",
+  "card": {
+   "type": "compare",
+   "title": "DUV 與 EUV 微影技術對比",
+   "left": {
+    "name": "DUV 浸潤式微影",
+    "items": [
+     "193 nm 波長",
+     "穿透式石英透鏡",
+     "高純度水或氮氣環境",
+     "穿透式石英光罩"
+    ]
+   },
+   "right": {
+    "name": "EUV 微影",
+    "items": [
+     "13.5 nm 波長",
+     "反射式多層膜鏡面",
+     "超高真空環境",
+     "反射式多層膜光罩"
+    ]
+   },
+   "takeaway": "物理環境從大氣轉向真空，光學原理從折射轉向反射。"
+  }
+ },
+ {
+  "file": "03-04-card4.svg",
+  "title": "LPP 光源產生流程",
+  "type": "flow",
+  "card": {
+   "type": "flow",
+   "title": "LPP 光源產生流程",
+   "steps": [
+    "液態錫滴高頻噴注",
+    "預脈衝雷射形變",
+    "主脈衝雷射激發",
+    "錫離子能階躍遷",
+    "收集鏡匯聚光束",
+    "氫氣流原位除污"
+   ],
+   "takeaway": "雙脈衝技術與氫氣化學清洗確保光源功率與鏡面壽命。"
+  }
+ }
+]
