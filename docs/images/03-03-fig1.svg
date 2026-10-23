@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- 箭頭標記：深藍色（流體/抽吸）、深板岩色（尺寸與掃描） -->
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0284C7"/>
+    </marker>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1E293B"/>
+    </marker>
+  </defs>
+
+  <!-- 1. 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- 2. 圖名與章節標頭 -->
+  <text x="400" y="32" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1E293B" text-anchor="middle">浸潤式微影流體結構與光路交介面示意圖</text>
+
+  <!-- 3. 投影物鏡最後透鏡元件 -->
+  <polygon points="260,50 540,50 480,145 320,145" fill="#E2E8F0" stroke="#1E293B" stroke-width="2"/>
+  <text x="400" y="80" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1E293B" text-anchor="middle">投影物鏡最後透鏡元件</text>
+  <text x="400" y="102" font-family="sans-serif" font-size="14" fill="#1E293B" text-anchor="middle">合成石英 (SiO₂, n ≈ 1.56)</text>
+
+  <!-- 4. 局部浸潤噴頭結構 (Immersion Hood) -->
+  <!-- 左側噴頭 -->
+  <polygon points="70,110 240,110 240,195 210,195 210,145 70,145" fill="#E2E8F0" stroke="#1E293B" stroke-width="2"/>
+  <text x="145" y="132" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1E293B" text-anchor="middle">浸潤控制噴頭</text>
+  <!-- 右側噴頭 -->
+  <polygon points="560,110 730,110 730,145 590,145 590,195 560,195" fill="#E2E8F0" stroke="#1E293B" stroke-width="2"/>
+  <text x="655" y="132" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1E293B" text-anchor="middle">浸潤控制噴頭</text>
+
+  <!-- 5. 超純水液膜與動態彎月面 -->
+  <!-- 超純水主體 (含彎月面邊界) -->
+  <path d="M 320,145 L 480,145 L 490,180 Q 520,205 500,225 L 300,225 Q 280,205 310,180 Z" fill="#38BDF8" fill-opacity="0.35" stroke="#0284C7" stroke-width="2"/>
+
+  <!-- 6. 曝光光束路徑（大數值孔徑光錐，穿透透鏡與水層聚於光阻） -->
+  <!-- 透鏡內光路 -->
+  <polygon points="345,50 455,50 435,145 365,145" fill="#F59E0B" fill-opacity="0.45"/>
+  <!-- 水層內折射光路 (小折射角，維持大 NA 入射) -->
+  <polygon points="365,145 435,145 408,225 392,225" fill="#F59E0B" fill-opacity="0.6"/>
+  <!-- 光軸中心線 -->
+  <line x1="400" y1="45" x2="400" y2="230" stroke="#1E293B" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- 7. 光學孔徑角與全反射邊界註記 -->
+  <line x1="365" y1="145" x2="330" y2="175" stroke="#0284C7" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="325" y="195" font-family="sans-serif" font-size="14" fill="#0284C7" text-anchor="end">乾式全反射極限角</text>
+  <text x="400" y="170" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1E293B" text-anchor="middle">大孔徑會聚光束 (NA = 1.35)</text>
+
+  <!-- 8. 流體噴嘴、抽吸通道與動態彎月面標註 -->
+  <!-- 左側：注水孔與箭頭 -->
+  <line x1="225" y1="165" x2="285" y2="178" stroke="#0284C7" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <text x="195" y="170" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0284C7" text-anchor="end">注水孔 (UPW)</text>
+
+  <!-- 左側：抽吸回收孔與箭頭 -->
+  <line x1="275" y1="210" x2="215" y2="210" stroke="#0284C7" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <text x="195" y="215" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0284C7" text-anchor="end">真空回收孔</text>
+
+  <!-- 右側：注水孔與箭頭 -->
+  <line x1="575" y1="165" x2="515" y2="178" stroke="#0284C7" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <text x="605" y="170" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0284C7" text-anchor="start">注水孔 (UPW)</text>
+
+  <!-- 右側：抽吸回收孔與箭頭 -->
+  <line x1="525" y1="210" x2="585" y2="210" stroke="#0284C7" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <text x="605" y="215" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0284C7" text-anchor="start">真空回收孔</text>
+
+  <!-- 彎月面標籤 -->
+  <path d="M 290,195 L 240,245" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="235" y="260" font-family="sans-serif" font-size="14" fill="#1E293B" text-anchor="end">動態彎月面 (Meniscus)</text>
+
+  <!-- 9. 晶圓基板與光阻層 -->
+  <!-- 超純水液膜厚度標示 -->
+  <line x1="535" y1="145" x2="535" y2="225" stroke="#1E293B" stroke-width="1.5" marker-start="url(#arrow-slate)" marker-end="url(#arrow-slate)"/>
+  <text x="545" y="190" font-family="sans-serif" font-size="14" fill="#1E293B" text-anchor="start">間隙厚度 ~1 mm</text>
+
+  <!-- 光阻層 (薄層塗佈) -->
+  <rect x="70" y="225" width="660" height="15" fill="#F59E0B" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="80" y="237" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1E293B">光阻層 (Photoresist, n ≈ 1.70)</text>
+
+  <!-- 矽晶圓基板 -->
+  <rect x="70" y="240" width="660" height="40" fill="#E2E8F0" stroke="#1E293B" stroke-width="2"/>
+  <text x="400" y="265" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1E293B" text-anchor="middle">矽晶圓基板 (Silicon Wafer)</text>
+
+  <!-- 10. 晶圓載台掃描運動標註 -->
+  <rect x="70" y="280" width="660" height="35" fill="#ffffff" stroke="#1E293B" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="280" y1="298" x2="500" y2="298" stroke="#1E293B" stroke-width="2.5" marker-end="url(#arrow-slate)"/>
+  <text x="515" y="303" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1E293B">載台高速掃描方向 (&gt; 500 mm/s)</text>
+
+  <!-- 11. 下方光學與流體物理機制對照框 -->
+  <rect x="70" y="335" width="660" height="95" rx="6" fill="#E2E8F0" fill-opacity="0.4" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="90" y="360" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0284C7">光學擴展原理：</text>
+  <text x="190" y="360" font-family="sans-serif" font-size="14" fill="#1E293B">超純水介質 (n = 1.44) 縮短有效波長 (λ = λ₀ / n)，消除全反射並使 NA 突破 1.0 極限至 1.35</text>
+  <text x="90" y="388" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0284C7">流體邊界控制：</text>
+  <text x="190" y="388" font-family="sans-serif" font-size="14" fill="#1E293B">高流速注入配合環形微副壓抽吸，維持穩定動態彎月面，杜絕氣泡夾帶 (Air Entrainment)</text>
+  <text x="90" y="415" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0284C7">熱光效應防制：</text>
+  <text x="190" y="415" font-family="sans-serif" font-size="14" fill="#1E293B">超純水持續循環溫控 (dn/dT ≈ -1×10⁻⁴ K⁻¹)，抑制曝光熱吸收引發之波前畸變 (OPD)</text>
+</svg>
