@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- 光罩 A (左上) -->
+  <g>
+    <text x="200" y="32" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1e293b">半視場光罩 A (Sub-field A)</text>
+    <rect x="100" y="45" width="200" height="90" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <!-- 內部圖案示意 -->
+    <line x1="120" y1="75" x2="295" y2="75" stroke="#2563eb" stroke-width="2"/>
+    <line x1="120" y1="105" x2="295" y2="105" stroke="#2563eb" stroke-width="2"/>
+    <!-- 光罩 A 拼接端對準標記 -->
+    <line x1="295" y1="55" x2="295" y2="65" stroke="#dc2626" stroke-width="2"/>
+    <line x1="290" y1="60" x2="300" y2="60" stroke="#dc2626" stroke-width="2"/>
+    <line x1="295" y1="115" x2="295" y2="125" stroke="#dc2626" stroke-width="2"/>
+    <line x1="290" y1="120" x2="300" y2="120" stroke="#dc2626" stroke-width="2"/>
+  </g>
+
+  <!-- 光罩 B (右上) -->
+  <g>
+    <text x="600" y="32" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1e293b">半視場光罩 B (Sub-field B)</text>
+    <rect x="500" y="45" width="200" height="90" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+    <!-- 內部圖案示意 -->
+    <line x1="505" y1="75" x2="680" y2="75" stroke="#d97706" stroke-width="2"/>
+    <line x1="505" y1="105" x2="680" y2="105" stroke="#d97706" stroke-width="2"/>
+    <!-- 光罩 B 拼接端對準標記 -->
+    <line x1="505" y1="55" x2="505" y2="65" stroke="#dc2626" stroke-width="2"/>
+    <line x1="500" y1="60" x2="510" y2="60" stroke="#dc2626" stroke-width="2"/>
+    <line x1="505" y1="115" x2="505" y2="125" stroke="#dc2626" stroke-width="2"/>
+    <line x1="500" y1="120" x2="510" y2="120" stroke="#dc2626" stroke-width="2"/>
+  </g>
+
+  <!-- 投影微影曝光路徑 (虛線箭頭) -->
+  <path d="M 200 135 L 280 235" fill="none" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+  <text x="215" y="195" font-family="sans-serif" font-size="14" fill="#1e293b">第 1 次曝光</text>
+
+  <path d="M 600 135 L 520 235" fill="none" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+  <text x="535" y="195" font-family="sans-serif" font-size="14" fill="#1e293b">第 2 次曝光</text>
+
+  <!-- 晶圓端完整晶場 (下方) -->
+  <!-- 子晶場 A 區域 -->
+  <rect x="175" y="240" width="235" height="160" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <!-- 子晶場 B 區域 -->
+  <rect x="390" y="240" width="235" height="160" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+
+  <!-- 重疊拼接區域 (Stitching Zone) -->
+  <rect x="390" y="240" width="20" height="160" fill="#dc2626" fill-opacity="0.2" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- 拼接區導線連續性示意 -->
+  <!-- 導線 1 -->
+  <line x1="195" y1="305" x2="408" y2="305" stroke="#2563eb" stroke-width="3"/>
+  <line x1="392" y1="305" x2="605" y2="305" stroke="#d97706" stroke-width="3"/>
+  <!-- 導線 2 -->
+  <line x1="195" y1="345" x2="408" y2="345" stroke="#2563eb" stroke-width="3"/>
+  <line x1="392" y1="345" x2="605" y2="345" stroke="#d97706" stroke-width="3"/>
+
+  <!-- 拼接區對準標記 (晶圓端) -->
+  <g>
+    <!-- 上方對準標記 -->
+    <line x1="400" y1="250" x2="400" y2="264" stroke="#dc2626" stroke-width="2"/>
+    <line x1="393" y1="257" x2="407" y2="257" stroke="#dc2626" stroke-width="2"/>
+    <!-- 下方對準標記 -->
+    <line x1="400" y1="376" x2="400" y2="390" stroke="#dc2626" stroke-width="2"/>
+    <line x1="393" y1="383" x2="407" y2="383" stroke="#dc2626" stroke-width="2"/>
+  </g>
+
+  <!-- 晶圓文字標籤 -->
+  <text x="280" y="275" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#2563eb" font-weight="bold">子視場圖案 A</text>
+  <text x="520" y="275" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#d97706" font-weight="bold">子視場圖案 B</text>
+
+  <!-- 拼接區引線標註 -->
+  <line x1="400" y1="240" x2="400" y2="175" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="400" y="165" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#dc2626">拼接重疊區 (微米級過渡帶)</text>
+
+  <!-- 對準標記引線標註 -->
+  <line x1="407" y1="383" x2="480" y2="383" stroke="#dc2626" stroke-width="1"/>
+  <text x="485" y="388" font-family="sans-serif" font-size="14" fill="#dc2626">重疊對準標記</text>
+
+  <!-- 連續線路標註 -->
+  <text x="195" y="295" font-family="sans-serif" font-size="14" fill="#1e293b">連續互連導線</text>
+
+  <!-- 晶場外框總尺寸標註 -->
+  <text x="400" y="430" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1e293b">晶圓端完整晶場 (Full Field)</text>
+</svg>
