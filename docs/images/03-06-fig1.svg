@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0f172a"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- 圖名 -->
+  <text x="400" y="32" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#0f172a">EUV 反射式光罩與防塵薄膜剖面結構</text>
+
+  <!-- 支撐框座 (Pellicle Frame) -->
+  <rect x="110" y="110" width="30" height="180" fill="#64748b"/>
+  <rect x="660" y="110" width="30" height="180" fill="#64748b"/>
+
+  <!-- 防塵薄膜 (Pellicle) -->
+  <line x1="110" y1="110" x2="690" y2="110" stroke="#0284c7" stroke-width="4"/>
+
+  <!-- 超低熱膨脹基板 (ULE Glass) -->
+  <rect x="110" y="360" width="580" height="55" fill="#64748b"/>
+
+  <!-- 背面導電夾持層 -->
+  <rect x="110" y="415" width="580" height="8" fill="#0f172a"/>
+
+  <!-- Mo/Si 多層反射膜 (交替堆疊示意) -->
+  <rect x="110" y="316" width="580" height="44" fill="#ffffff" stroke="#64748b" stroke-width="1"/>
+  <line x1="110" y1="322" x2="690" y2="322" stroke="#0284c7" stroke-width="3"/>
+  <line x1="110" y1="328" x2="690" y2="328" stroke="#0284c7" stroke-width="3"/>
+  <line x1="110" y1="334" x2="690" y2="334" stroke="#0284c7" stroke-width="3"/>
+  <line x1="110" y1="340" x2="690" y2="340" stroke="#0284c7" stroke-width="3"/>
+  <line x1="110" y1="346" x2="690" y2="346" stroke="#0284c7" stroke-width="3"/>
+  <line x1="110" y1="352" x2="690" y2="352" stroke="#0284c7" stroke-width="3"/>
+  <line x1="110" y1="358" x2="690" y2="358" stroke="#0284c7" stroke-width="3"/>
+
+  <!-- 釕保護層 (Ru Capping Layer) -->
+  <rect x="110" y="312" width="580" height="4" fill="#0284c7"/>
+
+  <!-- 圖案化吸收層 (Absorber Patterns) -->
+  <rect x="180" y="265" width="90" height="47" fill="#0f172a"/>
+  <rect x="390" y="265" width="100" height="47" fill="#0f172a"/>
+
+  <!-- 遮蔽陰影區 (Shadowing effect on mask) -->
+  <rect x="270" y="312" width="12" height="4" fill="#dc2626"/>
+  <rect x="490" y="312" width="12" height="4" fill="#dc2626"/>
+
+  <!-- 光學路徑: 法線 -->
+  <line x1="335" y1="160" x2="335" y2="312" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- 入射光束 (6度傾角示意) -->
+  <line x1="310" y1="60" x2="335" y2="312" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- 反射光束 -->
+  <line x1="335" y1="312" x2="360" y2="60" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- 角度標註弧線與文字 -->
+  <path d="M 327 230 A 82 82 0 0 1 335 230" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="315" y="222" font-family="sans-serif" font-size="14" fill="#dc2626" text-anchor="end">6°</text>
+
+  <!-- 光束名稱標籤 -->
+  <text x="290" y="80" font-family="sans-serif" font-size="14" fill="#dc2626" text-anchor="end">入射 EUV 光束</text>
+  <text x="380" y="80" font-family="sans-serif" font-size="14" fill="#dc2626" text-anchor="start">反射 EUV 光束</text>
+
+  <!-- 左側結構標籤 -->
+  <line x1="90" y1="110" x2="110" y2="110" stroke="#0f172a" stroke-width="1"/>
+  <text x="80" y="115" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="end">防塵薄膜 (~數十 nm)</text>
+
+  <line x1="90" y1="200" x2="110" y2="200" stroke="#0f172a" stroke-width="1"/>
+  <text x="80" y="205" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="end">支撐框座 (Frame)</text>
+
+  <line x1="150" y1="285" x2="180" y2="285" stroke="#0f172a" stroke-width="1"/>
+  <text x="140" y="290" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="end">圖案化吸收層</text>
+
+  <!-- 右側結構標籤 -->
+  <line x1="690" y1="314" x2="715" y2="314" stroke="#0f172a" stroke-width="1"/>
+  <text x="725" y="318" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="start">釕保護層 (Ru, 2.5~3 nm)</text>
+
+  <line x1="690" y1="337" x2="715" y2="337" stroke="#0f172a" stroke-width="1"/>
+  <text x="725" y="342" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="start">Mo/Si 多層膜 (40~50對)</text>
+
+  <line x1="690" y1="387" x2="715" y2="387" stroke="#0f172a" stroke-width="1"/>
+  <text x="725" y="392" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="start">低熱膨脹玻璃基板 (ULE)</text>
+
+  <!-- 底部導電層標籤 -->
+  <line x1="400" y1="423" x2="400" y2="440" stroke="#0f172a" stroke-width="1"/>
+  <text x="400" y="442" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">背面導電夾持層 (Cr/TaN)</text>
+
+  <!-- 遮蔽效應標註 -->
+  <line x1="500" y1="260" x2="494" y2="308" stroke="#dc2626" stroke-width="1" marker-end="url(#arrow)"/>
+  <text x="505" y="258" font-family="sans-serif" font-size="14" fill="#dc2626" text-anchor="start">陰影遮蔽區 (Shadowing)</text>
+</svg>
