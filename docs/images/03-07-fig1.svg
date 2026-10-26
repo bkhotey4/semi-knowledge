@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <!-- 入射光紅色箭頭 -->
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626"/>
+    </marker>
+    <!-- 繞射光藍色箭頭 -->
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+    <!-- 尺寸雙向深色箭頭 -->
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 2 L 8 5 L 0 8 z" fill="#0f172a"/>
+    </marker>
+  </defs>
+
+  <!-- 白色背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- 圖名 -->
+  <text x="400" y="32" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#0f172a">晶圓繞射對準光路原理</text>
+
+  <!-- 上方偵測與光源模組 -->
+  <!-- 左光電感測器 (-1階) -->
+  <rect x="140" y="52" width="160" height="36" rx="4" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5"/>
+  <text x="220" y="75" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#0f172a">光電感測器 (-1階)</text>
+
+  <!-- 中央雷射光源 -->
+  <rect x="335" y="52" width="130" height="36" rx="4" fill="#e2e8f0" stroke="#dc2626" stroke-width="2"/>
+  <text x="400" y="75" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#dc2626">雷射光源 (λ)</text>
+
+  <!-- 右光電感測器 (+1階) -->
+  <rect x="500" y="52" width="160" height="36" rx="4" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5"/>
+  <text x="580" y="75" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#0f172a">光電感測器 (+1階)</text>
+
+  <!-- 相位差解析運算示意方塊 -->
+  <path d="M 220 88 L 220 115 L 310 115" fill="none" stroke="#0f172a" stroke-dasharray="3 3" stroke-width="1.2"/>
+  <path d="M 580 88 L 580 115 L 490 115" fill="none" stroke="#0f172a" stroke-dasharray="3 3" stroke-width="1.2"/>
+  <rect x="310" y="100" width="180" height="30" rx="3" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+  <text x="400" y="120" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#0f172a">相位差解析 ΔΦ = φ₊₁ - φ₋₁</text>
+
+  <!-- 聚焦物鏡 / 收集透鏡 -->
+  <path d="M 120 185 Q 400 162 680 185 Q 400 208 120 185 Z" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5"/>
+  <text x="690" y="190" text-anchor="start" font-family="sans-serif" font-size="14" fill="#0f172a">聚焦透鏡 (物鏡)</text>
+
+  <!-- 透鏡光軸中心線 -->
+  <line x1="400" y1="140" x2="400" y2="355" stroke="#0f172a" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- 光路：垂直入射雷射 (紅色) -->
+  <line x1="400" y1="88" x2="400" y2="165" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+  <line x1="400" y1="195" x2="400" y2="355" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+  <text x="412" y="250" text-anchor="start" font-family="sans-serif" font-size="14" font-weight="bold" fill="#dc2626">垂直入射光束</text>
+
+  <!-- 光路：-1階 繞射光 (藍色) -->
+  <line x1="400" y1="360" x2="270" y2="230" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <line x1="270" y1="230" x2="220" y2="185" stroke="#2563eb" stroke-width="2.2"/>
+  <line x1="220" y1="185" x2="220" y2="100" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <text x="210" y="270" text-anchor="end" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2563eb">-1階繞射光</text>
+
+  <!-- 光路：+1階 繞射光 (藍色) -->
+  <line x1="400" y1="360" x2="530" y2="230" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <line x1="530" y1="230" x2="580" y2="185" stroke="#2563eb" stroke-width="2.2"/>
+  <line x1="580" y1="185" x2="580" y2="100" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <text x="590" y="270" text-anchor="start" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2563eb">+1階繞射光</text>
+
+  <!-- 繞射角弧線標註 -->
+  <path d="M 372 315 A 60 60 0 0 1 400 300" fill="none" stroke="#0f172a" stroke-width="1.2"/>
+  <text x="366" y="298" text-anchor="end" font-family="sans-serif" font-size="14" fill="#0f172a">θ₋₁</text>
+
+  <path d="M 400 300 A 60 60 0 0 1 428 315" fill="none" stroke="#0f172a" stroke-width="1.2"/>
+  <text x="434" y="298" text-anchor="start" font-family="sans-serif" font-size="14" fill="#0f172a">θ₊₁</text>
+
+  <!-- 底部晶圓基板與光柵標記 -->
+  <!-- 晶圓本體 -->
+  <rect x="80" y="375" width="640" height="35" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5"/>
+
+  <!-- 光柵結構 (週期 P = 30) -->
+  <path d="M 235 375 L 265 375 L 265 363 L 280 363 L 280 375 L 295 375 L 295 363 L 310 363 L 310 375 L 325 375 L 325 363 L 340 363 L 340 375 L 355 375 L 355 363 L 370 363 L 370 375 L 385 375 L 385 363 L 415 363 L 415 375 L 430 375 L 430 363 L 445 363 L 445 375 L 460 375 L 460 363 L 475 363 L 475 375 L 490 375 L 490 363 L 505 363 L 505 375 L 520 375 L 520 363 L 535 363 L 535 375 L 565 375" fill="none" stroke="#0f172a" stroke-width="1.8"/>
+
+  <!-- 光柵節距標註 P -->
+  <line x1="445" y1="355" x2="475" y2="355" stroke="#0f172a" stroke-width="1.2" marker-start="url(#arrow-dark)" marker-end="url(#arrow-dark)"/>
+  <text x="460" y="350" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0f172a">節距 P</text>
+
+  <!-- 晶圓標記中心位置標定線 -->
+  <line x1="400" y1="375" x2="400" y2="422" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="400" y="435" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0f172a">光柵對準標記物理中心 (x = 0)</text>
+
+  <!-- 左右兩側物理公式與說明 -->
+  <rect x="50" y="300" width="145" height="52" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1"/>
+  <text x="122" y="320" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#0f172a">光柵方程式</text>
+  <text x="122" y="340" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2563eb">sin θ = ±λ / P</text>
+
+  <rect x="605" y="300" width="155" height="52" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1"/>
+  <text x="682" y="320" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#0f172a">位置解算關係</text>
+  <text x="682" y="340" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0f172a">Δx = (P / 4π) · ΔΦ</text>
+</svg>

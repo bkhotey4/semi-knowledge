@@ -1,0 +1,59 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff0000"/>
+    </marker>
+    <marker id="blackarrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/>
+    </marker>
+  </defs>
+
+  <text x="120" y="50" font-family="sans-serif" font-size="18" font-weight="bold" fill="#000000">影像式疊對量測 (IBO)</text>
+  <text x="520" y="50" font-family="sans-serif" font-size="18" font-weight="bold" fill="#000000">繞射式疊對量測 (DBO)</text>
+  <line x1="400" y1="40" x2="400" y2="410" stroke="#cccccc" stroke-width="1" stroke-dasharray="5,5"/>
+
+  <rect x="80" y="120" width="200" height="200" fill="none" stroke="#888888" stroke-width="8"/>
+  <text x="80" y="110" font-family="sans-serif" font-size="14" fill="#888888">外框 (底層 Previous Layer)</text>
+  
+  <rect x="165" y="205" width="50" height="50" fill="none" stroke="#0000ff" stroke-width="4"/>
+  <text x="165" y="200" font-family="sans-serif" font-size="14" fill="#0000ff">內框 (當前層)</text>
+
+  <line x1="180" y1="220" x2="180" y2="220" stroke="#000000" stroke-width="1"/>
+  <circle cx="180" cy="220" r="2" fill="#888888"/>
+  <circle cx="190" cy="230" r="2" fill="#0000ff"/>
+  <line x1="180" y1="220" x2="188" y2="228" stroke="#ff0000" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="200" y="245" font-family="sans-serif" font-size="14" fill="#ff0000">中心偏移量 (Overlay Offset)</text>
+
+  <line x1="180" y1="120" x2="180" y2="320" stroke="#888888" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="80" y1="220" x2="280" y2="220" stroke="#888888" stroke-width="1" stroke-dasharray="2,2"/>
+
+  <rect x="450" y="350" width="300" height="10" fill="#f0f0f0" stroke="#000000"/>
+  
+  <rect x="480" y="330" width="20" height="20" fill="#888888"/>
+  <rect x="540" y="330" width="20" height="20" fill="#888888"/>
+  <rect x="600" y="330" width="20" height="20" fill="#888888"/>
+  <rect x="660" y="330" width="20" height="20" fill="#888888"/>
+  <text x="480" y="380" font-family="sans-serif" font-size="14" fill="#888888">底層光柵 (Bottom Grating)</text>
+
+  <rect x="488" y="310" width="20" height="20" fill="#0000ff" fill-opacity="0.7"/>
+  <rect x="548" y="310" width="20" height="20" fill="#0000ff" fill-opacity="0.7"/>
+  <rect x="608" y="310" width="20" height="20" fill="#0000ff" fill-opacity="0.7"/>
+  <rect x="668" y="310" width="20" height="20" fill="#0000ff" fill-opacity="0.7"/>
+  <text x="480" y="300" font-family="sans-serif" font-size="14" fill="#0000ff">頂層光柵 (Top Grating)</text>
+
+  <line x1="480" y1="355" x2="540" y2="355" stroke="#000000" stroke-width="1" marker-start="url(#blackarrow)" marker-end="url(#blackarrow)"/>
+  <text x="495" y="370" font-family="sans-serif" font-size="12">週期 P</text>
+
+  <path d="M 600 100 L 600 310" stroke="#ff0000" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="610" y="120" font-family="sans-serif" font-size="14" fill="#ff0000">入射光</text>
+
+  <path d="M 600 310 L 500 150" stroke="#ff0000" stroke-width="1" marker-end="url(#arrow)"/>
+  <text x="460" y="140" font-family="sans-serif" font-size="14" fill="#ff0000">-1階繞射 (I-1)</text>
+
+  <path d="M 600 310 L 720 150" stroke="#ff0000" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="700" y="140" font-family="sans-serif" font-size="14" fill="#ff0000">+1階繞射 (I+1)</text>
+
+  <text x="520" y="230" font-family="sans-serif" font-size="16" fill="#000000" font-style="italic">ΔI = I+1 - I-1</text>
+  <text x="520" y="255" font-family="sans-serif" font-size="14" fill="#000000">透過強度差推算偏移 ε</text>
+</svg>
