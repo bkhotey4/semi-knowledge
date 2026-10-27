@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/>
+    </marker>
+  </defs>
+  <text x="200" y="40" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#000000">電容耦合電漿 (CCP)</text>
+  <rect x="60" y="80" width="280" height="260" fill="none" stroke="#333333" stroke-width="2"/>
+  <rect x="100" y="100" width="200" height="20" fill="#cccccc" stroke="#000000"/>
+  <rect x="100" y="310" width="200" height="20" fill="#cccccc" stroke="#000000"/>
+  <rect x="100" y="150" width="200" height="130" fill="#b39ddb" fill-opacity="0.5"/>
+  <text x="200" y="220" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#000000">塊狀電漿區</text>
+  <line x1="40" y1="110" x2="100" y2="110" stroke="#000000" stroke-width="2"/>
+  <circle cx="30" cy="110" r="15" fill="none" stroke="#000000" stroke-width="2"/>
+  <path d="M 22 110 Q 30 95 38 110 T 30 125 T 22 110" fill="none" stroke="#000000" stroke-width="1"/>
+  <text x="30" y="145" font-family="sans-serif" font-size="14" text-anchor="middle">射頻電源</text>
+  <line x1="200" y1="330" x2="200" y2="360" stroke="#000000" stroke-width="2"/>
+  <line x1="180" y1="360" x2="220" y2="360" stroke="#000000" stroke-width="2"/>
+  <line x1="185" y1="365" x2="215" y2="365" stroke="#000000" stroke-width="2"/>
+  <line x1="190" y1="370" x2="210" y2="370" stroke="#000000" stroke-width="2"/>
+  <text x="200" y="390" font-family="sans-serif" font-size="14" text-anchor="middle">接地 (GND)</text>
+  <text x="200" y="420" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#000000">通量與能量相互耦合</text>
+  <text x="600" y="40" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#000000">感應耦合電漿 (ICP)</text>
+  <rect x="460" y="80" width="280" height="260" fill="none" stroke="#333333" stroke-width="2"/>
+  <rect x="500" y="100" width="200" height="15" fill="#f0f0f0" stroke="#000000"/>
+  <text x="600" y="95" font-family="sans-serif" font-size="14" text-anchor="middle">介電窗 (石英/氧化鋁)</text>
+  <circle cx="530" cy="85" r="8" fill="#ff8c00" stroke="#000000"/>
+  <circle cx="565" cy="85" r="8" fill="#ff8c00" stroke="#000000"/>
+  <circle cx="600" cy="85" r="8" fill="#ff8c00" stroke="#000000"/>
+  <circle cx="635" cy="85" r="8" fill="#ff8c00" stroke="#000000"/>
+  <circle cx="670" cy="85" r="8" fill="#ff8c00" stroke="#000000"/>
+  <text x="715" y="80" font-family="sans-serif" font-size="14">感應線圈</text>
+  <rect x="500" y="130" width="200" height="160" fill="#b39ddb" fill-opacity="0.7"/>
+  <text x="600" y="220" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#000000">高密度電漿區</text>
+  <rect x="500" y="310" width="200" height="20" fill="#cccccc" stroke="#000000"/>
+  <line x1="600" y1="55" x2="600" y2="75" stroke="#000000" stroke-width="2" marker-end="url(#arrow)"/>
+  <circle cx="600" cy="40" r="12" fill="none" stroke="#000000" stroke-width="1.5" visibility="hidden"/>
+  <text x="710" y="35" font-family="sans-serif" font-size="14" text-anchor="middle">源極電源</text>
+  <text x="710" y="55" font-family="sans-serif" font-size="14" text-anchor="middle">(Source RF)</text>
+  <line x1="440" y1="320" x2="500" y2="320" stroke="#000000" stroke-width="2"/>
+  <circle cx="425" cy="320" r="15" fill="none" stroke="#000000" stroke-width="2"/>
+  <path d="M 417 320 Q 425 305 433 320 T 425 335 T 417 320" fill="none" stroke="#000000" stroke-width="1"/>
+  <text x="425" y="355" font-family="sans-serif" font-size="14" text-anchor="middle">偏壓電源</text>
+  <text x="425" y="375" font-family="sans-serif" font-size="14" text-anchor="middle">(Bias RF)</text>
+  <line x1="550" y1="135" x2="550" y2="155" stroke="#000000" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="650" y1="135" x2="650" y2="155" stroke="#000000" stroke-width="1" marker-end="url(#arrow)"/>
+  <text x="600" y="420" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#000000">離子通量與能量獨立調控 (解耦)</text>
+  <line x1="400" y1="50" x2="400" y2="400" stroke="#cccccc" stroke-dasharray="5,5"/>
+</svg>
