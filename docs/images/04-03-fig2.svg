@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <!-- 1. 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- 2. 基板 (Substrate) -->
+  <rect x="100" y="380" width="600" height="35" fill="#e2e8f0" stroke="#334155" stroke-width="2"/>
+  <text x="400" y="403" font-family="sans-serif" font-size="15" fill="#334155" font-weight="bold" text-anchor="middle">晶圓基板 (Substrate)</text>
+
+  <!-- 3. 間隙殘留液體與凹面彎月液面 (Meniscus) -->
+  <!-- 左柱內側接觸點約 (328, 220)，右柱內側接觸點約 (472, 220)，凹液面最低點約 (400, 275) -->
+  <path d="M 310 380 L 328 220 Q 400 275 472 220 L 490 380 Z" fill="#0284c7" fill-opacity="0.25" stroke="none"/>
+  <path d="M 328 220 Q 400 275 472 220" fill="none" stroke="#0284c7" stroke-width="3"/>
+
+  <!-- 4. 兩根微結構 (向內側彈性彎曲靠攏) -->
+  <!-- 左結構 (HAR Pillar 1) -->
+  <path d="M 270 380 Q 272 240 330 110 L 370 110 Q 312 240 310 380 Z" fill="#e2e8f0" stroke="#334155" stroke-width="2.5"/>
+  <!-- 右結構 (HAR Pillar 2) -->
+  <path d="M 490 380 Q 488 240 430 110 L 470 110 Q 528 240 530 380 Z" fill="#e2e8f0" stroke="#334155" stroke-width="2.5"/>
+
+  <!-- 5. 結構頂部：毛細拉力箭頭與位移標示 -->
+  <line x1="330" y1="95" x2="385" y2="95" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+  <line x1="470" y1="95" x2="415" y2="95" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+  <text x="400" y="75" font-family="sans-serif" font-size="15" fill="#dc2626" font-weight="bold" text-anchor="middle">毛細拉力 (Capillary Force)</text>
+  <text x="400" y="93" font-family="sans-serif" font-size="14" fill="#334155" text-anchor="middle">頂端位移 δ</text>
+
+  <!-- 頂部與原始位置參考線 -->
+  <line x1="290" y1="90" x2="290" y2="130" stroke="#334155" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="510" y1="90" x2="510" y2="130" stroke="#334155" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- 6. 液面物理參數：表面張力向量 γ 與 接觸角 θ -->
+  <!-- 左側接觸線切線向量 -->
+  <line x1="328" y1="220" x2="368" y2="245" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <text x="382" y="248" font-family="sans-serif" font-size="14" fill="#dc2626" font-weight="bold">γ (表面張力)</text>
+
+  <!-- 左側接觸角標示弧線 -->
+  <path d="M 333 190 A 20 20 0 0 1 343 230" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <text x="345" y="205" font-family="sans-serif" font-size="14" fill="#334155" font-weight="bold">θ</text>
+
+  <!-- 凹液面負壓差說明 -->
+  <text x="400" y="315" font-family="sans-serif" font-size="15" fill="#0284c7" font-weight="bold" text-anchor="middle">負壓區 (P_liquid &lt; P_gas)</text>
+  <text x="400" y="335" font-family="sans-serif" font-size="14" fill="#0284c7" text-anchor="middle">ΔP = (2γ cosθ) / D</text>
+
+  <!-- 7. 根部應力集中區域標記 -->
+  <!-- 左外側根部拉伸應力 -->
+  <path d="M 264 365 Q 268 375 272 380" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <path d="M 258 370 Q 263 378 268 383" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <!-- 右外側根部拉伸應力 -->
+  <path d="M 536 365 Q 532 375 528 380" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <path d="M 542 370 Q 537 378 532 383" fill="none" stroke="#dc2626" stroke-width="2"/>
+
+  <!-- 應力集中文字標籤 -->
+  <line x1="230" y1="340" x2="265" y2="370" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+  <text x="210" y="335" font-family="sans-serif" font-size="14" fill="#dc2626" font-weight="bold" text-anchor="end">最大彎曲應力 σ_max</text>
+  <text x="210" y="353" font-family="sans-serif" font-size="14" fill="#dc2626" text-anchor="end">(應力集中與斷裂危險區)</text>
+
+  <!-- 8. 幾何尺寸標示 (H, W, D) -->
+  <!-- 高度 H (左側標註) -->
+  <line x1="160" y1="110" x2="160" y2="380" stroke="#334155" stroke-width="1.5" marker-start="url(#arrow-dark)" marker-end="url(#arrow-dark)"/>
+  <line x1="150" y1="110" x2="280" y2="110" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="150" y1="380" x2="265" y2="380" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="145" y="250" font-family="sans-serif" font-size="15" fill="#334155" font-weight="bold" text-anchor="end">高度 H</text>
+
+  <!-- 線寬 W (左柱根部標註) -->
+  <line x1="270" y1="425" x2="310" y2="425" stroke="#334155" stroke-width="1.5" marker-start="url(#arrow-dark)" marker-end="url(#arrow-dark)"/>
+  <line x1="270" y1="380" x2="270" y2="435" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="310" y1="380" x2="310" y2="435" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="290" y="443" font-family="sans-serif" font-size="14" fill="#334155" font-weight="bold" text-anchor="middle">線寬 W</text>
+
+  <!-- 間距 D (根部初始間距標註) -->
+  <line x1="310" y1="365" x2="490" y2="365" stroke="#334155" stroke-width="1.5" marker-start="url(#arrow-dark)" marker-end="url(#arrow-dark)"/>
+  <text x="400" y="360" font-family="sans-serif" font-size="14" fill="#334155" font-weight="bold" text-anchor="middle">初始圖形間距 D</text>
+
+  <!-- 右側文字註記 (倒塌機制與條件) -->
+  <text x="590" y="160" font-family="sans-serif" font-size="16" fill="#334155" font-weight="bold">圖形倒塌準則：</text>
+  <text x="590" y="190" font-family="sans-serif" font-size="14" fill="#334155">1. 彈性接觸 (Stiction):</text>
+  <text x="610" y="212" font-family="sans-serif" font-size="14" fill="#dc2626">δ ≥ D / 2</text>
+  <text x="590" y="245" font-family="sans-serif" font-size="14" fill="#334155">2. 根部塑性斷裂:</text>
+  <text x="610" y="267" font-family="sans-serif" font-size="14" fill="#dc2626">σ_max ≥ σ_yield</text>
+  <text x="590" y="300" font-family="sans-serif" font-size="14" fill="#334155">深寬比 AR = H / W ≫ 1</text>
+</svg>
