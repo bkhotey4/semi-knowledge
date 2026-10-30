@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- 大圖標題 -->
+  <text x="400" y="34" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1e293b" text-anchor="middle">溝槽階梯覆蓋與輪廓演化示意圖</text>
+
+  <!-- 左右區塊中軸分隔線 -->
+  <line x1="400" y1="55" x2="400" y2="425" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,5"/>
+
+  <!-- ==================== 左側：低黏著係數 (共形覆蓋) ==================== -->
+  <text x="210" y="70" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">低黏著係數（Sc ≪ 1，如 LPCVD / ALD）</text>
+  <text x="210" y="92" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">分子多次再發射 ➔ 均勻共形覆蓋（Conformal）</text>
+
+  <!-- 左側入射通量箭頭 -->
+  <line x1="120" y1="105" x2="120" y2="135" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <line x1="170" y1="105" x2="170" y2="135" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <line x1="210" y1="105" x2="210" y2="135" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <line x1="250" y1="105" x2="250" y2="135" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <line x1="300" y1="105" x2="300" y2="135" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <text x="210" y="122" font-family="sans-serif" font-size="14" fill="#ef4444" text-anchor="middle">前驅物分子通量</text>
+
+  <!-- 左側薄膜 (共形覆蓋) -->
+  <path d="M 70,145 H 185 V 305 H 235 V 145 H 350 V 170 H 260 V 330 H 160 V 170 H 70 Z" fill="#0284c7" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- 左側基板 -->
+  <path d="M 70,170 H 160 V 330 H 260 V 170 H 350 V 380 H 70 Z" fill="#64748b" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- 左側再發射示意虛線箭頭 -->
+  <path d="M 195,185 Q 210,230 225,250" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arrow-red)"/>
+  <path d="M 225,260 Q 200,285 210,300" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arrow-red)"/>
+  <text x="210" y="225" font-family="sans-serif" font-size="14" fill="#ef4444" text-anchor="middle">孔內多次再發射</text>
+
+  <!-- 左側厚度與指標標註 -->
+  <text x="115" y="195" font-family="sans-serif" font-size="14" fill="#1e293b">t_top</text>
+  <text x="120" y="250" font-family="sans-serif" font-size="14" fill="#1e293b">t_side</text>
+  <line x1="160" y1="245" x2="185" y2="245" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="210" y="355" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">t_bot</text>
+  <line x1="210" y1="305" x2="210" y2="330" stroke="#1e293b" stroke-width="1.5"/>
+
+  <text x="210" y="405" font-family="sans-serif" font-size="15" font-weight="bold" fill="#0284c7" text-anchor="middle">理想共形覆蓋（t_top ≈ t_side ≈ t_bot）</text>
+
+
+  <!-- ==================== 右側：高黏著係數 (懸垂與微孔洞) ==================== -->
+  <text x="600" y="70" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">高黏著係數（Sc ≈ 1，如 PVD / PECVD）</text>
+  <text x="600" y="92" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">視角遮蔽與拐角堆積 ➔ 懸垂與閉鎖微孔洞</text>
+
+  <!-- 右側入射通量箭頭 -->
+  <line x1="510" y1="105" x2="510" y2="130" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <line x1="550" y1="105" x2="550" y2="120" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <line x1="600" y1="105" x2="600" y2="128" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <line x1="650" y1="105" x2="650" y2="120" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <line x1="690" y1="105" x2="690" y2="130" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <text x="600" y="120" font-family="sans-serif" font-size="14" fill="#ef4444" text-anchor="middle">氣相直射通量</text>
+
+  <!-- 右側基板 -->
+  <path d="M 460,170 H 550 V 330 H 650 V 170 H 740 V 380 H 460 Z" fill="#64748b" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- 右側懸垂薄膜（含 pinch-off 接合） -->
+  <path d="M 460,135 H 520 C 535,135 545,115 565,115 C 585,115 595,138 600,140 C 605,138 615,115 635,115 C 655,115 665,135 680,135 H 740 V 170 H 650 V 330 H 550 V 170 H 460 Z" fill="#0284c7" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- 右側內部閉鎖微孔洞 (Void) -->
+  <path d="M 600,140 C 588,148 570,165 565,200 C 560,235 558,280 560,323 H 640 C 642,280 640,235 635,200 C 630,165 612,148 600,140 Z" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+
+  <!-- 右側特徵標記與導線 -->
+  <!-- 懸垂 Overhang 標註 -->
+  <line x1="565" y1="115" x2="525" y2="175" stroke="#1e293b" stroke-width="1.5" marker-start="url(#arrow-dark)"/>
+  <text x="515" y="190" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="end">孔口懸垂 (Overhang)</text>
+
+  <!-- 掐縮 Pinch-off 標註 -->
+  <line x1="600" y1="140" x2="685" y2="175" stroke="#ef4444" stroke-width="1.5" marker-start="url(#arrow-red)"/>
+  <text x="690" y="180" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ef4444">提早掐縮 (Pinch-off)</text>
+
+  <!-- 微孔洞 Void 標註 -->
+  <text x="600" y="240" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">閉鎖孔洞</text>
+  <text x="600" y="260" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">(Keyhole Void)</text>
+
+  <text x="600" y="405" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ef4444" text-anchor="middle">階梯覆蓋劣化（側壁匱乏、深處未填實）</text>
+
+  <!-- 基板材質通用標籤 -->
+  <text x="95" y="365" font-family="sans-serif" font-size="14" fill="#ffffff">晶圓基板</text>
+  <text x="485" y="365" font-family="sans-serif" font-size="14" fill="#ffffff">晶圓基板</text>
+</svg>

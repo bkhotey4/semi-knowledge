@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#d97706"/>
+    </marker>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- 邊界層底色區塊 -->
+  <rect x="50" y="120" width="700" height="220" fill="#e2e8f0"/>
+
+  <!-- 邊界層頂部邊界虛線 -->
+  <line x1="50" y1="120" x2="750" y2="120" stroke="#1e293b" stroke-width="2" stroke-dasharray="8,6"/>
+
+  <!-- 晶圓基板 -->
+  <rect x="50" y="340" width="700" height="70" fill="#1e293b"/>
+  <text x="400" y="382" font-family="sans-serif" font-size="16" fill="#ffffff" font-weight="bold" text-anchor="middle">晶圓基板 (Wafer Substrate)</text>
+
+  <!-- 已生長的薄膜 -->
+  <rect x="360" y="332" width="390" height="8" fill="#0284c7"/>
+  <text x="640" y="324" font-family="sans-serif" font-size="14" fill="#0284c7" font-weight="bold" text-anchor="middle">沉積薄膜 (Deposited Film)</text>
+
+  <!-- 邊界層厚度標籤與雙向箭頭 -->
+  <line x1="80" y1="126" x2="80" y2="334" stroke="#1e293b" stroke-width="1.5" marker-start="url(#arrow-dark)" marker-end="url(#arrow-dark)"/>
+  <text x="95" y="235" font-family="sans-serif" font-size="15" fill="#1e293b" font-weight="bold">邊界層厚度 δ</text>
+
+  <!-- 區域標籤 -->
+  <text x="60" y="65" font-family="sans-serif" font-size="16" fill="#1e293b" font-weight="bold">氣相主流區 (Bulk Flow)</text>
+  <text x="145" y="150" font-family="sans-serif" font-size="15" fill="#1e293b">邊界層 (滯留層, Stagnant Layer)</text>
+
+  <!-- 步驟 1: 主流對流輸送 (反應前驅物) -->
+  <line x1="220" y1="60" x2="330" y2="60" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <text x="245" y="42" font-family="sans-serif" font-size="14" fill="#0284c7" font-weight="bold">① 主流對流輸送</text>
+
+  <!-- 步驟 2: 擴散跨越邊界層 -->
+  <line x1="330" y1="75" x2="330" y2="310" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <text x="210" y="215" font-family="sans-serif" font-size="14" fill="#0284c7" font-weight="bold">② 跨邊界層擴散</text>
+
+  <!-- 步驟 3: 表面吸附 -->
+  <circle cx="330" cy="332" r="5" fill="#0284c7"/>
+  <text x="310" y="324" font-family="sans-serif" font-size="14" fill="#0284c7" font-weight="bold" text-anchor="end">③ 吸附</text>
+
+  <!-- 步驟 4: 表面擴散與化學沉積反應 -->
+  <line x1="340" y1="328" x2="440" y2="328" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+  <text x="400" y="308" font-family="sans-serif" font-size="14" fill="#0284c7" font-weight="bold" text-anchor="middle">④ 表面遷移與化學反應</text>
+
+  <!-- 步驟 5: 副產物脫附 -->
+  <circle cx="480" cy="332" r="5" fill="#d97706"/>
+  <text x="495" y="324" font-family="sans-serif" font-size="14" fill="#d97706" font-weight="bold">⑤ 脫附</text>
+
+  <!-- 步驟 6: 副產物逆向擴散跨越邊界層 -->
+  <line x1="480" y1="310" x2="480" y2="75" stroke="#d97706" stroke-width="3" marker-end="url(#arrow-orange)"/>
+  <text x="495" y="215" font-family="sans-serif" font-size="14" fill="#d97706" font-weight="bold">⑥ 逆向擴散</text>
+
+  <!-- 步驟 7: 副產物隨氣流排出 -->
+  <line x1="495" y1="60" x2="630" y2="60" stroke="#d97706" stroke-width="3" marker-end="url(#arrow-orange)"/>
+  <text x="525" y="42" font-family="sans-serif" font-size="14" fill="#d97706" font-weight="bold">⑦ 氣流排淨副產物</text>
+</svg>
