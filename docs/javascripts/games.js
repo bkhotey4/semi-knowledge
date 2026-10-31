@@ -143,7 +143,8 @@
         function showStep() {
           var s = c.steps[stepIdx], fb = el("div", { class: "ix-quiz-explain", style: "display:none" });
           var box = el("div", {}, el("div", { class: "ix-quiz-q", text: "第 " + (stepIdx + 1) + " 步：" + s.question }));
-          var btns = s.options.map(function (o) {
+          // 每個選項自帶 correct 旗標，直接打亂順序即可
+          var btns = IX.shuffle(s.options.slice()).map(function (o) {
             return el("button", { class: "ix-quiz-opt", text: o.text, onclick: function () {
               fb.style.display = ""; fb.textContent = o.feedback;
               if (o.correct) {
@@ -213,7 +214,7 @@
         }
         function station() {
           drawTrack(); drawState();
-          var s = st[idx], fb = el("div", { class: "ix-quiz-explain", style: "display:none" });
+          var s = IX.shuffleOptions(st[idx]), fb = el("div", { class: "ix-quiz-explain", style: "display:none" });
           var box = el("div", {},
             el("div", { class: "ix-muted", text: "第 " + (idx + 1) + " / " + st.length + " 站" }),
             el("h3", { text: s.icon + " " + s.name }), el("p", { text: s.story }),
@@ -347,7 +348,7 @@
       var d = today(), rnd = seeded(d), picks = [];
       var idxs = pool.map(function (_, i) { return i; });
       for (var i = idxs.length - 1; i > 0; i--) { var j = Math.floor(rnd() * (i + 1)); var t = idxs[i]; idxs[i] = idxs[j]; idxs[j] = t; }
-      picks = idxs.slice(0, Math.min(3, pool.length)).map(function (i) { return pool[i]; });
+      picks = idxs.slice(0, Math.min(3, pool.length)).map(function (i) { return IX.shuffleOptions(pool[i], rnd); });
       var streak = store.get("daily:streak", 0), last = store.get("daily:last", "");
       var head = el("div", { class: "ix-row" },
         el("strong", { text: "今日挑戰（" + d + "）" }),

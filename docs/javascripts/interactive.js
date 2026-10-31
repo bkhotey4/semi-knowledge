@@ -45,9 +45,21 @@
     return m.toFixed(digits) + "×10" + String(e).split("").map(function (c) { return SUP[c]; }).join("");
   }
 
-  function shuffle(a) {
-    for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+  function shuffle(a, rnd) {
+    rnd = rnd || Math.random;
+    for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(rnd() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
     return a;
+  }
+
+  // 顯示前打亂選項並同步正確答案的位置，避免 AI 出題時答案集中在某個選項被猜中。
+  // 有「以上皆是／皆非」這類必須放最後的選項就維持原順序。
+  function shuffleOptions(q, rnd) {
+    if (!q.options || q.options.some(function (o) { return /以上|皆是|皆非|都對|都不對|都是|都不是/.test(o); })) return q;
+    var order = shuffle(q.options.map(function (_, i) { return i; }), rnd);
+    return Object.assign({}, q, {
+      options: order.map(function (i) { return q.options[i]; }),
+      answer: order.indexOf(q.answer)
+    });
   }
 
   // ── 折線圖（canvas）──────────────────────────────
@@ -371,19 +383,21 @@
       var r = Math.min(W, H) / 2 - 6, cx = W / 2, cy = H / 2, scale = r / 150; // px per mm
       var side = Math.sqrt(area.get()), usable = 147, D = D0.get();
       g.strokeStyle = fg; g.beginPath(); g.arc(cx, cy, r, 0, 2 * Math.PI); g.stroke();
-      var dies = [], n = Math.ceil(usable / side);
+      var dies = [], grid = {}, n = Math.ceil(usable / side);
       for (var i = -n; i < n; i++) for (var j = -n; j < n; j++) {
         var x0 = i * side, y0 = j * side, ok = true;
         [[x0, y0], [x0 + side, y0], [x0, y0 + side], [x0 + side, y0 + side]].forEach(function (c) { if (c[0] * c[0] + c[1] * c[1] > usable * usable) ok = false; });
-        if (ok) dies.push({ x: x0, y: y0, bad: false });
+        if (ok) { var die = { x: x0, y: y0, bad: false }; dies.push(die); grid[i + "," + j] = die; }
       }
       var count = poissonSample(D * Math.PI * 15 * 15), defects = [];
       for (var k = 0; k < count; k++) {
         var rr = 150 * Math.sqrt(Math.random()), th = 2 * Math.PI * Math.random();
         defects.push([rr * Math.cos(th), rr * Math.sin(th)]);
       }
+      // 依座標直接算出缺陷落在哪顆晶粒，不必逐顆比對（缺陷多、晶粒小時滑桿才不會卡）
       defects.forEach(function (d) {
-        dies.forEach(function (die) { if (d[0] >= die.x && d[0] < die.x + side && d[1] >= die.y && d[1] < die.y + side) die.bad = true; });
+        var hit = grid[Math.floor(d[0] / side) + "," + Math.floor(d[1] / side)];
+        if (hit) hit.bad = true;
       });
       var good = 0;
       dies.forEach(function (die) {
@@ -788,6 +802,7 @@
     var result = el("div", { class: "ix-row" });
     root.appendChild(head);
     qs.forEach(function (q, qi) {
+      q = shuffleOptions(q);
       root.appendChild(el("div", { class: "ix-quiz-q", text: (qi + 1) + ". " + q.q }));
       var explain = el("div", { class: "ix-quiz-explain", style: "display:none" });
       var buttons = q.options.map(function (opt, oi) {
@@ -907,7 +922,7 @@
   }
 
   // 給遊戲模組 (games.js) 共用
-  window.SemiIX = { el: el, store: store, plot: plot, sci: sci, shuffle: shuffle, range: range,
+  window.SemiIX = { el: el, store: store, plot: plot, sci: sci, shuffle: shuffle, shuffleOptions: shuffleOptions, range: range,
     dataUrl: dataUrl, pageUrl: pageUrl, legend: legend, PALETTE: PALETTE };
 
   // ── 啟動 ───────────────────────────────────────
