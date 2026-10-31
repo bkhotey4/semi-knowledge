@@ -113,7 +113,7 @@
         var solved = store.get("pe:solved", {});
         root.replaceChildren(el("div", { class: "ix-row" },
           el("strong", { text: "選擇一個值班案例" }),
-          el("span", { class: "ix-muted", text: "已解決 " + Object.keys(solved).length + " / " + cases.length })));
+          el("span", { class: "ix-muted", text: "已解決 " + cases.filter(function (c) { return c.id in solved; }).length + " / " + cases.length })));
         cases.forEach(function (c) {
           var best = solved[c.id];
           root.appendChild(el("button", { class: "ix-quiz-opt", onclick: function () { play(c); } },
@@ -261,14 +261,15 @@
         var done = store.get("puzzle:" + p.id, null);
         sel.appendChild(el("option", { value: p.id, text: p.title + "（" + p.level + "）" + (done !== null ? " ✓" : "") }));
       });
-      var area = el("div");
+      var area = el("div"), timer = null;
       sel.addEventListener("change", function () { load(); });
       root.replaceChildren(el("div", { class: "ix-row" }, el("strong", { text: "選擇題目：" }), sel), area);
       function load() {
         var p = puzzles.filter(function (x) { return x.id === sel.value; })[0];
         var order = IX.shuffle(p.steps.map(function (s, i) { return i; }));
         while (order.every(function (v, i) { return v === i; })) order = IX.shuffle(order);
-        var startTime = null, timer = null, moves = 0;
+        clearInterval(timer); timer = null;  // 重新打亂或換題時停掉上一題的計時器
+        var startTime = null, moves = 0, solved = false;
         var list = el("ol", { class: "ix-puzzle" }), info = el("div", { class: "ix-row" }), result = el("div");
         var clock = el("span", { class: "ix-muted", text: "計時：0 秒" });
         function startClock() {
@@ -292,12 +293,13 @@
           });
         }
         function move(from, to) {
-          if (to < 0 || to >= order.length || from === to) return;
+          if (solved || to < 0 || to >= order.length || from === to) return;
           startClock(); moves++;
           var v = order.splice(from, 1)[0]; order.splice(to, 0, v);
           result.replaceChildren(); render();
         }
         function check() {
+          if (solved) return;  // 已完成就不再重算時間與紀錄
           startClock();
           var items = list.children, ok = 0;
           order.forEach(function (stepIdx, pos) {
@@ -307,6 +309,7 @@
             items[pos].classList.toggle("wrong", !right);
           });
           if (ok === order.length) {
+            solved = true;
             clearInterval(timer);
             var secs = Math.round((Date.now() - startTime) / 1000), best = store.get("puzzle:" + p.id, null);
             if (best === null || secs < best) store.set("puzzle:" + p.id, secs);
@@ -391,20 +394,24 @@
   // ── 成就徽章 ───────────────────────────────────
   function quizStats() {
     var done = 0, perfect = 0;
-    for (var i = 0; i < localStorage.length; i++) {
-      var k = localStorage.key(i);
-      if (k && k.indexOf("semi:quiz:") === 0) {
-        done++;
-        var id = k.slice("semi:quiz:".length);
-        if (store.get("quiz:" + id, -1) === store.get("quiztotal:" + id, -2)) perfect++;
+    try {  // 瀏覽器封鎖網站資料時 localStorage 會丟例外，徽章仍要能顯示
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k && k.indexOf("semi:quiz:") === 0) {
+          done++;
+          var id = k.slice("semi:quiz:".length);
+          if (store.get("quiz:" + id, -1) === store.get("quiztotal:" + id, -2)) perfect++;
+        }
       }
-    }
+    } catch (e) { /* 無法讀取就當作 0 */ }
     return { done: done, perfect: perfect };
   }
   function renderBadges(root) {
     Promise.all([getJSON("pe_cases.json").catch(function () { return []; }), getJSON("puzzles.json").catch(function () { return []; })]).then(function (res) {
       var nCases = res[0].length, puzzles = res[1];
-      var q = quizStats(), solved = store.get("pe:solved", {}), solvedIds = Object.keys(solved);
+      var q = quizStats(), solved = store.get("pe:solved", {});
+      // 只算目前還存在的案例，案例改名或刪除後舊紀錄不會讓徽章提前解鎖
+      var solvedIds = res[0].map(function (c) { return c.id; }).filter(function (id) { return id in solved; });
       var known = store.get("known-terms", {}), knownCount = Object.keys(known).filter(function (k) { return known[k]; }).length;
       var visited = Object.keys(store.get("visited", {})).length;
       var puzzlesDone = puzzles.filter(function (p) { return store.get("puzzle:" + p.id, null) !== null; }).length;

@@ -702,11 +702,23 @@
     }).catch(function () { root.textContent = "機型資料載入失敗。"; });
   }
 
+  // 動態插入的內容（閃卡等）要自己呼叫 KaTeX，頁面載入時的那次渲染照不到
+  function renderMath(node) {
+    if (window.renderMathInElement) {
+      try {
+        window.renderMathInElement(node, { delimiters: [
+          { left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }] });
+      } catch (e) { /* 公式有誤就保留原文 */ }
+    }
+  }
+
   // ── 圖卡庫 ───────────────────────────────────
   function downloadPng(src, name) {
-    fetch(src).then(function (r) { return r.text(); }).then(function (svgText) {
+    function fail() { alert("圖片下載失敗，請稍後再試，或直接在圖卡上按右鍵另存 SVG。"); }
+    fetch(src).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }).then(function (svgText) {
       var blobUrl = URL.createObjectURL(new Blob([svgText], { type: "image/svg+xml" }));
       var img = new Image();
+      img.onerror = function () { URL.revokeObjectURL(blobUrl); fail(); };
       img.onload = function () {
         var scale = 2, canvas = document.createElement("canvas");
         canvas.width = (img.naturalWidth || 960) * scale; canvas.height = (img.naturalHeight || 600) * scale;
@@ -715,16 +727,19 @@
         g.drawImage(img, 0, 0, canvas.width, canvas.height);
         URL.revokeObjectURL(blobUrl);
         canvas.toBlob(function (blob) {
-          var a = el("a", { href: URL.createObjectURL(blob), download: name + ".png" });
+          if (!blob) return fail();
+          var url = URL.createObjectURL(blob), a = el("a", { href: url, download: name + ".png" });
           document.body.appendChild(a); a.click(); a.remove();
+          setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
         }, "image/png");
       };
       img.src = blobUrl;
-    });
+    }).catch(fail);
   }
   function initCardLibrary(root) {
     fetch(dataUrl("cards.json"), { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (cards) {
-      var kinds = ["全部", "核心概念", "章節重點"], current = "全部";
+      // 分類從資料取，新增圖卡種類（例如機台示意圖）時會自動出現篩選按鈕
+      var kinds = ["全部"].concat(cards.map(function (c) { return c.kind; }).filter(function (k, i, a) { return k && a.indexOf(k) === i; })), current = "全部";
       var chips = el("div", { class: "ix-row" }), grid = el("div", { class: "ix-card-lib" });
       function render() {
         chips.replaceChildren();
@@ -821,7 +836,8 @@
         }
         function show() {
           flipped = false;
-          var k = Object.keys(known).filter(function (t) { return known[t]; }).length;
+          // 只算目前題庫裡的術語，舊術語被移除後不會灌水
+          var k = terms.filter(function (t) { return known[t.term]; }).length;
           stat.textContent = "已掌握 " + k + " / " + terms.length + " 個術語";
           bar.firstChild.style.width = (k / terms.length * 100) + "%";
           card.replaceChildren();
@@ -829,6 +845,7 @@
           var t = deck[idx % deck.length];
           card.appendChild(el("div", { class: "term", text: t.term }));
           card.appendChild(el("div", { class: "ix-muted", text: "點卡片看解釋　（" + (idx % deck.length + 1) + " / " + deck.length + "）" }));
+          renderMath(card);
         }
         function flip() {
           if (!deck.length || flipped) return;
@@ -838,6 +855,7 @@
             el("div", { class: "term", text: t.term }),
             el("div", { class: "def", text: t.def }),
             el("a", { href: pageUrl(t.url), class: "ix-muted", text: "出處：" + t.chapter, onclick: function (e) { e.stopPropagation(); } }));
+          renderMath(card);
         }
         function mark(isKnown) {
           if (!deck.length) return;
@@ -866,7 +884,8 @@
         var written = chapters.filter(function (c) { return c.written; });
         var read = written.filter(function (c) { return visited[c.id]; }).length;
         var quizzed = written.filter(function (c) { return store.get("quiz:" + c.id, null) !== null; });
-        var known = Object.keys(store.get("known-terms", {})).length;
+        var knownMap = store.get("known-terms", {});
+        var known = Object.keys(knownMap).filter(function (k) { return knownMap[k]; }).length;  // 按「再複習」的不算
         root.replaceChildren(
           el("strong", { text: "我的學習進度" }),
           el("div", { class: "ix-out" },
@@ -879,7 +898,7 @@
           quizzed.forEach(function (c) {
             table.appendChild(el("tr", {},
               el("td", {}, el("a", { href: pageUrl(c.url), text: "第 " + c.n + " 章　" + c.title })),
-              el("td", { text: "測驗最佳 " + store.get("quiz:" + c.id, 0) + " 分" })));
+              el("td", { text: "測驗最佳 " + store.get("quiz:" + c.id, 0) + " / " + store.get("quiztotal:" + c.id, "?") + " 題" })));
           });
           root.appendChild(table);
         }
