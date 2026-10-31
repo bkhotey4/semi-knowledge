@@ -187,6 +187,8 @@
   function redrawOnResize(fn) {
     var timer;
     window.addEventListener("resize", function () { clearTimeout(timer); timer = setTimeout(fn, 150); });
+    // 在背景分頁載入時畫布寬度是 0，切回來時補畫一次
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) fn(); });
   }
 
   // ── 半導體物理常數與模型 ─────────────────────────
@@ -381,6 +383,7 @@
       var g = wafer.getContext("2d"); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H);
       var cs = getComputedStyle(wafer), fg = cs.getPropertyValue("--md-default-fg-color--light").trim() || "#777";
       var r = Math.min(W, H) / 2 - 6, cx = W / 2, cy = H / 2, scale = r / 150; // px per mm
+      if (r <= 0) return;  // 畫布還沒排版（例如頁面在背景載入）時先不畫，視窗大小改變時會重畫
       var side = Math.sqrt(area.get()), usable = 147, D = D0.get();
       g.strokeStyle = fg; g.beginPath(); g.arc(cx, cy, r, 0, 2 * Math.PI); g.stroke();
       var dies = [], grid = {}, n = Math.ceil(usable / side);
