@@ -1,0 +1,65 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <!-- 定義箭頭 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000000"/>
+    </marker>
+    <marker id="ion-arrow" markerWidth="6" markerHeight="6" refX="0" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#4a90e2"/>
+    </marker>
+  </defs>
+
+  <!-- 靶材 (Target) -->
+  <rect x="200" y="20" width="400" height="30" fill="#e0e0e0" stroke="#000000" stroke-width="2"/>
+  <text x="355" y="42" font-family="sans-serif" font-size="16" fill="#000000">金屬靶材 (Cathode)</text>
+
+  <!-- ICP 線圈 -->
+  <circle cx="150" cy="180" r="15" fill="#f5a623" stroke="#000000" stroke-width="2"/>
+  <circle cx="150" cy="230" r="15" fill="#f5a623" stroke="#000000" stroke-width="2"/>
+  <circle cx="650" cy="180" r="15" fill="#f5a623" stroke="#000000" stroke-width="2"/>
+  <circle cx="650" cy="230" r="15" fill="#f5a623" stroke="#000000" stroke-width="2"/>
+  <text x="80" y="160" font-family="sans-serif" font-size="16" fill="#000000">感應線圈 (RF Coil)</text>
+  <text x="610" y="160" font-family="sans-serif" font-size="16" fill="#000000">ICP 源</text>
+
+  <!-- 電漿區域示意 -->
+  <rect x="200" y="150" width="400" height="120" fill="#4a90e2" fill-opacity="0.1" stroke="#4a90e2" stroke-dasharray="5,5"/>
+  <text x="345" y="215" font-family="sans-serif" font-size="18" fill="#4a90e2" font-weight="bold">離子化區域 (M+)</text>
+
+  <!-- 基板與高深寬比溝槽 -->
+  <path d="M 100 350 L 370 350 L 370 430 L 430 430 L 430 350 L 700 350" fill="none" stroke="#000000" stroke-width="3"/>
+  <rect x="100" y="353" width="270" height="20" fill="#e0e0e0"/>
+  <rect x="430" y="353" width="270" height="20" fill="#e0e0e0"/>
+  <text x="450" y="420" font-family="sans-serif" font-size="16" fill="#000000">高深寬比溝槽 (HAR Trench)</text>
+
+  <!-- 中性原子 (隨機方向) -->
+  <circle cx="300" cy="80" r="4" fill="#888888"/>
+  <line x1="300" y1="80" x2="330" y2="130" stroke="#888888" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="230" y="100" font-family="sans-serif" font-size="14" fill="#888888">中性原子 (M0)</text>
+
+  <!-- 離子 (受偏壓引導，垂直向下) -->
+  <circle cx="385" cy="280" r="5" fill="#4a90e2"/>
+  <line x1="385" y1="285" x2="385" y2="340" stroke="#4a90e2" stroke-width="2" marker-end="url(#ion-arrow)"/>
+  
+  <circle cx="400" cy="300" r="5" fill="#4a90e2"/>
+  <line x1="400" y1="305" x2="400" y2="420" stroke="#4a90e2" stroke-width="2" marker-end="url(#ion-arrow)"/>
+
+  <circle cx="415" cy="280" r="5" fill="#4a90e2"/>
+  <line x1="415" y1="285" x2="415" y2="340" stroke="#4a90e2" stroke-width="2" marker-end="url(#ion-arrow)"/>
+  
+  <text x="430" y="295" font-family="sans-serif" font-size="14" fill="#4a90e2">金屬離子 (M+)</text>
+
+  <!-- 負偏壓標示 -->
+  <line x1="100" y1="380" x2="100" y2="410" stroke="#000000" stroke-width="2"/>
+  <line x1="80" y1="410" x2="120" y2="410" stroke="#000000" stroke-width="2"/>
+  <line x1="90" y1="415" x2="110" y2="415" stroke="#000000" stroke-width="2"/>
+  <text x="130" y="415" font-family="sans-serif" font-size="16" fill="#000000">負偏壓 (Substrate Bias)</text>
+
+  <!-- 物理效應標註 -->
+  <path d="M 360 330 Q 380 340 375 355" fill="none" stroke="#ff0000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="210" y="330" font-family="sans-serif" font-size="14" fill="#ff0000">克服陰影效應 (Shadowing)</text>
+  
+  <text x="385" y="445" font-family="sans-serif" font-size="14" fill="#000000" text-anchor="middle">底部沉積 (Bottom Coverage)</text>
+</svg>
