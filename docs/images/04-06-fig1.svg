@@ -1,0 +1,93 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333333"/>
+    </marker>
+  </defs>
+
+  <!-- 標題 -->
+  <text x="400" y="30" font-family="sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#333333">圖 23-1 原子層沉積 (ALD) 四步驟循環示意圖</text>
+
+  <!-- 步驟 1 -->
+  <g transform="translate(50, 50)">
+    <text x="0" y="20" font-family="sans-serif" font-size="16" font-weight="bold" fill="#333333">步驟 1：前驅物 A 脈衝</text>
+    <rect x="0" y="130" width="300" height="20" fill="#cccccc"/>
+    <text x="150" y="145" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#333333">基板 Substrate</text>
+    <!-- 吸附分子 -->
+    <circle cx="30" cy="122" r="8" fill="#3498db"/>
+    <circle cx="70" cy="122" r="8" fill="#3498db"/>
+    <circle cx="110" cy="122" r="8" fill="#3498db"/>
+    <circle cx="150" cy="122" r="8" fill="#3498db"/>
+    <circle cx="190" cy="122" r="8" fill="#3498db"/>
+    <circle cx="230" cy="122" r="8" fill="#3498db"/>
+    <circle cx="270" cy="122" r="8" fill="#3498db"/>
+    <!-- 懸浮分子 -->
+    <circle cx="50" cy="60" r="8" fill="#3498db" fill-opacity="0.6"/>
+    <circle cx="180" cy="80" r="8" fill="#3498db" fill-opacity="0.6"/>
+    <circle cx="250" cy="50" r="8" fill="#3498db" fill-opacity="0.6"/>
+    <text x="150" y="110" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#3498db">自限性飽和吸附</text>
+  </g>
+
+  <!-- 步驟 2 -->
+  <g transform="translate(450, 50)">
+    <text x="0" y="20" font-family="sans-serif" font-size="16" font-weight="bold" fill="#333333">步驟 2：惰性氣體沖洗</text>
+    <rect x="0" y="130" width="300" height="20" fill="#cccccc"/>
+    <!-- 飽和層 -->
+    <circle cx="30" cy="122" r="8" fill="#3498db"/>
+    <circle cx="70" cy="122" r="8" fill="#3498db"/>
+    <circle cx="110" cy="122" r="8" fill="#3498db"/>
+    <circle cx="150" cy="122" r="8" fill="#3498db"/>
+    <circle cx="190" cy="122" r="8" fill="#3498db"/>
+    <circle cx="230" cy="122" r="8" fill="#3498db"/>
+    <circle cx="270" cy="122" r="8" fill="#3498db"/>
+    <!-- 沖洗箭頭 -->
+    <line x1="50" y1="60" x2="150" y2="60" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="180" y1="80" x2="280" y2="80" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="150" y="50" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#333333">移除多餘前驅物</text>
+  </g>
+
+  <!-- 步驟 3 -->
+  <g transform="translate(50, 250)">
+    <text x="0" y="20" font-family="sans-serif" font-size="16" font-weight="bold" fill="#333333">步驟 3：反應物 B 脈衝</text>
+    <rect x="0" y="130" width="300" height="20" fill="#cccccc"/>
+    <!-- 表面反應 -->
+    <rect x="0" y="120" width="300" height="10" fill="#e74c3c"/>
+    <circle cx="30" cy="122" r="8" fill="#3498db"/>
+    <circle cx="70" cy="122" r="8" fill="#3498db"/>
+    <circle cx="110" cy="122" r="8" fill="#3498db"/>
+    <circle cx="150" cy="122" r="8" fill="#3498db"/>
+    <circle cx="190" cy="122" r="8" fill="#3498db"/>
+    <circle cx="230" cy="122" r="8" fill="#3498db"/>
+    <circle cx="270" cy="122" r="8" fill="#3498db"/>
+    <!-- 反應物 B -->
+    <circle cx="60" cy="60" r="8" fill="#e74c3c" fill-opacity="0.6"/>
+    <circle cx="150" cy="80" r="8" fill="#e74c3c" fill-opacity="0.6"/>
+    <circle cx="240" cy="50" r="8" fill="#e74c3c" fill-opacity="0.6"/>
+    <text x="150" y="110" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#e74c3c">表面化學反應</text>
+  </g>
+
+  <!-- 步驟 4 -->
+  <g transform="translate(450, 250)">
+    <text x="0" y="20" font-family="sans-serif" font-size="16" font-weight="bold" fill="#333333">步驟 4：二次沖洗</text>
+    <rect x="0" y="130" width="300" height="20" fill="#cccccc"/>
+    <!-- 形成之單層膜 -->
+    <rect x="0" y="115" width="300" height="15" fill="#333333" fill-opacity="0.3"/>
+    <line x1="310" y1="115" x2="310" y2="130" stroke="#333333" stroke-width="1"/>
+    <line x1="305" y1="115" x2="315" y2="115" stroke="#333333" stroke-width="1"/>
+    <line x1="305" y1="130" x2="315" y2="130" stroke="#333333" stroke-width="1"/>
+    <text x="320" y="127" font-family="sans-serif" font-size="14" fill="#333333">單原子層厚度</text>
+    <!-- 沖洗副產物 -->
+    <circle cx="100" cy="70" r="5" fill="none" stroke="#e74c3c" stroke-width="2"/>
+    <circle cx="200" cy="60" r="5" fill="none" stroke="#e74c3c" stroke-width="2"/>
+    <line x1="110" y1="70" x2="180" y2="70" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="150" y="50" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#333333">移除副產物與多餘 B</text>
+  </g>
+
+  <!-- 循環箭頭 -->
+  <path d="M370,150 Q400,150 430,150" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M600,210 Q600,230 600,250" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M430,380 Q400,380 370,380" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M200,250 Q200,230 200,210" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="400" y="235" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#333333">一個 ALD 循環 (Cycle)</text>
+</svg>
