@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1a365d"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1a365d">熱氧化 Deal-Grove 模型示意圖</text>
+
+  <!-- Region Backgrounds -->
+  <!-- Gas Phase -->
+  <rect x="60" y="55" width="200" height="315" fill="#ffffff" stroke="#1a365d" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <!-- SiO2 Layer -->
+  <rect x="260" y="55" width="260" height="315" fill="#feebc8" stroke="#1a365d" stroke-width="1.5"/>
+  <!-- Si Substrate -->
+  <rect x="520" y="55" width="220" height="315" fill="#e2e8f0" stroke="#1a365d" stroke-width="1.5"/>
+
+  <!-- Region Labels -->
+  <text x="160" y="80" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1a365d">主氣體與滯流層</text>
+  <text x="390" y="80" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1a365d">二氧化矽層 (SiO₂)</text>
+  <text x="630" y="80" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1a365d">矽基板 (Si)</text>
+
+  <!-- Thickness Indicator xo -->
+  <line x1="260" y1="108" x2="520" y2="108" stroke="#1a365d" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="390" y="103" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#1a365d">氧化層厚度 xo</text>
+
+  <!-- Flux Arrows and Labels -->
+  <!-- F1: Gas Phase Transport -->
+  <line x1="90" y1="155" x2="230" y2="155" stroke="#1a365d" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="160" y="145" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1a365d">氣相輸送通量 F₁</text>
+
+  <!-- F2: Oxide Diffusion -->
+  <line x1="290" y1="155" x2="490" y2="155" stroke="#1a365d" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="390" y="145" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1a365d">氧化層擴散通量 F₂</text>
+
+  <!-- F3: Interface Reaction -->
+  <line x1="530" y1="155" x2="610" y2="155" stroke="#1a365d" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="570" y="145" text-anchor="start" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1a365d">介面反應通量 F₃</text>
+
+  <!-- Concentration Reference Lines & Labels -->
+  <!-- Equilibrium Concentration C* -->
+  <line x1="60" y1="205" x2="520" y2="205" stroke="#e53e3e" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="70" y="198" font-family="sans-serif" font-size="15" font-weight="bold" fill="#e53e3e">C* (平衡濃度)</text>
+
+  <!-- Concentration Profile Curve -->
+  <!-- Gas Phase Gradient (C* to Co) -->
+  <path d="M 70 205 Q 180 205 260 235" fill="none" stroke="#e53e3e" stroke-width="3"/>
+  <!-- Oxide Diffusion Gradient (Co to Ci) -->
+  <line x1="260" y1="235" x2="520" y2="315" stroke="#e53e3e" stroke-width="3"/>
+  <!-- Drop to zero at interface -->
+  <line x1="520" y1="315" x2="520" y2="370" stroke="#e53e3e" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- Concentration Points and Labels -->
+  <!-- Surface Concentration Co -->
+  <circle cx="260" cy="235" r="4.5" fill="#e53e3e"/>
+  <text x="250" y="240" text-anchor="end" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e53e3e">Co (表面濃度)</text>
+
+  <!-- Interface Concentration Ci -->
+  <circle cx="520" cy="315" r="4.5" fill="#e53e3e"/>
+  <text x="532" y="320" text-anchor="start" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e53e3e">Ci (介面濃度)</text>
+
+  <!-- X-Axis and Interface Labels -->
+  <line x1="60" y1="385" x2="740" y2="385" stroke="#1a365d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  
+  <line x1="260" y1="370" x2="260" y2="392" stroke="#1a365d" stroke-width="1.5"/>
+  <text x="260" y="412" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1a365d">x = 0 (外表面)</text>
+
+  <line x1="520" y1="370" x2="520" y2="392" stroke="#1a365d" stroke-width="1.5"/>
+  <text x="520" y="412" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1a365d">x = xo (Si/SiO₂介面)</text>
+
+  <text x="740" y="412" text-anchor="end" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1a365d">位置 x</text>
+</svg>

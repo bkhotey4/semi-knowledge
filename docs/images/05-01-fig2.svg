@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#333333"/>
+    </marker>
+    <marker id="gray-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5f6368"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- 圖表標題 -->
+  <text x="400" y="35" font-family="sans-serif" font-size="18" font-weight="bold" fill="#333333" text-anchor="middle">雜質擴散濃度分佈圖</text>
+
+  <!-- 圖例說明區域 -->
+  <rect x="470" y="55" width="280" height="65" fill="#ffffff" stroke="#5f6368" stroke-width="1" rx="4"/>
+  <line x1="485" y1="78" x2="520" y2="78" stroke="#1a73e8" stroke-width="3"/>
+  <text x="530" y="83" font-family="sans-serif" font-size="14" fill="#333333">預沉積 (無限源, erfc 分佈)</text>
+  <line x1="485" y1="103" x2="520" y2="103" stroke="#d93025" stroke-width="3"/>
+  <text x="530" y="108" font-family="sans-serif" font-size="14" fill="#333333">推進驅入 (有限源, 高斯分佈)</text>
+
+  <!-- 座標軸 -->
+  <line x1="120" y1="360" x2="120" y2="65" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="120" y1="360" x2="740" y2="360" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <text x="55" y="65" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">濃度 C</text>
+  <text x="730" y="395" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="end">深度 x</text>
+
+  <!-- 縱軸刻度標籤與輔助線 -->
+  <line x1="115" y1="90" x2="120" y2="90" stroke="#333333" stroke-width="2"/>
+  <text x="110" y="95" font-family="sans-serif" font-size="14" fill="#333333" text-anchor="end">Cs (固體溶解度)</text>
+
+  <line x1="115" y1="180" x2="120" y2="180" stroke="#333333" stroke-width="2"/>
+  <text x="110" y="185" font-family="sans-serif" font-size="14" fill="#333333" text-anchor="end">C(0, t₂)</text>
+
+  <line x1="120" y1="310" x2="710" y2="310" stroke="#5f6368" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="110" y="315" font-family="sans-serif" font-size="14" fill="#5f6368" text-anchor="end">Csub (基板濃度)</text>
+
+  <!-- 橫軸刻度標籤與輔助線 -->
+  <text x="120" y="385" font-family="sans-serif" font-size="14" fill="#333333" text-anchor="middle">0 (晶圓表面)</text>
+
+  <line x1="320" y1="310" x2="320" y2="360" stroke="#5f6368" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="320" y="385" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1a73e8" text-anchor="middle">Xj1</text>
+
+  <line x1="560" y1="310" x2="560" y2="360" stroke="#5f6368" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="560" y="385" font-family="sans-serif" font-size="14" font-weight="bold" fill="#d93025" text-anchor="middle">Xj2</text>
+
+  <!-- 擴散濃度分佈曲線 -->
+  <!-- 1. 預沉積曲線 (erfc) -->
+  <path d="M 120 90 C 150 180, 220 300, 320 310 C 370 315, 420 330, 480 332" fill="none" stroke="#1a73e8" stroke-width="3"/>
+  
+  <!-- 2. 推進驅入曲線 (Gaussian) -->
+  <path d="M 120 180 C 220 190, 380 250, 560 310 C 620 320, 670 330, 710 332" fill="none" stroke="#d93025" stroke-width="3"/>
+
+  <!-- 趨勢動態指示 -->
+  <!-- 表面濃度下降箭頭 -->
+  <line x1="160" y1="105" x2="160" y2="165" stroke="#5f6368" stroke-width="2" marker-end="url(#gray-arrow)"/>
+  <text x="170" y="140" font-family="sans-serif" font-size="14" fill="#5f6368">表面濃度降低</text>
+
+  <!-- 擴散深度增加箭頭 -->
+  <line x1="330" y1="265" x2="450" y2="285" stroke="#5f6368" stroke-width="2" marker-end="url(#gray-arrow)"/>
+  <text x="350" y="255" font-family="sans-serif" font-size="14" fill="#5f6368">擴散深度增加 (Xj2 &gt; Xj1)</text>
+
+  <!-- 接面交點標示圓點 -->
+  <circle cx="320" cy="310" r="4" fill="#1a73e8"/>
+  <circle cx="560" cy="310" r="4" fill="#d93025"/>
+</svg>
