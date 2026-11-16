@@ -1,0 +1,72 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333333"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" font-family="sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#333333">替換閘極製程 (RMG) 整合流程圖</text>
+
+  <g transform="translate(40, 100)">
+    <text x="75" y="20" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#333333">1. 形成犧牲閘極與側牆</text>
+    <rect x="0" y="150" width="150" height="30" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+    <rect x="55" y="90" width="40" height="60" fill="#ffd700" stroke="#333333" stroke-width="1"/>
+    <polygon points="45,150 55,150 55,90 50,90" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <polygon points="95,150 105,150 100,90 95,90" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <text x="75" y="125" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#333333">Dummy</text>
+    <text x="75" y="200" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#333333">矽基板</text>
+  </g>
+
+  <line x1="200" y1="210" x2="230" y2="210" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <g transform="translate(230, 100)">
+    <text x="75" y="20" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#333333">2. 沉積 ILD 與 CMP</text>
+    <rect x="0" y="150" width="150" height="30" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+    <rect x="0" y="90" width="45" height="60" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <rect x="105" y="90" width="45" height="60" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <rect x="55" y="90" width="40" height="60" fill="#ffd700" stroke="#333333" stroke-width="1"/>
+    <polygon points="45,150 55,150 55,90 45,90" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <polygon points="95,150 105,150 105,90 95,90" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <text x="25" y="125" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#333333">ILD</text>
+  </g>
+
+  <line x1="390" y1="210" x2="420" y2="210" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <g transform="translate(420, 100)">
+    <text x="75" y="20" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#333333">3. 移除犧牲閘極</text>
+    <rect x="0" y="150" width="150" height="30" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+    <rect x="0" y="90" width="45" height="60" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <rect x="105" y="90" width="45" height="60" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <rect x="45" y="90" width="10" height="60" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <rect x="95" y="90" width="10" height="60" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <rect x="55" y="90" width="40" height="60" fill="#ffffff" stroke="#333333" stroke-dasharray="4" stroke-width="1"/>
+    <text x="75" y="125" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#333333">溝槽</text>
+  </g>
+
+  <line x1="580" y1="210" x2="610" y2="210" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <g transform="translate(610, 100)">
+    <text x="75" y="20" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#333333">4. 填充 HKMG</text>
+    <rect x="0" y="150" width="150" height="30" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+    <rect x="0" y="90" width="45" height="60" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <rect x="105" y="90" width="45" height="60" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <rect x="45" y="90" width="10" height="60" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <rect x="95" y="90" width="10" height="60" fill="#add8e6" stroke="#333333" stroke-width="1"/>
+    <rect x="55" y="90" width="40" height="60" fill="#333333" stroke="#333333" stroke-width="1"/>
+    <path d="M55,90 L55,150 L95,150 L95,90" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <text x="75" y="125" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#ffffff">Metal</text>
+  </g>
+
+  <g transform="translate(50, 320)">
+    <rect x="0" y="0" width="15" height="15" fill="#ffd700" stroke="#333333"/>
+    <text x="25" y="13" font-family="sans-serif" font-size="14" fill="#333333">多晶矽 (犧牲閘極)</text>
+    <rect x="200" y="0" width="15" height="15" fill="#add8e6" stroke="#333333"/>
+    <text x="225" y="13" font-family="sans-serif" font-size="14" fill="#333333">介電層 (ILD/Spacer)</text>
+    <rect x="420" y="0" width="15" height="15" fill="#333333" stroke="#333333"/>
+    <text x="445" y="13" font-family="sans-serif" font-size="14" fill="#333333">金屬閘極 (Metal Gate)</text>
+    <rect x="620" y="0" width="15" height="15" fill="#ffffff" stroke="#333333" stroke-width="2"/>
+    <text x="645" y="13" font-family="sans-serif" font-size="14" fill="#333333">High-k 界面層</text>
+  </g>
+</svg>
