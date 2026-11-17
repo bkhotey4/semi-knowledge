@@ -1,0 +1,42 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#b87333"/>
+    </marker>
+  </defs>
+  <rect x="50" y="120" width="250" height="280" fill="#f0f0f0"/>
+  <rect x="500" y="120" width="250" height="280" fill="#f0f0f0"/>
+  <text x="120" y="260" font-family="sans-serif" font-size="18" fill="#666666">介電層 (Dielectric)</text>
+  <path d="M 50 120 L 300 120 L 300 400 L 500 400 L 500 120 L 750 120" fill="none" stroke="#b87333" stroke-width="4"/>
+  <path d="M 50 120 L 300 120 L 300 400 L 500 400 L 500 120 L 750 120 L 750 135 L 515 135 L 515 400 L 285 400 L 285 135 L 50 135 Z" fill="#b87333" opacity="0.3"/>
+  <path d="M 300 400 L 500 400 L 500 340 L 315 340 L 315 400 Z" fill="#b87333"/>
+  <path d="M 300 400 L 315 400 L 315 120 L 300 120 Z" fill="#b87333"/>
+  <path d="M 485 400 L 500 400 L 500 120 L 485 120 Z" fill="#b87333"/>
+  <circle cx="80" cy="110" r="8" fill="#0055ff"/>
+  <circle cx="120" cy="110" r="8" fill="#0055ff"/>
+  <circle cx="160" cy="110" r="8" fill="#0055ff"/>
+  <circle cx="280" cy="110" r="8" fill="#0055ff"/>
+  <circle cx="305" cy="130" r="8" fill="#0055ff"/>
+  <circle cx="520" cy="110" r="8" fill="#0055ff"/>
+  <circle cx="495" cy="130" r="8" fill="#0055ff"/>
+  <circle cx="600" cy="110" r="8" fill="#0055ff"/>
+  <circle cx="350" cy="385" r="4" fill="#ff0000"/>
+  <circle cx="380" cy="390" r="4" fill="#ff0000"/>
+  <circle cx="410" cy="380" r="4" fill="#ff0000"/>
+  <circle cx="440" cy="390" r="4" fill="#ff0000"/>
+  <circle cx="460" cy="385" r="4" fill="#ff0000"/>
+  <circle cx="400" cy="360" r="4" fill="#ff0000"/>
+  <line x1="400" y1="330" x2="400" y2="260" stroke="#b87333" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="325" y1="250" x2="345" y2="250" stroke="#b87333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="475" y1="250" x2="455" y2="250" stroke="#b87333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="340" y="60" font-family="sans-serif" font-size="18" fill="#000000">電解液 (Electrolyte)</text>
+  <text x="100" y="80" font-family="sans-serif" font-size="16" fill="#0055ff">抑制劑 (Suppressor)</text>
+  <line x1="180" y1="85" x2="270" y2="105" stroke="#0055ff" stroke-width="1"/>
+  <text x="550" y="380" font-family="sans-serif" font-size="16" fill="#ff0000">加速劑 (Accelerator)</text>
+  <line x1="545" y1="375" x2="470" y2="375" stroke="#ff0000" stroke-width="1"/>
+  <text x="340" y="230" font-family="sans-serif" font-size="16" fill="#b87333">由下而上生長</text>
+  <text x="325" y="250" font-family="sans-serif" font-size="14" fill="#b87333">Bottom-up Growth</text>
+  <text x="520" y="155" font-family="sans-serif" font-size="14" fill="#b87333">銅晶種層 (Cu Seed)</text>
+  <line x1="515" y1="150" x2="502" y2="150" stroke="#b87333" stroke-width="1"/>
+</svg>

@@ -1,0 +1,33 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#000000"/>
+    </marker>
+  </defs>
+  <rect x="50" y="380" width="700" height="15" fill="#cccccc"/>
+  <rect x="50" y="100" width="700" height="280" fill="#f4f4f4"/>
+  <rect x="50" y="80" width="700" height="20" fill="#cccccc"/>
+  <rect x="320" y="395" width="160" height="40" fill="#d97706" stroke="#000000" stroke-width="1"/>
+  <polygon points="250,80 550,80 550,200 450,200 450,380 350,380 350,200 250,200" fill="#d97706" stroke="#000000" stroke-width="2"/>
+  <line x1="50" y1="80" x2="750" y2="80" stroke="#000000" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="600" y1="60" x2="555" y2="78" stroke="#000000" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="610" y="65" font-family="sans-serif" font-size="16" fill="#000000">化學機械研磨 (CMP) 平坦化頂面</text>
+  <line x1="150" y1="50" x2="150" y2="75" stroke="#000000" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="100" y="40" font-family="sans-serif" font-size="16" fill="#000000">硬遮罩 (Hard Mask)</text>
+  <line x1="650" y1="150" x2="555" y2="150" stroke="#000000" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="660" y="155" font-family="sans-serif" font-size="16" fill="#000000">溝槽 (Trench)</text>
+  <line x1="650" y1="300" x2="455" y2="300" stroke="#000000" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="660" y="305" font-family="sans-serif" font-size="16" fill="#000000">通孔 (Via)</text>
+  <line x1="100" y1="250" x2="145" y2="250" stroke="#000000" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="60" y="230" font-family="sans-serif" font-size="16" fill="#000000">層間介電質 (ILD)</text>
+  <line x1="100" y1="388" x2="145" y2="388" stroke="#000000" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="60" y="410" font-family="sans-serif" font-size="16" fill="#000000">蝕刻停止層 (ESL)</text>
+  <line x1="300" y1="340" x2="348" y2="340" stroke="#000000" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="140" y="345" font-family="sans-serif" font-size="16" fill="#000000">擴散阻絕層與晶種層</text>
+  <text x="375" y="150" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffffff">電鍍銅 (Cu)</text>
+  <text x="335" y="430" font-family="sans-serif" font-size="14" fill="#000000">下層金屬 (Metal n-1)</text>
+  <path d="M570,220 Q600,250 570,280" fill="none" stroke="#000000" stroke-width="1" marker-end="url(#arrow)"/>
+  <text x="580" y="240" font-family="sans-serif" font-size="14" fill="#000000">通孔優先 (Via-First) 架構：</text>
+  <text x="580" y="260" font-family="sans-serif" font-size="14" fill="#000000">先蝕刻深孔，再蝕刻淺溝</text>
+</svg>
