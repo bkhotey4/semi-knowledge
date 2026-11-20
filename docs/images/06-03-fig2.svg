@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <defs>
+    <!-- 製程推進箭頭 -->
+    <marker id="step-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2D3748"/>
+    </marker>
+    <!-- 電漿蝕刻離子箭頭 -->
+    <marker id="ion-arrow" viewBox="0 0 10 10" refX="5" refY="6" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 1 0 L 5 8 L 9 0 z" fill="#2D3748"/>
+    </marker>
+    <!-- 尺寸標註箭頭 -->
+    <marker id="dim-arrow-start" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 10 1 L 0 5 L 10 9 z" fill="#2D3748"/>
+    </marker>
+    <marker id="dim-arrow-end" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2D3748"/>
+    </marker>
+  </defs>
+
+  <!-- 圖名 -->
+  <text x="400" y="42" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2D3748" text-anchor="middle">減法金屬蝕刻製程步驟 (Subtractive DME)</text>
+
+  <!-- ================= 階段一：沉積與微影圖案化 ================= -->
+  <text x="150" y="85" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2D3748" text-anchor="middle">(a) 全面沉積與光阻圖案化</text>
+
+  <!-- 階段一 基底介電層 -->
+  <rect x="50" y="270" width="200" height="70" fill="#E2E8F0" stroke="#2D3748" stroke-width="1.5"/>
+  <text x="150" y="312" font-family="sans-serif" font-size="14" fill="#2D3748" text-anchor="middle">基底介電層</text>
+
+  <!-- 階段一 金屬層 (Ru / Mo) -->
+  <rect x="50" y="190" width="200" height="80" fill="#3182CE" stroke="#2D3748" stroke-width="1.5"/>
+  <text x="150" y="236" font-family="sans-serif" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">釕或鉬薄膜 (Ru / Mo)</text>
+
+  <!-- 階段一 光阻 / 硬罩幕 -->
+  <rect x="80" y="145" width="45" height="45" fill="#ED8936" stroke="#2D3748" stroke-width="1.5"/>
+  <rect x="175" y="145" width="45" height="45" fill="#ED8936" stroke="#2D3748" stroke-width="1.5"/>
+  <text x="150" y="132" font-family="sans-serif" font-size="14" fill="#ED8936" font-weight="bold" text-anchor="middle">光阻 / 硬罩幕</text>
+
+  <!-- 步驟推進箭頭 1 -> 2 -->
+  <line x1="265" y1="230" x2="285" y2="230" stroke="#2D3748" stroke-width="2.5" marker-end="url(#step-arrow)"/>
+
+  <!-- ================= 階段二：直接金屬蝕刻 (DME) ================= -->
+  <text x="400" y="85" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2D3748" text-anchor="middle">(b) 反應性離子蝕刻 (RIE)</text>
+
+  <!-- 離子入射指示 -->
+  <line x1="330" y1="115" x2="330" y2="135" stroke="#2D3748" stroke-width="2" marker-end="url(#ion-arrow)"/>
+  <line x1="400" y1="115" x2="400" y2="135" stroke="#2D3748" stroke-width="2" marker-end="url(#ion-arrow)"/>
+  <line x1="470" y1="115" x2="470" y2="135" stroke="#2D3748" stroke-width="2" marker-end="url(#ion-arrow)"/>
+  <text x="400" y="110" font-family="sans-serif" font-size="14" fill="#2D3748" text-anchor="middle">定向離子轟擊與化學揮發</text>
+
+  <!-- 階段二 基底介電層 -->
+  <rect x="300" y="270" width="200" height="70" fill="#E2E8F0" stroke="#2D3748" stroke-width="1.5"/>
+  <text x="400" y="312" font-family="sans-serif" font-size="14" fill="#2D3748" text-anchor="middle">蝕刻停止於基底表面</text>
+
+  <!-- 階段二 金屬條柱 (高深寬比導線) -->
+  <rect x="330" y="190" width="45" height="80" fill="#3182CE" stroke="#2D3748" stroke-width="1.5"/>
+  <rect x="425" y="190" width="45" height="80" fill="#3182CE" stroke="#2D3748" stroke-width="1.5"/>
+  <text x="352" y="236" font-family="sans-serif" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">Ru</text>
+  <text x="447" y="236" font-family="sans-serif" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">Ru</text>
+
+  <!-- 階段二 殘留罩幕 (略有損耗) -->
+  <rect x="330" y="155" width="45" height="35" fill="#ED8936" stroke="#2D3748" stroke-width="1.5"/>
+  <rect x="425" y="155" width="45" height="35" fill="#ED8936" stroke="#2D3748" stroke-width="1.5"/>
+
+  <!-- 垂直側壁特徵標註 -->
+  <text x="400" y="210" font-family="sans-serif" font-size="14" fill="#2D3748" text-anchor="middle">高深寬比</text>
+  <text x="400" y="230" font-family="sans-serif" font-size="14" fill="#2D3748" text-anchor="middle">垂直金屬線</text>
+
+  <!-- 步驟推進箭頭 2 -> 3 -->
+  <line x1="515" y1="230" x2="535" y2="230" stroke="#2D3748" stroke-width="2.5" marker-end="url(#step-arrow)"/>
+
+  <!-- ================= 階段三：介電填膠與研磨平坦化 ================= -->
+  <text x="650" y="85" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2D3748" text-anchor="middle">(c) 介電填膠與 CMP 平坦化</text>
+
+  <!-- 階段三 基底介電層 -->
+  <rect x="550" y="270" width="200" height="70" fill="#E2E8F0" stroke="#2D3748" stroke-width="1.5"/>
+  <text x="650" y="312" font-family="sans-serif" font-size="14" fill="#2D3748" text-anchor="middle">基底介電層</text>
+
+  <!-- 階段三 充填低介電常數介電質 (Low-k ILD) -->
+  <rect x="550" y="190" width="30" height="80" fill="#38A169" stroke="#2D3748" stroke-width="1.5"/>
+  <rect x="625" y="190" width="50" height="80" fill="#38A169" stroke="#2D3748" stroke-width="1.5"/>
+  <rect x="720" y="190" width="30" height="80" fill="#38A169" stroke="#2D3748" stroke-width="1.5"/>
+
+  <!-- 階段三 導線金屬 (已平坦化去除罩幕) -->
+  <rect x="580" y="190" width="45" height="80" fill="#3182CE" stroke="#2D3748" stroke-width="1.5"/>
+  <rect x="675" y="190" width="45" height="80" fill="#3182CE" stroke="#2D3748" stroke-width="1.5"/>
+  <text x="602" y="236" font-family="sans-serif" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">Ru</text>
+  <text x="697" y="236" font-family="sans-serif" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">Ru</text>
+
+  <!-- 平坦化研磨面標示線 -->
+  <line x1="545" y1="190" x2="755" y2="190" stroke="#2D3748" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="650" y="175" font-family="sans-serif" font-size="14" fill="#2D3748" text-anchor="middle">CMP 研磨平坦化表面</text>
+
+  <!-- 介電填膠標記 -->
+  <text x="650" y="236" font-family="sans-serif" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">Low-k</text>
+
+  <!-- 導線間距 Pitch 標籤 -->
+  <line x1="602.5" y1="355" x2="697.5" y2="355" stroke="#2D3748" stroke-width="1.5" marker-start="url(#dim-arrow-start)" marker-end="url(#dim-arrow-end)"/>
+  <line x1="602.5" y1="275" x2="602.5" y2="365" stroke="#2D3748" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="697.5" y1="275" x2="697.5" y2="365" stroke="#2D3748" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="650" y="380" font-family="sans-serif" font-size="14" fill="#2D3748" text-anchor="middle">導線間距 (Pitch &lt; 30 nm)</text>
+
+  <!-- 介電填膠引線標記 -->
+  <text x="650" y="420" font-family="sans-serif" font-size="14" fill="#38A169" font-weight="bold" text-anchor="middle">層間低介電質充填 (Low-k Gap-fill)</text>
+</svg>
