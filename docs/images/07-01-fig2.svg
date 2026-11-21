@@ -1,0 +1,62 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000000"/>
+    </marker>
+    <marker id="bluearrow" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3366cc"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="30" font-family="sans-serif" font-size="20" font-weight="bold" text-anchor="middle">光學臨界尺寸量測 (OCD) 流程示意圖</text>
+
+  <rect x="50" y="380" width="250" height="10" fill="#e0e0e0" stroke="#000000"/>
+  <rect x="80" y="350" width="30" height="30" fill="#e0e0e0" stroke="#000000"/>
+  <rect x="130" y="350" width="30" height="30" fill="#e0e0e0" stroke="#000000"/>
+  <rect x="180" y="350" width="30" height="30" fill="#e0e0e0" stroke="#000000"/>
+  <rect x="230" y="350" width="30" height="30" fill="#e0e0e0" stroke="#000000"/>
+  <text x="165" y="415" font-family="sans-serif" font-size="14" text-anchor="middle">週期性光柵結構 (晶圓標靶)</text>
+
+  <circle cx="60" y="100" r="20" fill="#fff9c4" stroke="#000000"/>
+  <text x="60" y="75" font-family="sans-serif" font-size="14" text-anchor="middle">寬頻光源</text>
+  <line x1="75" y1="115" x2="140" y2="340" stroke="#3366cc" stroke-width="2" marker-end="url(#bluearrow)"/>
+  <text x="60" y="230" font-family="sans-serif" font-size="14" fill="#3366cc" transform="rotate(70, 60, 230)">入射光</text>
+
+  <line x1="160" y1="340" x2="225" y2="115" stroke="#3366cc" stroke-width="2" marker-end="url(#bluearrow)"/>
+  <text x="230" y="230" font-family="sans-serif" font-size="14" fill="#3366cc" transform="rotate(-70, 230, 230)">反射/散射光</text>
+  <rect x="210" y="70" width="60" height="40" fill="#e0e0e0" stroke="#000000"/>
+  <text x="240" y="60" font-family="sans-serif" font-size="14" text-anchor="middle">偵測器</text>
+
+  <rect x="350" y="80" width="160" height="100" fill="none" stroke="#000000"/>
+  <path d="M 360 160 Q 390 80 420 140 T 500 100" fill="none" stroke="#cc3333" stroke-width="2"/>
+  <text x="430" y="195" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#cc3333">量測光譜 (S_meas)</text>
+
+  <rect x="350" y="240" width="160" height="100" fill="none" stroke="#000000"/>
+  <path d="M 360 320 Q 390 240 420 300 T 500 260" fill="none" stroke="#3366cc" stroke-width="2" stroke-dasharray="4"/>
+  <text x="430" y="355" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#3366cc">理論模型庫 (RCWA)</text>
+
+  <line x1="430" y1="185" x2="430" y2="235" stroke="#000000" stroke-width="2" marker-start="url(#arrowhead)" marker-end="url(#arrowhead)"/>
+  <text x="440" y="215" font-family="sans-serif" font-size="14">迴歸分析</text>
+
+  <rect x="580" y="80" width="180" height="300" fill="none" stroke="#000000" stroke-dasharray="5"/>
+  <text x="670" y="105" font-family="sans-serif" font-size="16" text-anchor="middle" font-weight="bold">重建幾何輪廓</text>
+  
+  <polygon points="620,320 720,320 705,180 635,180" fill="#e3f2fd" stroke="#3366cc" stroke-width="2"/>
+  
+  <line x1="635" y1="170" x2="705" y2="170" stroke="#000000" stroke-width="1" marker-start="url(#arrowhead)" marker-end="url(#arrowhead)"/>
+  <text x="670" y="165" font-family="sans-serif" font-size="12" text-anchor="middle">頂部寬度 (Top CD)</text>
+  
+  <line x1="620" y1="335" x2="720" y2="335" stroke="#000000" stroke-width="1" marker-start="url(#arrowhead)" marker-end="url(#arrowhead)"/>
+  <text x="670" y="350" font-family="sans-serif" font-size="12" text-anchor="middle">底部寬度 (Bottom CD)</text>
+  
+  <line x1="740" y1="180" x2="740" y2="320" stroke="#000000" stroke-width="1" marker-start="url(#arrowhead)" marker-end="url(#arrowhead)"/>
+  <text x="745" y="255" font-family="sans-serif" font-size="12" transform="rotate(90, 745, 255)">高度 (Height)</text>
+  
+  <path d="M 620 320 L 600 320 M 620 320 L 625 280" stroke="#000000" stroke-width="1"/>
+  <path d="M 610 320 A 20 20 0 0 1 615 300" fill="none" stroke="#000000" stroke-width="1"/>
+  <text x="585" y="300" font-family="sans-serif" font-size="12">SWA</text>
+
+  <line x1="515" y1="215" x2="575" y2="215" stroke="#000000" stroke-width="2" marker-end="url(#arrowhead)"/>
+</svg>
