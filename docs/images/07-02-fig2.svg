@@ -1,0 +1,56 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <defs>
+    <marker id="arrow-down" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0000ff" />
+    </marker>
+    <marker id="arrow-up" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0000ff" />
+    </marker>
+  </defs>
+
+  <!-- 晶圓結構層 -->
+  <rect x="100" y="320" width="600" height="60" fill="#cccccc" />
+  <text x="110" y="355" font-family="sans-serif" font-size="16" fill="#000000">矽基板 (Substrate)</text>
+  
+  <rect x="100" y="120" width="600" height="200" fill="#eeeeee" />
+  <text x="110" y="145" font-family="sans-serif" font-size="16" fill="#000000">絕緣層 (ILD)</text>
+
+  <!-- 左側接觸窗 (接地) -->
+  <rect x="250" y="120" width="40" height="200" fill="#666666" />
+  <line x1="270" y1="320" x2="270" y2="380" stroke="#000000" stroke-width="2" />
+  <line x1="255" y1="380" x2="285" y2="380" stroke="#000000" stroke-width="2" />
+  <line x1="260" y1="385" x2="280" y2="385" stroke="#000000" stroke-width="2" />
+  <line x1="265" y1="390" x2="275" y2="390" stroke="#000000" stroke-width="2" />
+  <text x="175" y="375" font-family="sans-serif" font-size="14" fill="#000000">接地路徑</text>
+
+  <!-- 右側接觸窗 (斷路) -->
+  <rect x="510" y="120" width="40" height="160" fill="#666666" />
+  <text x="560" y="280" font-family="sans-serif" font-size="14" fill="#000000">電性斷路 (Open)</text>
+  
+  <!-- 一次電子束 -->
+  <text x="355" y="30" font-family="sans-serif" font-size="18" font-weight="bold" fill="#0000ff">一次電子束 (Primary Beam)</text>
+  <line x1="270" y1="40" x2="270" y2="110" stroke="#0000ff" stroke-width="3" marker-end="url(#arrow-down)" />
+  <line x1="530" y1="40" x2="530" y2="110" stroke="#0000ff" stroke-width="3" marker-end="url(#arrow-down)" />
+
+  <!-- 左側二次電子 (大量發射) -->
+  <path d="M270,120 Q240,80 220,90" stroke="#0000ff" stroke-width="1.5" fill="none" marker-end="url(#arrow-up)" />
+  <path d="M270,120 Q255,70 250,80" stroke="#0000ff" stroke-width="1.5" fill="none" marker-end="url(#arrow-up)" />
+  <path d="M270,120 Q285,70 290,80" stroke="#0000ff" stroke-width="1.5" fill="none" marker-end="url(#arrow-up)" />
+  <path d="M270,120 Q300,80 320,90" stroke="#0000ff" stroke-width="1.5" fill="none" marker-end="url(#arrow-up)" />
+  <text x="170" y="75" font-family="sans-serif" font-size="14" fill="#0000ff">二次電子 (SE)</text>
+  <text x="215" y="430" font-family="sans-serif" font-size="16" font-weight="bold" fill="#000000">影像：明亮 (Bright)</text>
+
+  <!-- 右側二次電子 (受抑制) -->
+  <path d="M530,120 Q520,105 515,110" stroke="#0000ff" stroke-width="1.5" fill="none" marker-end="url(#arrow-up)" />
+  <path d="M530,120 Q540,105 545,110" stroke="#0000ff" stroke-width="1.5" fill="none" marker-end="url(#arrow-up)" />
+  <text x="560" y="145" font-family="sans-serif" font-size="14" fill="#0000ff">正電荷堆積</text>
+  <text x="520" y="135" font-family="sans-serif" font-size="14" fill="#0000ff">+</text>
+  <text x="530" y="135" font-family="sans-serif" font-size="14" fill="#0000ff">+</text>
+  <text x="540" y="135" font-family="sans-serif" font-size="14" fill="#0000ff">+</text>
+  <text x="485" y="430" font-family="sans-serif" font-size="16" font-weight="bold" fill="#000000">影像：黑暗 (Dark)</text>
+
+  <!-- 標註說明 -->
+  <line x1="100" y1="405" x2="700" y2="405" stroke="#666666" stroke-width="1" stroke-dasharray="5,5" />
+</svg>

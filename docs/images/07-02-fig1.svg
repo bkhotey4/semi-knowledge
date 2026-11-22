@@ -1,0 +1,54 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff0000" />
+    </marker>
+  </defs>
+
+  <line x1="400" y1="20" x2="400" y2="430" stroke="#000000" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <text x="200" y="40" font-family="sans-serif" font-size="18" text-anchor="middle" font-weight="bold">明場檢測 (Brightfield)</text>
+  <text x="600" y="40" font-family="sans-serif" font-size="18" text-anchor="middle" font-weight="bold">暗場檢測 (Darkfield)</text>
+
+  <g id="brightfield">
+    <rect x="150" y="60" width="100" height="30" fill="#e0e0e0" stroke="#000000"/>
+    <text x="200" y="80" font-family="sans-serif" font-size="14" text-anchor="middle">偵測器</text>
+    
+    <path d="M 140 220 Q 200 190 260 220 Q 200 250 140 220" fill="#e0e0e0" stroke="#000000"/>
+    <text x="280" y="225" font-family="sans-serif" font-size="14">物鏡</text>
+    
+    <rect x="50" y="380" width="300" height="10" fill="#666666"/>
+    <circle cx="200" cy="378" r="4" fill="#000000"/>
+    <text x="210" y="375" font-family="sans-serif" font-size="14">缺陷</text>
+    
+    <line x1="190" y1="100" x2="190" y2="370" stroke="#ff0000" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="135" y="150" font-family="sans-serif" font-size="14" fill="#ff0000">入射光</text>
+    
+    <line x1="210" y1="370" x2="210" y2="100" stroke="#ff0000" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="215" y="150" font-family="sans-serif" font-size="14" fill="#ff0000">反射光</text>
+  </g>
+
+  <g id="darkfield">
+    <rect x="550" y="60" width="100" height="30" fill="#e0e0e0" stroke="#000000"/>
+    <text x="600" y="80" font-family="sans-serif" font-size="14" text-anchor="middle">偵測器</text>
+    
+    <path d="M 540 220 Q 600 190 660 220 Q 600 250 540 220" fill="#e0e0e0" stroke="#000000"/>
+    
+    <rect x="450" y="380" width="300" height="10" fill="#666666"/>
+    <circle cx="600" cy="378" r="4" fill="#000000"/>
+    
+    <line x1="480" y1="300" x2="590" y2="375" stroke="#ff0000" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="470" y="290" font-family="sans-serif" font-size="14" fill="#ff0000">入射光</text>
+    
+    <line x1="610" y1="375" x2="720" y2="300" stroke="#ff0000" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="680" y="290" font-family="sans-serif" font-size="14" fill="#ff0000">反射光</text>
+    
+    <line x1="600" y1="370" x2="600" y2="250" stroke="#ff0000" stroke-width="1.5" stroke-dasharray="2,2" marker-end="url(#arrow)"/>
+    <line x1="595" y1="370" x2="570" y2="250" stroke="#ff0000" stroke-width="1.5" stroke-dasharray="2,2" marker-end="url(#arrow)"/>
+    <line x1="605" y1="370" x2="630" y2="250" stroke="#ff0000" stroke-width="1.5" stroke-dasharray="2,2" marker-end="url(#arrow)"/>
+    <text x="615" y="340" font-family="sans-serif" font-size="14" fill="#ff0000">散射光</text>
+  </g>
+  
+  <text x="400" y="415" font-family="sans-serif" font-size="16" text-anchor="middle">晶圓表面</text>
+</svg>
