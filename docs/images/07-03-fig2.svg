@@ -1,0 +1,80 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <!-- 定義箭頭標記 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0000ff"/>
+    </marker>
+  </defs>
+
+  <!-- 晶圓本體 -->
+  <circle cx="300" cy="225" r="180" fill="#f0f0f0" stroke="#000000" stroke-width="2"/>
+  <path d="M 290 405 L 310 405 L 300 395 Z" fill="#ffffff" stroke="#000000"/> <!-- Notch 示意 -->
+  
+  <!-- 1. 均勻隨機分佈 (Random) -->
+  <g fill="#ff0000">
+    <circle cx="250" cy="180" r="2"/>
+    <circle cx="320" cy="260" r="2"/>
+    <circle cx="280" cy="210" r="2"/>
+    <circle cx="350" cy="190" r="2"/>
+    <circle cx="220" cy="240" r="2"/>
+    <circle cx="310" cy="150" r="2"/>
+  </g>
+
+  <!-- 2. 邊緣環狀分佈 (Ring) -->
+  <g fill="#ff0000">
+    <circle cx="450" cy="225" r="3"/>
+    <circle cx="445" cy="260" r="3"/>
+    <circle cx="430" cy="295" r="3"/>
+    <circle cx="405" cy="330" r="3"/>
+    <circle cx="150" cy="225" r="3"/>
+    <circle cx="155" cy="190" r="3"/>
+    <circle cx="170" cy="155" r="3"/>
+    <circle cx="195" cy="120" r="3"/>
+  </g>
+
+  <!-- 3. 線狀刮傷 (Scratch) -->
+  <g fill="#ff0000">
+    <circle cx="280" cy="300" r="2"/>
+    <circle cx="300" cy="310" r="2"/>
+    <circle cx="320" cy="315" r="2"/>
+    <circle cx="340" cy="310" r="2"/>
+    <circle cx="360" cy="300" r="2"/>
+  </g>
+
+  <!-- 4. 局部群聚 (Cluster) -->
+  <g fill="#ff0000">
+    <circle cx="220" cy="140" r="3"/>
+    <circle cx="230" cy="135" r="3"/>
+    <circle cx="225" cy="150" r="3"/>
+    <circle cx="240" cy="145" r="3"/>
+    <circle cx="235" cy="155" r="3"/>
+    <circle cx="215" cy="150" r="3"/>
+  </g>
+
+  <!-- 標註線與文字 -->
+  <!-- Ring -->
+  <line x1="450" y1="225" x2="520" y2="100" stroke="#0000ff" stroke-width="1.5" marker-start="url(#arrowhead)"/>
+  <text x="530" y="95" font-family="sans-serif" font-size="16" font-weight="bold">邊緣環狀 (Ring Pattern)</text>
+  <text x="530" y="115" font-family="sans-serif" font-size="14">回溯：CMP 壓力不均或蝕刻邊緣效應</text>
+
+  <!-- Cluster -->
+  <line x1="230" y1="140" x2="520" y2="170" stroke="#0000ff" stroke-width="1.5" marker-start="url(#arrowhead)"/>
+  <text x="530" y="165" font-family="sans-serif" font-size="16" font-weight="bold">局部群聚 (Cluster Pattern)</text>
+  <text x="530" y="185" font-family="sans-serif" font-size="14">回溯：微影光阻滴落或清洗水滴殘留</text>
+
+  <!-- Scratch -->
+  <line x1="320" y1="310" x2="520" y2="240" stroke="#0000ff" stroke-width="1.5" marker-start="url(#arrowhead)"/>
+  <text x="530" y="235" font-family="sans-serif" font-size="16" font-weight="bold">線狀刮傷 (Scratch Pattern)</text>
+  <text x="530" y="255" font-family="sans-serif" font-size="14">回溯：機械手臂傳送或 CMP 漿料大顆粒</text>
+
+  <!-- Random -->
+  <line x1="280" y1="210" x2="520" y2="310" stroke="#0000ff" stroke-width="1.5" marker-start="url(#arrowhead)"/>
+  <text x="530" y="305" font-family="sans-serif" font-size="16" font-weight="bold">均勻隨機 (Random Pattern)</text>
+  <text x="530" y="325" font-family="sans-serif" font-size="14">回溯：潔淨度背景缺陷 (Noise)</text>
+
+  <!-- 圖表標題 -->
+  <text x="400" y="40" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">圖 35-5 晶圓圖空間失效型態與製程異常回溯示意圖</text>
+</svg>

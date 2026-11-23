@@ -1,0 +1,32 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/>
+    </marker>
+    <marker id="grayarrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7f7f7f"/>
+    </marker>
+  </defs>
+  <line x1="100" y1="380" x2="750" y2="380" stroke="#000000" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="100" y1="380" x2="100" y2="50" stroke="#000000" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="320" y="420" font-family="sans-serif" font-size="16" fill="#000000">晶片面積與缺陷密度乘積 (AD₀)</text>
+  <text x="40" y="230" font-family="sans-serif" font-size="16" fill="#000000" transform="rotate(-90, 40, 230)">良率 (Yield, Y)</text>
+  <text x="75" y="85" font-family="sans-serif" font-size="14" fill="#000000">1.0</text>
+  <text x="85" y="385" font-family="sans-serif" font-size="14" fill="#000000">0</text>
+  <path d="M 100 80 C 150 280, 250 360, 700 378" fill="none" stroke="#d62728" stroke-width="3"/>
+  <path d="M 100 80 C 180 260, 300 340, 700 365" fill="none" stroke="#1f77b4" stroke-width="3"/>
+  <path d="M 100 80 C 250 220, 450 280, 700 320" fill="none" stroke="#2ca02c" stroke-width="3"/>
+  <text x="520" y="310" font-family="sans-serif" font-size="16" fill="#2ca02c">西奇模型 (Seeds)</text>
+  <text x="520" y="350" font-family="sans-serif" font-size="16" fill="#1f77b4">墨菲模型 (Murphy)</text>
+  <text x="520" y="395" font-family="sans-serif" font-size="16" fill="#d62728">卜瓦松模型 (Poisson)</text>
+  <line x1="720" y1="325" x2="720" y2="375" stroke="#7f7f7f" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="715" y1="325" x2="725" y2="325" stroke="#7f7f7f" stroke-width="1"/>
+  <line x1="715" y1="375" x2="725" y2="375" stroke="#7f7f7f" stroke-width="1"/>
+  <text x="730" y="355" font-family="sans-serif" font-size="14" fill="#7f7f7f">預測差異擴大</text>
+  <path d="M 100 80 L 700 80" stroke="#7f7f7f" stroke-width="1" stroke-dasharray="4"/>
+  <text x="110" y="70" font-family="sans-serif" font-size="14" fill="#7f7f7f">理想狀態 (無缺陷)</text>
+  <text x="350" y="30" font-family="sans-serif" font-size="18" font-weight="bold" fill="#000000">經典良率模型比較圖</text>
+  <text x="450" y="150" font-family="sans-serif" font-size="14" fill="#7f7f7f">大面積晶片區域</text>
+  <path d="M 450 160 L 600 250" stroke="#7f7f7f" stroke-width="1" marker-end="url(#grayarrow)" fill="none"/>
+</svg>
