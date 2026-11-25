@@ -1,0 +1,80 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <!-- 定義箭頭 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333333"/>
+    </marker>
+  </defs>
+
+  <!-- 模封化合物 (EMC) -->
+  <rect x="100" y="80" width="600" height="120" fill="#F0F0F0" stroke="#CCCCCC" stroke-width="1"/>
+  
+  <!-- 矽晶粒 (Silicon Die) -->
+  <rect x="300" y="100" width="200" height="100" fill="#999999" stroke="#666666" stroke-width="1"/>
+  
+  <!-- 晶粒接點 (Die Pads) -->
+  <rect x="330" y="195" width="20" height="5" fill="#FFD700"/>
+  <rect x="370" y="195" width="20" height="5" fill="#FFD700"/>
+  <rect x="410" y="195" width="20" height="5" fill="#FFD700"/>
+  <rect x="450" y="195" width="20" height="5" fill="#FFD700"/>
+
+  <!-- 介電層 (Dielectric Layers / RDL Stack) -->
+  <rect x="100" y="200" width="600" height="15" fill="#B0C4DE" opacity="0.6"/>
+  <rect x="100" y="215" width="600" height="15" fill="#B0C4DE" opacity="0.4"/>
+  <rect x="100" y="230" width="600" height="15" fill="#B0C4DE" opacity="0.2"/>
+
+  <!-- 重佈線層 (RDL Traces) - 展現扇出特性 -->
+  <!-- 左側扇出 -->
+  <path d="M 340 200 L 340 210 L 150 210 L 150 245" fill="none" stroke="#FFD700" stroke-width="3"/>
+  <path d="M 380 200 L 380 225 L 250 225 L 250 245" fill="none" stroke="#FFD700" stroke-width="3"/>
+  <!-- 中央 -->
+  <path d="M 420 200 L 420 245" fill="none" stroke="#FFD700" stroke-width="3"/>
+  <!-- 右側扇出 -->
+  <path d="M 460 200 L 460 210 L 650 210 L 650 245" fill="none" stroke="#FFD700" stroke-width="3"/>
+
+  <!-- 錫球 (Solder Balls) -->
+  <circle cx="150" cy="265" r="15" fill="#555555"/>
+  <circle cx="250" cy="265" r="15" fill="#555555"/>
+  <circle cx="350" cy="265" r="15" fill="#555555"/>
+  <circle cx="450" cy="265" r="15" fill="#555555"/>
+  <circle cx="550" cy="265" r="15" fill="#555555"/>
+  <circle cx="650" cy="265" r="15" fill="#555555"/>
+
+  <!-- 標註文字與指引線 -->
+  <text x="400" y="50" font-family="sans-serif" font-size="20" font-weight="bold" text-anchor="middle">扇出型封裝 (FO-WLP) 構造示意圖</text>
+  
+  <!-- 矽晶粒標籤 -->
+  <line x1="500" y1="150" x2="550" y2="150" stroke="#333333" stroke-width="1" marker-start="url(#arrowhead)"/>
+  <text x="560" y="155" font-family="sans-serif" font-size="16">矽晶粒 (Silicon Die)</text>
+  
+  <!-- 模封化合物標籤 -->
+  <line x1="200" y1="120" x2="150" y2="120" stroke="#333333" stroke-width="1" marker-start="url(#arrowhead)"/>
+  <text x="100" y="70" font-family="sans-serif" font-size="16">模封化合物 (EMC)</text>
+  
+  <!-- 重佈線層標籤 -->
+  <line x1="200" y1="215" x2="120" y2="215" stroke="#333333" stroke-width="1" marker-start="url(#arrowhead)"/>
+  <text x="10" y="220" font-family="sans-serif" font-size="16">重佈線層 (RDL)</text>
+  
+  <!-- 錫球標籤 -->
+  <line x1="350" y1="285" x2="350" y2="320" stroke="#333333" stroke-width="1" marker-start="url(#arrowhead)"/>
+  <text x="320" y="340" font-family="sans-serif" font-size="16">錫球 (Solder Balls)</text>
+
+  <!-- 扇出區域標示 -->
+  <line x1="100" y1="380" x2="300" y2="380" stroke="#333333" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="100" y1="370" x2="100" y2="390" stroke="#333333" stroke-width="1"/>
+  <line x1="300" y1="370" x2="300" y2="390" stroke="#333333" stroke-width="1"/>
+  <text x="130" y="410" font-family="sans-serif" font-size="14" fill="#666666">扇出區域 (Fan-out Area)</text>
+
+  <line x1="500" y1="380" x2="700" y2="380" stroke="#333333" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="500" y1="370" x2="500" y2="390" stroke="#333333" stroke-width="1"/>
+  <line x1="700" y1="370" x2="700" y2="390" stroke="#333333" stroke-width="1"/>
+  <text x="530" y="410" font-family="sans-serif" font-size="14" fill="#666666">扇出區域 (Fan-out Area)</text>
+
+  <!-- 晶粒尺寸參考線 -->
+  <line x1="300" y1="200" x2="300" y2="360" stroke="#999999" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="500" y1="200" x2="500" y2="360" stroke="#999999" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="355" y="375" font-family="sans-serif" font-size="14" fill="#999999">原始晶粒寬度</text>
+</svg>
