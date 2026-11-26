@@ -1,0 +1,98 @@
+[
+ {
+  "file": "08-02-card1.svg",
+  "title": "2.5D 封裝與 CoWoS 核心觀念",
+  "type": "summary",
+  "card": {
+   "type": "summary",
+   "title": "2.5D 封裝與 CoWoS 核心觀念",
+   "points": [
+    "透過矽中介層異質整合小晶片，突破單一晶粒光罩極限並提升製造良率。",
+    "縮短處理器與 HBM 間互連距離至微米級，有效克服記憶體牆之頻寬瓶頸。",
+    "利用半導體前段製程製作高密度重佈線層，實現亞微米級之線寬線距佈線。",
+    "包含 S、R、L 三種架構，分別針對密度、成本與大尺寸需求提供解決方案。"
+   ],
+   "takeaway": "以中介層實現異質整合，為高效能運算突破物理尺寸與資料傳輸頻寬之限制。"
+  }
+ },
+ {
+  "file": "08-02-card2.svg",
+  "title": "CoWoS-S 與 CoWoS-L 架構比較",
+  "type": "compare",
+  "card": {
+   "type": "compare",
+   "title": "CoWoS-S 與 CoWoS-L 架構比較",
+   "left": {
+    "name": "CoWoS-S (Silicon)",
+    "items": [
+     "採用全矽中介層結構",
+     "互連密度極高 (L/S ≤ 0.4μm)",
+     "受限於光罩拼接良率",
+     "應用於高階 GPU 與 AI 晶片"
+    ]
+   },
+   "right": {
+    "name": "CoWoS-L (Local)",
+    "items": [
+     "有機 RDL 搭配局部矽橋",
+     "關鍵路徑由矽橋提供高頻寬",
+     "支援超大尺寸 (4x 光罩以上)",
+     "應用於超大型 AI 運算系統"
+    ]
+   },
+   "takeaway": "CoWoS-S 追求極致佈線密度，CoWoS-L 則透過局部矽橋兼顧成本與大尺寸擴展性。"
+  }
+ },
+ {
+  "file": "08-02-card3.svg",
+  "title": "CoW (晶片對晶圓) 核心製程",
+  "type": "flow",
+  "card": {
+   "type": "flow",
+   "title": "CoW (晶片對晶圓) 核心製程",
+   "steps": [
+    "中介層晶圓準備",
+    "塗佈微凸塊助焊劑",
+    "晶片高精度放置",
+    "熱壓或回焊接合",
+    "底部填充劑固化",
+    "模封與背面加工"
+   ],
+   "takeaway": "CoW 階段透過高精度接合技術，在矽中介層上完成邏輯晶粒與記憶體之高密度互連。"
+  }
+ },
+ {
+  "file": "08-02-card4.svg",
+  "title": "2.5D 封裝最終良率模型",
+  "type": "formula",
+  "card": {
+   "type": "formula",
+   "title": "2.5D 封裝最終良率模型",
+   "formula": "Y_final = Y_interposer * Y_logic * (Y_HBM)ⁿ * Y_assembly",
+   "symbols": [
+    [
+     "Y_final",
+     "最終封裝總良率"
+    ],
+    [
+     "Y_logic",
+     "邏輯晶粒 KGD 良率"
+    ],
+    [
+     "Y_HBM",
+     "單顆 HBM 良率"
+    ],
+    [
+     "n",
+     "HBM 堆疊數量"
+    ],
+    [
+     "Y_assembly",
+     "組裝製程良率"
+    ]
+   ],
+   "note": "典型值 n=8 時，即使單一組件良率高，最終良率仍受多晶片累積影響。",
+   "takeaway": "多晶片封裝之最終良率隨組件數量呈指數型下降，KGD 篩選為量產成功之關鍵。"
+  }
+ }
+]
