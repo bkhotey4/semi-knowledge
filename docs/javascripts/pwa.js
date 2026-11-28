@@ -69,10 +69,12 @@
           if (!res.ok) throw new Error(res.status);
           var html = await res.clone().text();
           await cache.put(url, res);
-          // 一併下載該頁的圖片
+          // 一併下載該頁的圖片、樣式與腳本（含 KaTeX 等 CDN 資源），離線時版面與公式才能正常顯示
           var doc = new DOMParser().parseFromString(html, "text/html");
-          var imgs = Array.prototype.map.call(doc.querySelectorAll("img[src]"), function (img) { return new URL(img.getAttribute("src"), url).href; });
-          await Promise.all(imgs.filter(function (src) { return src.indexOf(location.origin) === 0; }).map(function (src) {
+          var assets = Array.prototype.map.call(doc.querySelectorAll("img[src], script[src], link[rel=stylesheet][href]"), function (n) {
+            return new URL(n.getAttribute("src") || n.getAttribute("href"), url).href;
+          });
+          await Promise.all(assets.filter(function (src) { return src.indexOf(location.origin) === 0 || /^https:\/\/cdn\.jsdelivr\.net\//.test(src); }).map(function (src) {
             return cache.match(src).then(function (hit) { return hit || cache.add(src).catch(function () {}); });
           }));
         } catch (e) {
