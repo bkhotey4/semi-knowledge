@@ -1,0 +1,84 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333333" />
+    </marker>
+  </defs>
+  
+  <text x="400" y="50" font-family="sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#333333">HBM 垂直堆疊架構示意圖</text>
+
+  <!-- DRAM Die 3 (Top) -->
+  <rect x="250" y="100" width="300" height="35" fill="#d1d1d1"/>
+  <rect x="250" y="135" width="300" height="5" fill="#a0c4ff"/>
+  
+  <!-- DRAM Die 2 -->
+  <rect x="250" y="150" width="300" height="35" fill="#d1d1d1"/>
+  <rect x="250" y="185" width="300" height="5" fill="#a0c4ff"/>
+  <line x1="300" y1="150" x2="300" y2="185" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="350" y1="150" x2="350" y2="185" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="400" y1="150" x2="400" y2="185" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="450" y1="150" x2="450" y2="185" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="500" y1="150" x2="500" y2="185" stroke="#ff8c00" stroke-width="3"/>
+
+  <!-- DRAM Die 1 -->
+  <rect x="250" y="200" width="300" height="35" fill="#d1d1d1"/>
+  <rect x="250" y="235" width="300" height="5" fill="#a0c4ff"/>
+  <line x1="300" y1="200" x2="300" y2="235" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="350" y1="200" x2="350" y2="235" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="400" y1="200" x2="400" y2="235" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="450" y1="200" x2="450" y2="235" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="500" y1="200" x2="500" y2="235" stroke="#ff8c00" stroke-width="3"/>
+
+  <!-- DRAM Die 0 -->
+  <rect x="250" y="250" width="300" height="35" fill="#d1d1d1"/>
+  <rect x="250" y="285" width="300" height="5" fill="#a0c4ff"/>
+  <line x1="300" y1="250" x2="300" y2="285" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="350" y1="250" x2="350" y2="285" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="400" y1="250" x2="400" y2="285" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="450" y1="250" x2="450" y2="285" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="500" y1="250" x2="500" y2="285" stroke="#ff8c00" stroke-width="3"/>
+
+  <!-- Base Die -->
+  <rect x="250" y="300" width="300" height="40" fill="#a0c4ff"/>
+  <line x1="300" y1="300" x2="300" y2="340" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="350" y1="300" x2="350" y2="340" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="400" y1="300" x2="400" y2="340" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="450" y1="300" x2="450" y2="340" stroke="#ff8c00" stroke-width="3"/>
+  <line x1="500" y1="300" x2="500" y2="340" stroke="#ff8c00" stroke-width="3"/>
+
+  <!-- Microbumps -->
+  <g fill="#333333">
+    <circle cx="300" cy="145" r="3"/><circle cx="350" cy="145" r="3"/><circle cx="400" cy="145" r="3"/><circle cx="450" cy="145" r="3"/><circle cx="500" cy="145" r="3"/>
+    <circle cx="300" cy="195" r="3"/><circle cx="350" cy="195" r="3"/><circle cx="400" cy="195" r="3"/><circle cx="450" cy="195" r="3"/><circle cx="500" cy="195" r="3"/>
+    <circle cx="300" cy="245" r="3"/><circle cx="350" cy="245" r="3"/><circle cx="400" cy="245" r="3"/><circle cx="450" cy="245" r="3"/><circle cx="500" cy="245" r="3"/>
+    <circle cx="300" cy="295" r="3"/><circle cx="350" cy="295" r="3"/><circle cx="400" cy="295" r="3"/><circle cx="450" cy="295" r="3"/><circle cx="500" cy="295" r="3"/>
+  </g>
+
+  <!-- Solder Balls (C4 Bumps) -->
+  <g fill="#333333">
+    <circle cx="280" cy="355" r="8"/><circle cx="330" cy="355" r="8"/><circle cx="380" cy="355" r="8"/><circle cx="430" cy="355" r="8"/><circle cx="480" cy="355" r="8"/><circle cx="530" cy="355" r="8"/>
+  </g>
+
+  <!-- Labels and Leader Lines -->
+  <g font-family="sans-serif" font-size="16" fill="#333333">
+    <text x="240" y="120" text-anchor="end">矽基板 (Silicon Substrate)</text>
+    <line x1="240" y1="115" x2="248" y2="115" stroke="#333333" marker-end="url(#arrow)"/>
+    
+    <text x="240" y="225" text-anchor="end">矽穿孔 (TSV)</text>
+    <line x1="240" y1="220" x2="295" y2="220" stroke="#333333" marker-end="url(#arrow)"/>
+    
+    <text x="240" y="270" text-anchor="end">微凸塊 (Microbump)</text>
+    <line x1="240" y1="265" x2="295" y2="265" stroke="#333333" marker-end="url(#arrow)"/>
+    
+    <text x="560" y="125" text-anchor="start">記憶體核心晶粒</text>
+    <text x="560" y="145" text-anchor="start">(DRAM Core Die)</text>
+    <line x1="560" y1="120" x2="552" y2="120" stroke="#333333" marker-end="url(#arrow)"/>
+    
+    <text x="560" y="320" text-anchor="start">基礎晶粒 (Base Die)</text>
+    <line x1="560" y1="315" x2="552" y2="315" stroke="#333333" marker-end="url(#arrow)"/>
+    
+    <text x="560" y="360" text-anchor="start">焊球 (Solder Ball)</text>
+    <line x1="560" y1="355" x2="540" y2="355" stroke="#333333" marker-end="url(#arrow)"/>
+  </g>
+</svg>

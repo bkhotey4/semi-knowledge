@@ -1021,16 +1021,6 @@
   "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5scVcwZ1U0NlM0dGdzUVBKR2tKQ3gycURkVnZjMzlGTUdieHI5U2VwT1dMRnRhek9UWHRIVnoxUWhLV0ZFdzJmUHgwcTNSSG_SAU5BVV95cUxPTm9xRERHVEpURzBQQ25KRE5TU0M4WGI2UFg4S3o2TlZZQ003MnoxRnROZXR1RTFFQWNtdVIwT2FaUlV5NFlOaE41TzlpR0E?oc=5"
  ],
  "pending_updates": {
-  "08-04": [
-   "- **2026-11-13**　三星宣布砸下46兆韓元重推進階記憶體並動工新廠，聚焦高頻寬記憶體（HBM）的產能擴充。此舉與先進封裝技術中的記憶體堆疊、資料傳輸頻寬提升高度相關，呼應高頻寬記憶體（HBM）在人工智慧運算架構中的關鍵地位。（來源：[【科技早餐】北京拚年產 20 萬台機器人！三星 HBM 新廠動工、規劃投資 46 兆韓元 - TechOrange 科技報橘](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVm1lSGxjOWJhZjU4Q3FVSWdoWEtkTG1XR2t6bWNGQ3QwZk9MWGNWOWlIRDRSdTZPUjhFYmN3XzIzZW1pOFlXSHktRThzbWY4Z3JTRTN2a2Y3d250aExjeld0bGxkMGlmeWdsdDdGYm9uTmNtRk95UlZjaW1zSFZ1UG45M2ZpaUNi?oc=5)）",
-   "- **2026-10-27**　高頻寬記憶體（HBM）作為人工智慧處理器旁側的高效能儲存解決方案，其內部採用矽穿孔（TSV）與多層晶片垂直堆疊技術。晶片基板與先進封裝的搭配組合，是決定整體系統頻寬與傳輸瓶頸的關鍵因素。（來源：[SemiAnalysis創始人：輝達HBM、先進封裝用量佔比已下降，2027年或繼續下滑！半導體供應鏈2028年或仍緊張，AI最大瓶頸是晶片基板 - 鉅亨號](https://news.google.com/rss/articles/CBMiSEFVX3lxTE9TeHhZT2dKMTJQQ1RzWi1Nb29WMjI4WVdnbGlnNjZGenJZNDVWdElnQnhDR0Q4YS0yemZZOXktQjljTjlyN1VYbw?oc=5)）",
-   "- **2026-10-25**　AI 晶片大廠推動高頻寬記憶體（HBM）之應用，使記憶體頻寬顯著提升。此技術進展對應高頻寬記憶體原理與架構演進，涉及多晶片堆疊與高資料傳輸率之系統整合設計。（來源：[AI晶片大洗牌！Google、亞馬遜搶攻2奈米＋HBM4 記憶體頻寬暴增2.5倍、台廠散熱PCB迎大單 - FTNN 新聞網](https://news.google.com/rss/articles/CBMiS0FVX3lxTE1TbXBRR0ZNUElVQ1psU0dLR1dmbTZvOWJQU2lPZjlJd1lVZFRCYnNJM3hjSVRoR3p4OC1xVnVfT1hsYzBKWnpsdDdoZw?oc=5)）",
-   "- **2026-10-23**　SK海力士開發高頻寬記憶體（HBM）的新散熱技術，透過材料與結構改良降低熱阻逾30%。這對高頻寬記憶體（HBM）的熱管理與多晶片堆疊的散熱效能具備直接的工程助益。（來源：[HBM也要拚散熱！SK海力士新技術讓熱阻降逾30% - 鉅亨網](https://news.google.com/rss/articles/CBMiT0FVX3lxTE15UjJoT3pOY0RORGg5UnI1aHhFVUlZdlRmYm96RFVTM2kxYXRXcjluaHBCMVJrQmthQkY2cDZwLS1vUFV3LXdiLVZ4WnJjZEU?oc=5)）",
-   "- **2026-10-22**　高頻寬記憶體（HBM）的架構持續演進，新一代產品之基礎晶粒採用先進邏輯製程製作。這與高頻寬記憶體章節中探討的邏輯晶片與記憶體異質整合及先進封裝互連技術高度相關。（來源：[韓媒：三星應輝達要求 下一代HBM基礎晶粒採台積電3奈米 - 經濟日報](https://news.google.com/rss/articles/CBMiWkFVX3lxTE1yNHFGTGw0VW1uNDVuMFp3NUZhMVplbGZTakVvalRkWU5sT3F3Ml9admxvTkRhREdnVzV6c2tWT0QyNm1jNWhRN3hxUTVqZnNXaURZUExVeFZlZ9IBX0FVX3lxTFBObm5rTlp5RGRLRnByYlM1dE5Cb1lOWFZlU0dqeWE5d1ROUTFfTElsN3FqbjRvUnNLUVU2Wkk1RS1TLV9ycVVmM2J4SXl5VGdiSDJqMUtTQTZpZGc4Q0Fr?oc=5)）",
-   "- **2026-10-21**　報導探討了突破人工智慧晶片記憶體牆的關鍵技術。這與高頻寬記憶體（HBM）、光互連與三維堆疊技術高度相關，能幫助讀者理解先進封裝在解決資料傳輸瓶頸上的物理與架構原理。（來源：[突破AI晶片「記憶體牆」 黃漢森：HBM、光互連、3D堆疊成關鍵 - DIGITIMES](https://news.google.com/rss/articles/CBMijgFBVV95cUxQWGdaTUFxRzFnWHFGOEI4cTRmTWlEQ1JjbUx5WTdqcUp1UUh2X2RLRExzNjlXUUdsd1VfeThwMlV2ZDZPWVVGZ0xNRWlTRjI5V1k2bUVWUEl0ZjF2QUhOV0o0dUpuejVSVnhIOUl4Q2M0TGF3dWNvS3paeHNCcmtGYzlyTG9Mbld4S0NMZnFR?oc=5)）",
-   "- **2026-10-20**　高頻寬記憶體（HBM）的底座晶片與邏輯控制器逐漸轉向採用先進的 3 奈米製程製造。此技術趨勢與高頻寬記憶體架構、邏輯晶片與記憶體晶片的異質整合原理高度相關。（來源：[三星首度用台積電3奈米造HBM！輝達為何要求三大記憶體廠統一製程？ - 數位時代](https://news.google.com/rss/articles/CBMidEFVX3lxTE5zTkg4cTg2ZVo3X2NnNnpwVkFBQmQ5aVJfTFhla3l0UmI1Q291Q1JabHZRLUkteTJsdlkzbUNWaGkzWGNVQW8wM3dIZ2dtbnVnV2dEa0RaOVN2blk2M1p6YzBYUkxXQk5TWG9kci05SjBka3pU?oc=5)）",
-   "- **2026-10-16**　此進展涉及高頻寬記憶體（HBM）之先進封裝與測試產能擴建。HBM 利用矽穿孔（TSV）與微凸塊技術將多層 DRAM 晶粒進行垂直三維堆疊，能顯著縮短連線長度並大幅提升頻寬密度，本章探討其堆疊架構、散熱管理與晶圓級測試之製程挑戰。（來源：[台灣美光先進封裝與測試二廠啟用，深化 AI 時代高頻寬記憶體布局 - TechNews 科技新報](https://news.google.com/rss/articles/CBMiswFBVV95cUxOc0VCOEhkS3FuNU00U2NTV2RUYmR5OG00LTdlYkgwTVo2b3RWTWwxaXE3WnVoNjN6Vi1pdWZKeUdidUNkU1luLUZySUNRR3N6aFJITjh2TWNYMUhmTXJXUE11dy1pVmhnODI1b0t3R093U1BmUXhOUVBsNi1YcEZXb0p6dWdpb3A4bE1EMGlURm03R0FWQmo1TXJ6eHJIUjhTd3hqczllc2Fnd3ZJTGNYbkhibw?oc=5)）"
-  ],
   "08-05": [
    "- **2026-11-28**　矽光子與共同封裝光學（CPO）技術逐漸走向量產落地，透過光電整合與光互連架構來突破傳統電子晶片的頻寬瓶頸與訊號衰減問題，直接對應矽光子與共同封裝光學章節的核心原理。（來源：[矽光子、CPO 聚焦量產落地！台灣首屆矽光子應用展明年四月登場 - TechNews 科技新報](https://news.google.com/rss/articles/CBMiWkFVX3lxTE9LUjdqUzJjZU9NWmF5VUw3QzR5SEtBS040T042QTE5M2hJY1VQVVVfT3hmNHJ3Y0pTSnNqMHlrVkNGU0ZDSXdMM3EyYmZOSWJWTHFDTkRFN05BUQ?oc=5)）",
    "- **2026-11-24**　蘋果積極招募人才並將光學封裝技術導入自研晶片，此發展呼應矽光子與共同封裝光學（CPO）技術在次世代資料中心晶片中的重要應用，透過光通訊取代傳統銅線以降低傳輸損耗。（來源：[矽光子戰場蘋果不缺席！從職缺密碼看 Apple 次世代 AI 資料中心晶片藍圖 - Mashdigi](https://news.google.com/rss/articles/CBMibEFVX3lxTE13MnBJNTU5V0wxY0JYNTlGWUdZNEE5WWt0dElSUU9ZNVZBN21LbTluNVNXeVIyRWhhSUwxMGJSc2tTbG11N1kydVp3OExVQkt4SlExMjh3WDVLNE5TcmNVcVhiVENxcGxFeGhfcQ?oc=5)）",
@@ -1103,7 +1093,8 @@
   "07-04": "2026-11-25",
   "08-01": "2026-11-26",
   "08-02": "2026-11-27",
-  "08-03": "2026-11-28"
+  "08-03": "2026-11-28",
+  "08-04": "2026-11-28"
  },
  "recent_updates": [
   {

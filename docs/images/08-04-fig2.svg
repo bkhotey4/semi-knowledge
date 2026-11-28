@@ -1,0 +1,89 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#424242"/>
+    </marker>
+  </defs>
+
+  <!-- 封裝基板 Substrate -->
+  <rect x="50" y="360" width="700" height="60" fill="#E0E0E0" stroke="#424242" stroke-width="1.5"/>
+  <text x="400" y="400" font-family="sans-serif" font-size="18" fill="#424242" text-anchor="middle">封裝基板 (Package Substrate)</text>
+
+  <!-- C4 凸塊 C4 Bumps -->
+  <circle cx="150" cy="345" r="8" fill="#90CAF9" stroke="#424242"/>
+  <circle cx="250" cy="345" r="8" fill="#90CAF9" stroke="#424242"/>
+  <circle cx="350" cy="345" r="8" fill="#90CAF9" stroke="#424242"/>
+  <circle cx="450" cy="345" r="8" fill="#90CAF9" stroke="#424242"/>
+  <circle cx="550" cy="345" r="8" fill="#90CAF9" stroke="#424242"/>
+  <circle cx="650" cy="345" r="8" fill="#90CAF9" stroke="#424242"/>
+
+  <!-- 矽中介層 Silicon Interposer -->
+  <rect x="100" y="280" width="600" height="50" fill="#FFE082" stroke="#424242" stroke-width="1.5"/>
+  <text x="400" y="312" font-family="sans-serif" font-size="16" fill="#424242" text-anchor="middle">矽中介層 (Silicon Interposer / CoWoS)</text>
+
+  <!-- RDL 重佈線層 -->
+  <path d="M 230 285 L 230 300 L 350 300 L 350 285" fill="none" stroke="#424242" stroke-width="2"/>
+  <path d="M 570 285 L 570 300 L 450 300 L 450 285" fill="none" stroke="#424242" stroke-width="2"/>
+  <line x1="380" y1="340" x2="380" y2="310" stroke="#424242" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <text x="385" y="345" font-family="sans-serif" font-size="14" fill="#424242">高密度重佈線層 (RDL)</text>
+
+  <!-- 邏輯晶粒 Logic Die -->
+  <rect x="320" y="140" width="160" height="120" fill="#90CAF9" stroke="#424242" stroke-width="1.5"/>
+  <text x="400" y="190" font-family="sans-serif" font-size="16" fill="#424242" text-anchor="middle">邏輯晶粒</text>
+  <text x="400" y="210" font-family="sans-serif" font-size="14" fill="#424242" text-anchor="middle">(Logic Die / GPU)</text>
+
+  <!-- HBM 堆疊 (左) -->
+  <g>
+    <rect x="130" y="60" width="140" height="25" fill="#D1E9FF" stroke="#424242"/>
+    <rect x="130" y="85" width="140" height="25" fill="#D1E9FF" stroke="#424242"/>
+    <rect x="130" y="110" width="140" height="25" fill="#D1E9FF" stroke="#424242"/>
+    <rect x="130" y="135" width="140" height="25" fill="#D1E9FF" stroke="#424242"/>
+    <rect x="130" y="160" width="140" height="100" fill="#90CAF9" stroke="#424242" stroke-width="1.5"/>
+    <text x="200" y="100" font-family="sans-serif" font-size="14" fill="#424242" text-anchor="middle">DRAM 堆疊</text>
+    <text x="200" y="215" font-family="sans-serif" font-size="16" fill="#424242" text-anchor="middle">基礎晶粒</text>
+    <text x="200" y="235" font-family="sans-serif" font-size="14" fill="#424242" text-anchor="middle">(Base Die)</text>
+    <!-- TSV -->
+    <line x1="160" y1="60" x2="160" y2="260" stroke="#424242" stroke-width="1" stroke-dasharray="4 2"/>
+    <line x1="240" y1="60" x2="240" y2="260" stroke="#424242" stroke-width="1" stroke-dasharray="4 2"/>
+  </g>
+
+  <!-- HBM 堆疊 (右) -->
+  <g>
+    <rect x="530" y="60" width="140" height="25" fill="#D1E9FF" stroke="#424242"/>
+    <rect x="530" y="85" width="140" height="25" fill="#D1E9FF" stroke="#424242"/>
+    <rect x="530" y="110" width="140" height="25" fill="#D1E9FF" stroke="#424242"/>
+    <rect x="530" y="135" width="140" height="25" fill="#D1E9FF" stroke="#424242"/>
+    <rect x="530" y="160" width="140" height="100" fill="#90CAF9" stroke="#424242" stroke-width="1.5"/>
+    <text x="600" y="100" font-family="sans-serif" font-size="14" fill="#424242" text-anchor="middle">DRAM 堆疊</text>
+    <text x="600" y="215" font-family="sans-serif" font-size="16" fill="#424242" text-anchor="middle">基礎晶粒</text>
+    <text x="600" y="235" font-family="sans-serif" font-size="14" fill="#424242" text-anchor="middle">(Base Die)</text>
+    <!-- TSV -->
+    <line x1="560" y1="60" x2="560" y2="260" stroke="#424242" stroke-width="1" stroke-dasharray="4 2"/>
+    <line x1="640" y1="60" x2="640" y2="260" stroke="#424242" stroke-width="1" stroke-dasharray="4 2"/>
+  </g>
+
+  <!-- 微凸塊 Micro-bumps -->
+  <circle cx="160" cy="270" r="4" fill="#424242"/>
+  <circle cx="200" cy="270" r="4" fill="#424242"/>
+  <circle cx="240" cy="270" r="4" fill="#424242"/>
+  <circle cx="350" cy="270" r="4" fill="#424242"/>
+  <circle cx="400" cy="270" r="4" fill="#424242"/>
+  <circle cx="450" cy="270" r="4" fill="#424242"/>
+  <circle cx="560" cy="270" r="4" fill="#424242"/>
+  <circle cx="600" cy="270" r="4" fill="#424242"/>
+  <circle cx="640" cy="270" r="4" fill="#424242"/>
+
+  <!-- 標籤與指標 -->
+  <line x1="70" y1="200" x2="125" y2="200" stroke="#424242" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <text x="55" y="185" font-family="sans-serif" font-size="14" fill="#424242">HBM 堆疊</text>
+  
+  <line x1="100" y1="100" x2="155" y2="100" stroke="#424242" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <text x="50" y="85" font-family="sans-serif" font-size="14" fill="#424242">矽穿孔 (TSV)</text>
+
+  <line x1="720" y1="270" x2="650" y2="270" stroke="#424242" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <text x="680" y="260" font-family="sans-serif" font-size="14" fill="#424242">微凸塊 (μ-bump)</text>
+
+  <text x="400" y="30" font-family="sans-serif" font-size="20" font-weight="bold" fill="#424242" text-anchor="middle">2.5D 系統整合架構示意圖 (CoWoS 典型結構)</text>
+</svg>

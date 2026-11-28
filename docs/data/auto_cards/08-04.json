@@ -1,0 +1,101 @@
+[
+ {
+  "file": "08-04-card1.svg",
+  "title": "HBM 物理架構與技術演進",
+  "type": "summary",
+  "card": {
+   "type": "summary",
+   "title": "HBM 物理架構與技術演進",
+   "points": [
+    "透過矽穿孔 (TSV) 垂直堆疊 DRAM 晶粒，解決記憶體牆 (Memory Wall) 瓶頸。",
+    "採「以寬度換取頻率」策略，藉由 1024/2048-bit 寬位元介面提升總頻寬。",
+    "基礎晶粒 (Base Die) 負責控制邏輯，製程趨向與先進邏輯節點 (如 5nm) 整合。",
+    "散熱管理、晶圓薄化應力與已知合格晶粒 (KGD) 良率為量產三大挑戰。"
+   ],
+   "takeaway": "HBM 藉由 3D 封裝與寬介面，在低功耗下實現極致頻寬，支撐高效能運算。"
+  }
+ },
+ {
+  "file": "08-04-card2.svg",
+  "title": "HBM 總頻寬與良率模型",
+  "type": "formula",
+  "card": {
+   "type": "formula",
+   "title": "HBM 總頻寬與良率模型",
+   "formula": "BW = (fₚᵢₙ × Wᵦᵤₛ) / 8 ; Y_HBM = Y_base × (Y_DRAM)ᴺ × Y_asm",
+   "symbols": [
+    [
+     "BW",
+     "總頻寬 (GB/s)"
+    ],
+    [
+     "f_pin",
+     "單接腳傳輸速率 (Gbps)"
+    ],
+    [
+     "W_bus",
+     "介面位元寬度 (bit)"
+    ],
+    [
+     "Y_HBM",
+     "最終產品良率"
+    ],
+    [
+     "Y_DRAM",
+     "單片 DRAM 晶粒良率"
+    ],
+    [
+     "N",
+     "堆疊層數"
+    ]
+   ],
+   "note": "HBM4 介面寬度典型值為 2048 bit；良率隨層數 N 增加呈指數衰減。",
+   "takeaway": "頻寬由速率與位元寬度決定，而最終良率對單片晶粒 (KGD) 品質極為敏感。"
+  }
+ },
+ {
+  "file": "08-04-card3.svg",
+  "title": "主流記憶體技術物理特性對比",
+  "type": "compare",
+  "card": {
+   "type": "compare",
+   "title": "主流記憶體技術物理特性對比",
+   "left": {
+    "name": "GDDR6/7",
+    "items": [
+     "封裝：表面黏著 (BGA)",
+     "位元寬度：32 bits",
+     "典型頻率：8 ~ 20 GHz",
+     "傳輸能耗：7 ~ 10 pJ/bit"
+    ]
+   },
+   "right": {
+    "name": "HBM3E",
+    "items": [
+     "封裝：3D 堆疊 (2.5D)",
+     "位元寬度：1024 bits",
+     "典型頻率：0.5 ~ 1.2 GHz",
+     "傳輸能耗：2 ~ 4 pJ/bit"
+    ]
+   },
+   "takeaway": "HBM 透過極寬位元與低頻設計，在達成 TB/s 級頻寬的同時顯著降低能耗。"
+  }
+ },
+ {
+  "file": "08-04-card4.svg",
+  "title": "HBM 垂直堆疊封裝流程",
+  "type": "flow",
+  "card": {
+   "type": "flow",
+   "title": "HBM 垂直堆疊封裝流程",
+   "steps": [
+    "晶圓減薄與 TSV 露頭",
+    "載具晶圓鍵合與處理",
+    "晶粒對準與熱壓鍵合",
+    "底部填充劑注入固化",
+    "封裝體測試與修復"
+   ],
+   "takeaway": "透過精密減薄與鍵合技術，實現多層晶粒在高度限制下的高密度垂直互連。"
+  }
+ }
+]
