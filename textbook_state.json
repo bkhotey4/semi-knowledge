@@ -1021,21 +1021,6 @@
   "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5scVcwZ1U0NlM0dGdzUVBKR2tKQ3gycURkVnZjMzlGTUdieHI5U2VwT1dMRnRhek9UWHRIVnoxUWhLV0ZFdzJmUHgwcTNSSG_SAU5BVV95cUxPTm9xRERHVEpURzBQQ25KRE5TU0M4WGI2UFg4S3o2TlZZQ003MnoxRnROZXR1RTFFQWNtdVIwT2FaUlV5NFlOaE41TzlpR0E?oc=5"
  ],
  "pending_updates": {
-  "08-05": [
-   "- **2026-11-28**　矽光子與共同封裝光學（CPO）技術逐漸走向量產落地，透過光電整合與光互連架構來突破傳統電子晶片的頻寬瓶頸與訊號衰減問題，直接對應矽光子與共同封裝光學章節的核心原理。（來源：[矽光子、CPO 聚焦量產落地！台灣首屆矽光子應用展明年四月登場 - TechNews 科技新報](https://news.google.com/rss/articles/CBMiWkFVX3lxTE9LUjdqUzJjZU9NWmF5VUw3QzR5SEtBS040T042QTE5M2hJY1VQVVVfT3hmNHJ3Y0pTSnNqMHlrVkNGU0ZDSXdMM3EyYmZOSWJWTHFDTkRFN05BUQ?oc=5)）",
-   "- **2026-11-24**　蘋果積極招募人才並將光學封裝技術導入自研晶片，此發展呼應矽光子與共同封裝光學（CPO）技術在次世代資料中心晶片中的重要應用，透過光通訊取代傳統銅線以降低傳輸損耗。（來源：[矽光子戰場蘋果不缺席！從職缺密碼看 Apple 次世代 AI 資料中心晶片藍圖 - Mashdigi](https://news.google.com/rss/articles/CBMibEFVX3lxTE13MnBJNTU5V0wxY0JYNTlGWUdZNEE5WWt0dElSUU9ZNVZBN21LbTluNVNXeVIyRWhhSUwxMGJSc2tTbG11N1kydVp3OExVQkt4SlExMjh3WDVLNE5TcmNVcVhiVENxcGxFeGhfcQ?oc=5)）",
-   "- **2026-11-22**　閎康針對矽光子元件展開檢測分析並接獲送樣，此技術涵蓋光引擎與整合晶片，對應矽光子與共同封裝光學（CPO）的光電轉換及元件介面量測原理。（來源：[閎康矽光子檢測已接獲送樣，明年擴至光引擎與整合晶片 - 優分析 UAnalyze](https://news.google.com/rss/articles/CBMiVkFVX3lxTE5zY1FMbmJTMUFDeVRzSklIQ0ktZHcxUl9zczl4VHZaLVNRZEt4UkNkZGxqa2lpZmhCQmlERUxjNEpPa01NTjd2d01XQV9VNUtJYXl0SlFn?oc=5)）",
-   "- **2026-11-17**　封裝廠與測試廠積極布局共同封裝光學（CPO）與矽光子晶圓測試，此技術將光學元件與電子晶片整合在同一封裝內，透過光通訊解決高頻寬傳輸的訊號衰減與延遲問題，對應第08-05章矽光子與共同封裝光學（CPO）原理。（來源：[旺矽搶CPO商機 漢測擴大矽光子布局 - 自由財經](https://news.google.com/rss/articles/CBMiW0FVX3lxTFBjQV84N2ItaVRMMlo5aE8zR0NxSko1WGxrUGM2cE11WkVQbGJheVh4RDR6LTZZbGFRbmlEVy02ZGlaQlhkSV9RQlQ0V2h5MFlnQkRFSV9HSDNtT1HSAVtBVV95cUxQY0FfODdiLWlUTDJaOWhPM0dDcUpKNVhsa1BjNnBNdVpFUGxiYXlYeEQ0ei02WWxhUW5pRFctNmRpWkJYZElfUUJUNFdoeTBZZ0JERUlfR0gzbU9R?oc=5)）",
-   "- **2026-11-16**　相關企業在矽光子與晶圓再生領域同步推進布局。矽光子技術透過光學互連取代傳統銅導線，能有效解決高頻寬傳輸下的訊號衰減與 RC 延遲問題。（來源：[不只搶攻AI機器人與先進封裝 羅昇晶圓再生、矽光子布局同步推進 - DIGITIMES](https://news.google.com/rss/articles/CBMia0FVX3lxTFB5RW9KR0FFemdiLXBwX1ZoRVZZTnA5Sm9PTEItNl8wZWZlN0VBSXhjSlJ6aUx4SC1sbkxfeVdqZXd1U3pFM2dzdEtvQktOaDlFd1ZPdmlXRERDbkcyQkhSTDVPY3IwRGVEZFd3?oc=5)）",
-   "- **2026-11-15**　封裝技術從傳統 CoWoS 邁向共同封裝光學（CPO）的新藍海，此技術將光通訊元件與積體電路共同整合於同一封裝內，對應矽光子與 CPO 的高速資料傳輸原理。（來源：[輝達助攻矽品登峰！從 CoWoS 代工邁向 CPO 新藍海，研發老將揭密十年技術布局 - TechNews 科技新報](https://news.google.com/rss/articles/CBMiyAFBVV95cUxNYU80OWdTTGVpaEkyMjlFZXRsdEI4TFo5Nm9QZVBGNnA3ZzFYTU9ycUdrMmpuMXEwNVpBMjBsWTQ5S3B0bGR5eXN5WUVadUxSNzU3YVUxdDNtUm1iVGhwa2U2bTlkd19rTWFKdjdMaGgyd3I4RGxmYkhaa21MbWI5LUxnLWh2N1NGTUhORzUyUDRwWTZSNjFsUkF1THFQbVdkT00yQnJLdS0tRjNlUmk4cmN3T1ZaY19PN05yU3RPVDF4cWZEVXowag?oc=5)）",
-   "- **2026-11-14**　明泰預計推出 1.6T 交換器並積極搶進矽光子與光通訊應用。此技術發展對應至矽光子與共同封裝光學領域，利用光學互連來突破傳統電氣傳輸在高速與高頻寬上的物理限制。（來源：[【即時新聞】最新消息！明泰1.6T交換器年底有望出貨，搶進矽光子與WiFi 8商機 - CMoney投資網誌](https://news.google.com/rss/articles/CBMikAFBVV95cUxOaXZmc2tnYjZhaTJnMHVJTmcwV0oxd1BTcnlGLXNSWXRMamtSNDhYZmJHekdHSXVaemFzQ0pGQnFSUUxtVE1pWmtpbEstWmZOVWVxTjM2el9IZFItQm96LWl5LUJhVjRRaC1yZTE0OEozUG8welU1UC1EN3RaZkVxcnB1MVBtSElGV0JiNDhKN2Y?oc=5)）",
-   "- **2026-10-26**　英特爾針對 AI 互連瓶頸推動 300mm 磷化銦（InP）基板與矽光子整合技術，發展共同封裝光學（CPO）與近封裝光學（NPO）架構。此技術利用化合物半導體的光電轉換特性與矽晶圓製程平台，突破傳統電訊號傳輸的頻寬與距離限制。（來源：[英特爾押注矽光子！稱300mm磷化銦量產能力領先、NPO與CPO瞄準AI互連瓶頸 - 科技島](https://news.google.com/rss/articles/CBMiX0FVX3lxTE1mQW11U3k3Q1cxQ0JmSWxSVlZyemo0MFA5ZmdYajN1MXJtVjFiNnQ0WUdBVGdVVjdoT09qQ2N6SUxDVXMtWklHRXVDRmlaUDFvYVZxYzBla255LVJmTEhr?oc=5)）",
-   "- **2026-10-26**　聯電完成 12 吋矽光子量產晶圓交付，結合半導體微影與蝕刻製程技術，在矽基板上整合光學元件與電性電路。此製程能解決傳統銅導線在高速傳輸下的 RC 延遲與頻寬極限，是實現共同封裝光學（CPO）的重要基礎。（來源：[聯電 12 吋矽光子量產晶圓交付，你現在是加碼還是觀望? - CMoney](https://news.google.com/rss/articles/CBMie0FVX3lxTFAwRktMeG1qTllHeW02bXA1SHljRC05WXJLMXg2NVZoUVdVNF9sSXVLUUVLTHROMXhpeU9CNmNXVUZVdy1GcEtwZk1iOER6YkFpTzBJR0huVHdLUkREOVZoajZaMVExZkxKQml2WVE5QzFObnYzenhXWGZxYw?oc=5)）",
-   "- **2026-10-20**　半導體廠積極擴展 300 毫米磷化銦（InP）產線以推進矽光子技術量產。此發展與矽光子與共同封裝光學（CPO）中的光通訊材料及異質整合製程原理相輔相成。（來源：[Intel 押注矽光子！OCP 2026 稱握有唯一量產 300 mm 磷化銦產線 - UNIKO's Hardware](https://news.google.com/rss/articles/CBMicEFVX3lxTE9lNllWSWtNOTFLT1FVbUNDbjJvUmppQlNTSFlJOEpfcGtZV3VmaVlET3Q4clNGQ0Nhb0RjSHFjaGp2VlNDbEhrYW16M1VqQUlpVFV0RW1qSFdKblJOR0gtZVpBRFFpaFQ3c3h3RUs1MlQ?oc=5)）",
-   "- **2026-10-19**　Intel 發表採用 300mm 矽光子製程打造的下一代 AI 系統架構，將傳統銅線傳輸轉換為光互連技術。這與矽光子與共同封裝光學章節中，利用半導體製程實現光學訊號傳輸以突破金屬導線 RC 延遲與頻寬限制的原理高度相關。（來源：[從銅線走向光互連：Intel以300mm矽光子製程打造下一代AI系統架構 - XFastest News](https://news.google.com/rss/articles/CBMiygJBVV95cUxNSmxvangzSWFuNkRWb3NWbFNzU1NWMW1KNGZEYW5FaXp5U3h0QVdXdWd6YVhwZzRrNnR3VFNTNHBkVUQxRnZQYXFFMS04ei1ETHV5RThSODBrNXo4Y2pVQVVJS1dwM2s3UU1oTXQ4SmJkbUlfX09NbkRiRUJOOWVGQm12YkpsVG1OQmlOajNUeHJROWJ2c2tzVjlvYlV4WUtNY3d2akZJakV5UFZ1cEV1aFNpR3k5ZnA1SUlMdHI2MVY0TjF5QWxYUzk2a213dnhsbmNmNmVGOFgzSmZ1RTBlTUhxcVlGZVZZZHVmbVJCYUYxbndfVGp2VGE4cVY2TTVLMjRzaGI5Nkc3MTA3ZlJ1bUFlMlhtSkQ2NElYT3dPdl9RNVpRejVZbEhYUGNLR0xNNXJYVHF4ZVU2X2piY0IwRTAzcFJMSi02Znc?oc=5)）",
-   "- **2026-10-18**　Lightmatter 揭露共同封裝光學（CPO）的放量時程，並由日月光與創意電子等台廠參與布局。這顯示光通訊技術正與先進封裝結合，以解決傳統電性互連的頻寬瓶頸與訊號衰減問題。（來源：[Lightmatter 揭 CPO 放量時程 日月光、創意參與矽光子布局 - 經濟日報](https://news.google.com/rss/articles/CBMiWkFVX3lxTFBYNER0OUx4cVpCODRyWUx2QkhpR240UThVMWRqZ3VIR2hGOW5vN0dxeFNZZHVGZ09tdmFvelJ6R0xtd3Nycmo4dTBXVEp1YldsSDM3TS1KYWdiQdIBX0FVX3lxTE00OVpwSGhtOHhYNGtsOUFLdkpDb0dTbWhiUzJyVGNvTTRBUlBBcGktdGplRHMzaE5FVzhGaDNjWFNWTTZlSVNwd2N4aDNPTXdsYkxvLUtjQzNrSXlGb2VN?oc=5)）",
-   "- **2026-10-17**　矽光子技術成為人工智慧硬體架構的重要突破方向。此技術利用半導體製程將光學元件與電路整合於同一晶片上，透過光通訊解決高頻寬傳輸時的訊號衰減與延遲問題。（來源：[創新技術克服挑戰 矽光子成AI產業最大突破 - 電子工程專輯](https://news.google.com/rss/articles/CBMioAFBVV95cUxPZ1NWbHVNU1BHR0g4SjF1NF8ycDlCbUlUNUV3aFRWcmFfQW5vQ2h0U3lnejJoM3FVSE5JdnhZbFdWOXh0Nk5nUFB0NmNSZzBCT0VFLUY3R09feXRGVU9hc29hX0dfQ0ZQNDVfWUxJbV9Kc045QU9qRG9pZmNiTlpEeVgzMWkzNnZ6RnlBUkJGQ0xOb2VWZTNSaEgzU01Pa3JF?oc=5)）"
-  ],
   "10-06": [
    "- **2026-10-24**　輝達與英飛凌採用氮化鎵（GaN）與3D IC設計推進800V供電系統以解決AI晶片功耗與散熱瓶頸。這呼應了小晶片與3D IC設計章節中對於高功率密度與系統級封裝的架構整合原理。（來源：[AI晶片功耗與散熱成瓶頸！NVIDIA與西門子EDA、英飛凌從3D IC設計推進800V供電 | 魏鑫陽 | 財經 - 風傳媒](https://news.google.com/rss/articles/CBMiTkFVX3lxTFBsVTdRTFM1d1lHU3VhcFB4a0U1VVBWMzVWOUFFbkRfR2hNUmxjcllJbEhmeDktNURiNFRKWVdLb3IxU29uTEVWSVVPaU1DZw?oc=5)）"
   ],
@@ -1094,7 +1079,8 @@
   "08-01": "2026-11-26",
   "08-02": "2026-11-27",
   "08-03": "2026-11-28",
-  "08-04": "2026-11-28"
+  "08-04": "2026-11-28",
+  "08-05": "2026-11-28"
  },
  "recent_updates": [
   {

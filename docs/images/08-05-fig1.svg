@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#f97316"/>
+    </marker>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="400" y="38" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1e293b" text-anchor="middle">光柵耦合器結構與光路耦合示意圖</text>
+
+  <!-- Silicon Substrate -->
+  <rect x="80" y="350" width="640" height="50" fill="#94a3b8" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="400" y="380" font-family="sans-serif" font-size="15" fill="#ffffff" font-weight="bold" text-anchor="middle">矽基板 (Silicon Substrate)</text>
+
+  <!-- SiO2 Buried Oxide (BOX) Layer -->
+  <rect x="80" y="280" width="640" height="70" fill="#e2e8f0" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="560" y="320" font-family="sans-serif" font-size="15" fill="#1e293b" text-anchor="middle">二氧化矽埋層 (SiO₂ BOX)</text>
+
+  <!-- Top Silicon Waveguide + Grating Teeth -->
+  <!-- Base Y=280, Full height Y=240, Etch depth Y=260 -->
+  <path d="M 100,280 
+           L 680,280 L 680,240 L 410,240 
+           L 410,260 L 395,260 L 395,240 
+           L 380,240 L 380,260 L 365,260 L 365,240 
+           L 350,240 L 350,260 L 335,260 L 335,240 
+           L 320,240 L 320,260 L 305,260 L 305,240 
+           L 290,240 L 290,260 L 275,260 L 275,240 
+           L 260,240 L 260,260 L 245,260 L 245,240 
+           L 230,240 L 230,260 L 215,260 L 215,240 
+           L 200,240 L 200,280 Z" fill="#0284c7" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Optical Fiber Group (Tilted at ~12 degrees) -->
+  <g transform="translate(260, 140) rotate(12)">
+    <!-- Light Beam inside Fiber -->
+    <rect x="-10" y="-80" width="20" height="80" fill="#f97316" opacity="0.8"/>
+    <!-- Fiber Cladding -->
+    <rect x="-28" y="-80" width="56" height="80" fill="#e2e8f0" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="-10" y="-80" width="20" height="80" fill="none" stroke="#f97316" stroke-width="1" stroke-dasharray="3,3"/>
+    <!-- Fiber Outer Boundary -->
+    <line x1="-28" y1="0" x2="28" y2="0" stroke="#1e293b" stroke-width="1.5"/>
+  </g>
+
+  <!-- Incident Light Beam Projection from Fiber to Grating -->
+  <polygon points="230,146 278,156 360,240 270,240" fill="#f97316" opacity="0.35"/>
+  <line x1="244" y1="149" x2="295" y2="240" stroke="#f97316" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="264" y1="153" x2="335" y2="240" stroke="#f97316" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Normal Line (Vertical Reference) -->
+  <line x1="305" y1="90" x2="305" y2="240" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Fiber Axis Line Extended -->
+  <line x1="244" y1="60" x2="315" y2="240" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2"/>
+
+  <!-- Tilt Angle Arc (theta) -->
+  <path d="M 305,120 A 30,30 0 0,0 294,122" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="290" y="110" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1e293b">傾角 θ</text>
+
+  <!-- Diffracted & Coupled Light Path in Waveguide -->
+  <!-- Main coupled mode ray -->
+  <path d="M 300,230 Q 340,260 400,260 L 640,260" fill="none" stroke="#f97316" stroke-width="4" marker-end="url(#arrow-orange)"/>
+  <path d="M 330,230 Q 360,260 400,260" fill="none" stroke="#f97316" stroke-width="2" opacity="0.7"/>
+
+  <!-- Annotations & Labels -->
+
+  <!-- Optical Fiber Label -->
+  <line x1="150" y1="90" x2="225" y2="105" stroke="#1e293b" stroke-width="1.2" marker-end="url(#arrow-dark)"/>
+  <text x="80" y="92" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1e293b">單模光纖 (SMF)</text>
+
+  <!-- Grating Period (Lambda) Indicator -->
+  <line x1="230" y1="225" x2="260" y2="225" stroke="#1e293b" stroke-width="1.2"/>
+  <line x1="230" y1="220" x2="230" y2="230" stroke="#1e293b" stroke-width="1.2"/>
+  <line x1="260" y1="220" x2="260" y2="230" stroke="#1e293b" stroke-width="1.2"/>
+  <text x="245" y="215" font-family="sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">光柵週期 Λ</text>
+
+  <!-- Partial Etch Depth Indicator -->
+  <line x1="420" y1="240" x2="445" y2="240" stroke="#1e293b" stroke-width="1"/>
+  <line x1="420" y1="260" x2="445" y2="260" stroke="#1e293b" stroke-width="1"/>
+  <line x1="435" y1="225" x2="435" y2="275" stroke="#1e293b" stroke-width="1" marker-end="url(#arrow-dark)"/>
+  <text x="450" y="253" font-family="sans-serif" font-size="14" fill="#1e293b">部分蝕刻深度</text>
+
+  <!-- Top Silicon Waveguide Label -->
+  <line x1="570" y1="185" x2="540" y2="235" stroke="#1e293b" stroke-width="1.2" marker-end="url(#arrow-dark)"/>
+  <rect x="520" y="160" width="170" height="30" fill="#ffffff" opacity="0.9" rx="4"/>
+  <text x="605" y="180" font-family="sans-serif" font-size="15" font-weight="bold" fill="#0284c7" text-anchor="middle">頂層矽波導 (Top Si)</text>
+
+  <!-- Light Transmission Label -->
+  <text x="530" y="248" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ea580c">耦合傳輸光場 (Guided Mode)</text>
+
+  <!-- Periodic Grating Label -->
+  <text x="310" y="305" font-family="sans-serif" font-size="15" font-weight="bold" fill="#0284c7" text-anchor="middle">週期性光柵結構</text>
+</svg>
