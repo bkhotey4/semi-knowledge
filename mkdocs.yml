@@ -6,6 +6,7 @@ repo_name: semi-knowledge
 copyright: 內容由 AI 依課綱撰寫，僅供學習參考
 theme:
   name: material
+  custom_dir: overrides
   language: zh-TW
   font:
     text: Noto Sans TC
@@ -60,6 +61,7 @@ extra_javascript:
   - javascripts/katex.js
   - javascripts/interactive.js
   - javascripts/games.js
+  - javascripts/pwa.js
   - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js
   - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js
 extra_css:
