@@ -1,0 +1,70 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#ffffff"/>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000000"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" font-family="sans-serif" font-size="20" font-weight="bold" text-anchor="middle">混合鍵合介面演進示意圖</text>
+
+  <g transform="translate(50, 80)">
+    <text x="90" y="280" font-family="sans-serif" font-size="16" text-anchor="middle">階段一：鍵合前 (CMP 後)</text>
+    <rect x="0" y="0" width="180" height="60" fill="#e0e0e0" stroke="#000000"/>
+    <path d="M 60 60 L 120 60 Q 90 54 60 60 Z" fill="#d2691e" stroke="#000000"/>
+    <rect x="60" y="0" width="60" height="54" fill="#d2691e"/>
+    
+    <rect x="0" y="140" width="180" height="60" fill="#e0e0e0" stroke="#000000"/>
+    <path d="M 60 140 L 120 140 Q 90 146 60 140 Z" fill="#d2691e" stroke="#000000"/>
+    <rect x="60" y="146" width="60" height="54" fill="#d2691e"/>
+    
+    <text x="185" y="30" font-family="sans-serif" font-size="14">電介質</text>
+    <text x="125" y="105" font-family="sans-serif" font-size="14">銅墊 (Cu Pad)</text>
+    <line x1="120" y1="100" x2="100" y2="142" stroke="#000000" marker-end="url(#arrowhead)"/>
+    <text x="5" y="105" font-family="sans-serif" font-size="14">凹陷 (Dishing)</text>
+    <line x1="55" y1="110" x2="85" y2="142" stroke="#000000" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <line x1="250" y1="180" x2="280" y2="180" stroke="#000000" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <g transform="translate(310, 80)">
+    <text x="90" y="280" font-family="sans-serif" font-size="16" text-anchor="middle">階段二：常溫初步鍵合</text>
+    <rect x="0" y="40" width="180" height="60" fill="#e0e0e0" stroke="#000000"/>
+    <path d="M 60 100 L 120 100 Q 90 94 60 100 Z" fill="#d2691e" stroke="#000000"/>
+    <rect x="60" y="40" width="60" height="54" fill="#d2691e"/>
+    
+    <rect x="0" y="100" width="180" height="60" fill="#e0e0e0" stroke="#000000"/>
+    <path d="M 60 100 L 120 100 Q 90 106 60 100 Z" fill="#d2691e" stroke="#000000"/>
+    <rect x="60" y="106" width="60" height="54" fill="#d2691e"/>
+    
+    <text x="185" y="105" font-family="sans-serif" font-size="14">電介質直接鍵合</text>
+    <text x="185" y="125" font-family="sans-serif" font-size="14">(凡得瓦力)</text>
+    <text x="10" y="105" font-family="sans-serif" font-size="14">殘留間隙</text>
+    <line x1="65" y1="100" x2="85" y2="100" stroke="#000000" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <line x1="510" y1="180" x2="540" y2="180" stroke="#000000" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <g transform="translate(570, 80)">
+    <text x="90" y="280" font-family="sans-serif" font-size="16" text-anchor="middle">階段三：高溫退火完成</text>
+    <rect x="0" y="40" width="180" height="60" fill="#e0e0e0" stroke="#000000"/>
+    <rect x="0" y="100" width="180" height="60" fill="#e0e0e0" stroke="#000000"/>
+    
+    <rect x="60" y="40" width="60" height="120" fill="#d2691e"/>
+    <line x1="60" y1="100" x2="120" y2="100" stroke="#d2691e" stroke-width="2"/>
+    <line x1="60" y1="100" x2="120" y2="100" stroke="#000000" stroke-dasharray="4"/>
+    
+    <text x="130" y="90" font-family="sans-serif" font-size="14">銅熱膨脹接觸</text>
+    <text x="130" y="115" font-family="sans-serif" font-size="14">原子相互擴散</text>
+    <path d="M 80 90 Q 90 100 100 110" fill="none" stroke="#000000" marker-end="url(#arrowhead)"/>
+    <path d="M 100 110 Q 90 100 80 90" fill="none" stroke="#000000" marker-end="url(#arrowhead)"/>
+    
+    <text x="185" y="150" font-family="sans-serif" font-size="14">共價鍵合介面</text>
+  </g>
+  
+  <rect x="50" y="340" width="700" height="80" fill="#f9f9f9" stroke="#cccccc"/>
+  <text x="70" y="365" font-family="sans-serif" font-size="14" font-weight="bold">物理機制說明：</text>
+  <text x="70" y="385" font-family="sans-serif" font-size="14">1. CMP 需精確控制銅墊凹陷 (典型值 2-5 nm) 以補償熱膨脹。</text>
+  <text x="70" y="405" font-family="sans-serif" font-size="14">2. 退火驅動銅原子跨越介面擴散，消除電性不連續面。</text>
+</svg>
